@@ -1,7 +1,12 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { restaurante } from "@/data/restaurante";
 
 export function Footer() {
+  const t = useTranslations("footer");
+  const tHorario = useTranslations("horario");
+  const horarios = tHorario.raw("linhas") as { dias: string; horas: string }[];
+
   return (
     <footer id="contactos" className="border-t border-line/70 bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
@@ -18,9 +23,9 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-gold-deep">Horário</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gold-deep">{t("horarioLabel")}</p>
             <ul className="mt-4 space-y-2 text-sm text-muted">
-              {restaurante.horarios.map((h) => (
+              {horarios.map((h) => (
                 <li key={h.dias}>
                   <span className="text-ink">{h.dias}:</span> {h.horas}
                 </li>
@@ -29,7 +34,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-gold-deep">Contactos</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gold-deep">{t("contactosLabel")}</p>
             <ul className="mt-4 space-y-2 text-sm text-muted">
               <li>{restaurante.morada}</li>
               <li>{restaurante.localidade}</li>
@@ -40,12 +45,12 @@ export function Footer() {
               </li>
               <li>
                 <a href={restaurante.instagram} target="_blank" rel="noreferrer" className="transition-colors hover:text-ink">
-                  Instagram ↗
+                  {t("instagram")} ↗
                 </a>
               </li>
               <li>
                 <a href={restaurante.menuPdfUrl} target="_blank" rel="noreferrer" className="text-gold-deep transition-colors hover:text-gold">
-                  Ver Ementa (PDF) ↗
+                  {t("verEmentaPdf")} ↗
                 </a>
               </li>
             </ul>
@@ -54,7 +59,7 @@ export function Footer() {
 
         <div className="hairline mt-12" />
         <p className="mt-6 text-center text-xs text-muted">
-          © {new Date().getFullYear()} {restaurante.nome}
+          {t("copyright", { ano: new Date().getFullYear(), nome: restaurante.nome })}
         </p>
       </div>
     </footer>

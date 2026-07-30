@@ -71,6 +71,8 @@ const styles = StyleSheet.create({
   },
 });
 
+// O PDF é gerado só em português (ver AGENTS.md) — a ementa completa,
+// traduzida nas 4 línguas, vive na página /ementa do site.
 function Prato({ prato }) {
   return React.createElement(
     View,
@@ -78,8 +80,8 @@ function Prato({ prato }) {
     React.createElement(
       View,
       { style: styles.pratoTexto },
-      React.createElement(Text, { style: styles.pratoNome }, prato.nome),
-      prato.descricao ? React.createElement(Text, { style: styles.pratoDescricao }, prato.descricao) : null,
+      React.createElement(Text, { style: styles.pratoNome }, prato.nome.pt),
+      prato.descricao ? React.createElement(Text, { style: styles.pratoDescricao }, prato.descricao.pt) : null,
     ),
     React.createElement(Text, { style: styles.pratoPreco }, prato.preco),
   );
@@ -89,8 +91,8 @@ function Categoria({ categoria }) {
   return React.createElement(
     View,
     { style: styles.categoria, wrap: false },
-    React.createElement(Text, { style: styles.categoriaTitulo }, categoria.nome),
-    ...categoria.pratos.map((prato) => React.createElement(Prato, { key: prato.nome, prato })),
+    React.createElement(Text, { style: styles.categoriaTitulo }, categoria.nome.pt),
+    ...categoria.pratos.map((prato) => React.createElement(Prato, { key: prato.nome.pt, prato })),
   );
 }
 
@@ -106,7 +108,7 @@ function MenuDocument() {
       Page,
       { size: "A4", style: styles.page },
       menu.placeholder
-        ? React.createElement(Text, { style: styles.notaRascunho }, "RASCUNHO — pratos e preços por confirmar")
+        ? React.createElement(Text, { style: styles.notaRascunho }, menu.nota.pt)
         : null,
       React.createElement(
         View,
@@ -126,12 +128,12 @@ function MenuDocument() {
         React.createElement(
           View,
           { style: styles.coluna },
-          ...colunaEsquerda.map((categoria) => React.createElement(Categoria, { key: categoria.nome, categoria })),
+          ...colunaEsquerda.map((categoria) => React.createElement(Categoria, { key: categoria.nome.pt, categoria })),
         ),
         React.createElement(
           View,
           { style: styles.coluna },
-          ...colunaDireita.map((categoria) => React.createElement(Categoria, { key: categoria.nome, categoria })),
+          ...colunaDireita.map((categoria) => React.createElement(Categoria, { key: categoria.nome.pt, categoria })),
         ),
       ),
       React.createElement(

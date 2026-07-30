@@ -19,23 +19,40 @@ Site do **Restaurante Mira Mar** (Angeiras/Lavra, Matosinhos) — projeto real d
 
 ## Âmbito do produto
 
-Duas peças, já implementadas nesta fase:
+- **Landing page** (`/{locale}`) — página única com secções: Hero, Sobre, Galeria (placeholder), Localização (mapa embutido do Google Maps), Contactos & Horário.
+- **Ementa digital** — página real do site (`/{locale}/ementa`), traduzida nas 4 línguas, com botão "Descarregar PDF" (só português, ver abaixo). QR code das mesas e o CTA "Ver Ementa" do site apontam para esta página.
+- **Multi-idioma** (PT/EN/FR/ES) — motivado por estar junto a um parque de campismo com muitos turistas. Ver secção própria abaixo.
+- **Logótipo no carregamento/transições** — dá "vida" ao site, pedido explicitamente para o mesmo motivo (site visitado por muitos visitantes de fora, primeira impressão importa).
 
-1. **Landing page** (`/`) — página única com secções: Hero, Sobre, Galeria (placeholder), Localização (mapa embutido do Google Maps), Contactos & Horário. Sem catálogo, sem funcionalidades complexas.
-2. **Ementa digital** — `src/data/menu.json` (dados) → `npm run menu:pdf` gera `public/mira-mar-menu.pdf` via `@react-pdf/renderer` (`scripts/generate-menu-pdf.mjs`) → `npm run menu:qr` gera `public/qr/mira-mar-menu-qr.png` via `qrcode` (`scripts/generate-qr.mjs`), apontando para o PDF. QR code e botão "Ver Ementa" do site apontam para o mesmo ficheiro PDF.
+### Multi-idioma (`next-intl`)
 
-**Atualizar a ementa no futuro**: editar `src/data/menu.json` → correr `npm run menu:pdf`. Simples, sem precisar de recriar o PDF à mão.
+- Locales: `pt` (default, sem prefixo no URL — `/`, `/ementa`), `en`, `fr`, `es` (`/en`, `/fr`, `/es`, `/en/ementa`...). Configurado em `src/i18n/routing.ts`.
+- `src/middleware.ts` deteta o idioma do browser automaticamente na primeira visita (`Accept-Language`); um seletor no `Header` permite trocar a qualquer momento (fica guardado em cookie). **Não há ecrã de escolha bloqueante** — decisão do cliente, para não gerar fricção com turistas.
+- Todo o copy da UI está em `messages/{pt,en,fr,es}.json`, usado via `useTranslations()` nos componentes. **As traduções EN/FR/ES foram feitas por mim (Claude)** — boas o suficiente para mostrar ao cliente, mas tal como o resto do conteúdo placeholder, vale a pena um nativo rever antes de publicar a sério.
+- A ementa (`src/data/menu.json`) segue o mesmo princípio: cada `nome`/`descricao` é um objeto `{ pt, en, fr, es }`; `preco` é universal (€, não convertido por idioma).
+- Ao adicionar novo copy: criar a chave nas 4 mensagens, nunca só em português — o build não falha se faltar uma chave nalgum idioma, mas o texto aparece a menos noutras línguas.
 
-**Antes de imprimir os QR codes definitivos**: atualizar `MENU_URL` em `scripts/generate-qr.mjs` para o domínio final (atualmente aponta para um subdomínio Vercel placeholder) e recorrer `npm run menu:qr`.
+### Ementa: página do site + PDF opcional
+
+- `src/data/menu.json` → página `/{locale}/ementa` (fonte principal, traduzida). Editar aqui para atualizar pratos/preços — não precisa de mais nada.
+- `npm run menu:pdf` gera `public/mira-mar-menu.pdf` via `@react-pdf/renderer` (`scripts/generate-menu-pdf.mjs`) — **só em português** (decisão do cliente: manter o PDF como download opcional, não vale a pena gerar 4 PDFs traduzidos). O script lê os campos `.pt` do `menu.json`.
+- `npm run menu:qr` gera `public/qr/mira-mar-menu-qr.png` via `qrcode` (`scripts/generate-qr.mjs`), a apontar para a página `/ementa` (não para o PDF). **Antes de imprimir os QR codes definitivos**: atualizar `MENU_URL` no script para o domínio final (atualmente placeholder Vercel).
+
+### Logótipo no carregamento e transições
+
+- `src/instrumentation-client.ts` + `src/components/ui/TransicaoRota.tsx` — usa a API estável do Next 16 `onRouterTransitionStart` (sem flags experimentais) para mostrar brevemente o logótipo (`LogoAnel.tsx`, anel dourado a girar) entre navegações (`/` ↔ `/ementa`, trocas de idioma).
+- `src/components/ui/Preloader.tsx` — o mesmo logótipo no primeiro carregamento do site.
+- Deliberadamente **discreto e rápido** (~700ms/450ms mínimos) — dá vida sem atrasar a navegação nem ficar "espetáculo" de luxo, coerente com o posicionamento simples/económico da marca.
 
 ### Design visual (decidido)
 
-Paleta extraída do logótipo real (`public/logo/mira-mar-logo.jpg`): fundo creme quente, tinta escura para texto, dourado quente como destaque/CTA, azul-petróleo profundo ("mar") como cor secundária, verde-oliva como acento pontual — tema claro, definido em `src/app/globals.css`. Tipografia: **Fraunces** (serifada quente, `--font-fraunces`) para títulos + Geist Sans para corpo. Sem preloader nem transições de rota — site de uma página, animação limitada a reveal subtil em scroll (`src/components/ui/Reveal.tsx`, usa `motion`).
+Paleta extraída do logótipo real (`public/logo/mira-mar-logo.jpg`): fundo creme quente, tinta escura para texto, dourado quente como destaque/CTA, azul-petróleo profundo ("mar") como cor secundária, verde-oliva como acento pontual — tema claro, definido em `src/app/globals.css`. Tipografia: **Fraunces** (serifada quente, `--font-fraunces`) para títulos + Geist Sans para corpo. Animação de scroll subtil (`src/components/ui/Reveal.tsx`, usa `motion`) + preloader/transições de rota (ver acima).
 
 ## Stack
 
-- Next.js 16 (App Router) + React 19 + TypeScript
+- Next.js 16 (App Router, `src/app/[locale]/...`) + React 19 + TypeScript
 - Tailwind CSS v4
+- `next-intl` — i18n (routing, middleware, mensagens em `messages/`)
 - npm
 
 ## Skills

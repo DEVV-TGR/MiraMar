@@ -1,17 +1,18 @@
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { BotaoAncora } from "@/components/ui/Botao";
 import { restaurante } from "@/data/restaurante";
 
 export function Localizacao() {
+  const t = useTranslations("localizacao");
+
   return (
     <section id="localizacao" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
         <p className="text-center text-xs uppercase tracking-[0.2em] text-gold-deep">
-          Localização
+          {t("eyebrow")}
         </p>
-        <h2 className="h-section mt-3 text-center font-display text-ink">
-          Junto ao Parque de Campismo de Angeiras
-        </h2>
+        <h2 className="h-section mt-3 text-center font-display text-ink">{t("titulo")}</h2>
       </Reveal>
 
       <Reveal delay={0.1} className="mt-10 overflow-hidden rounded-2xl border border-line">
@@ -31,7 +32,7 @@ export function Localizacao() {
           {restaurante.moradaCompleta}
         </p>
         <BotaoAncora href={restaurante.mapsUrl} target="_blank" rel="noreferrer" variante="mar">
-          Abrir no Google Maps
+          {t("abrirMaps")}
         </BotaoAncora>
       </Reveal>
     </section>

@@ -1,18 +1,25 @@
+export type TextoLocalizado = {
+  pt: string;
+  en: string;
+  fr: string;
+  es: string;
+};
+
 export type PratoMenu = {
-  nome: string;
-  descricao?: string;
+  nome: TextoLocalizado;
+  descricao?: TextoLocalizado;
   preco: string;
 };
 
 export type CategoriaMenu = {
-  nome: string;
-  descricao?: string;
+  nome: TextoLocalizado;
+  descricao?: TextoLocalizado;
   pratos: PratoMenu[];
 };
 
 export type Menu = {
   placeholder: boolean;
-  nota: string;
+  nota: TextoLocalizado;
   atualizadoEm: string;
   categorias: CategoriaMenu[];
 };

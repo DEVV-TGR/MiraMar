@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "title": "{nome} — Restaurante em Angeiras, Matosinhos",
+    "description": "Restaurante de bairro em Angeiras, junto ao Parque de Campismo. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias."
+  },
+  "nav": {
+    "sobre": "Sobre",
+    "fotos": "Fotos",
+    "localizacao": "Localização",
+    "contactos": "Contactos",
+    "verEmenta": "Ver Ementa",
+    "abrirMenu": "Abrir menu",
+    "fecharMenu": "Fechar menu"
+  },
+  "hero": {
+    "descricao": "Restaurante de bairro em Angeiras, junto ao Parque de Campismo. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias.",
+    "verEmenta": "Ver Ementa",
+    "comoChegar": "Como Chegar"
+  },
+  "sobre": {
+    "eyebrow": "Sobre nós",
+    "titulo": "Casa de bairro, mesa cheia",
+    "paragrafo1": "No Mira Mar cozinha-se todos os dias como em casa: muitas diárias, peixe fresco e carne de boa qualidade, a preços de todos os dias. Fica junto ao Parque de Campismo de Angeiras, num ambiente simples e acolhedor onde os habituais se sentem em casa desde o primeiro dia.",
+    "paragrafo2": "Sem complicações, sem pressa — só boa comida, servida com atenção, todos os dias da semana."
+  },
+  "galeria": {
+    "eyebrow": "Fotos",
+    "titulo": "Um bocadinho da casa",
+    "fotos": {
+      "peixeGrelhado": "Peixe grelhado",
+      "salaBalcao": "Sala e balcão",
+      "pratoDoDia": "Prato do dia",
+      "esplanada": "Esplanada",
+      "sobremesaDaCasa": "Sobremesa da casa",
+      "vistaSobreOMar": "Vista sobre o mar"
+    }
+  },
+  "localizacao": {
+    "eyebrow": "Localização",
+    "titulo": "Junto ao Parque de Campismo de Angeiras",
+    "abrirMaps": "Abrir no Google Maps"
+  },
+  "horario": {
+    "linhas": [
+      { "dias": "Terça a Domingo", "horas": "09:00 – 22:00" },
+      { "dias": "Segunda-feira", "horas": "Encerrado ao jantar" }
+    ]
+  },
+  "contactos": {
+    "eyebrow": "Contactos",
+    "titulo": "Fale connosco",
+    "horarioLabel": "Horário",
+    "telefoneLabel": "Telefone",
+    "ligarAgora": "Ligar agora"
+  },
+  "footer": {
+    "horarioLabel": "Horário",
+    "contactosLabel": "Contactos",
+    "instagram": "Instagram",
+    "verEmentaPdf": "Ver Ementa (PDF)",
+    "copyright": "© {ano} {nome}"
+  },
+  "ementa": {
+    "eyebrow": "Ementa",
+    "titulo": "A nossa ementa",
+    "voltar": "Voltar ao início",
+    "descarregarPdf": "Descarregar PDF (PT)",
+    "rascunhoAviso": "Ementa de rascunho — pratos e preços por confirmar"
+  },
+  "carregamento": {
+    "aCarregar": "A carregar",
+    "aCarregarPagina": "A carregar página"
+  },
+  "idiomas": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}

@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { restaurante } from "@/data/restaurante";
 import { ImagemPlaceholder } from "@/components/ui/ImagemPlaceholder";
-import { BotaoAncora } from "@/components/ui/Botao";
+import { BotaoLink, BotaoAncora } from "@/components/ui/Botao";
 
 export function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative overflow-hidden pt-16">
       <div className="absolute inset-0 -z-10">
@@ -23,15 +26,15 @@ export function Hero() {
         <h1 className="h-hero font-display text-ink">{restaurante.nome}</h1>
         <p className="mt-3 font-display text-lg italic text-gold-deep">{restaurante.tagline}</p>
         <p className="mt-6 max-w-xl text-balance text-base leading-relaxed text-muted">
-          {restaurante.descricaoCurta}
+          {t("descricao")}
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-          <BotaoAncora href={restaurante.menuPdfUrl} target="_blank" rel="noreferrer" variante="dourado">
-            Ver Ementa
-          </BotaoAncora>
+          <BotaoLink href="/ementa" variante="dourado">
+            {t("verEmenta")}
+          </BotaoLink>
           <BotaoAncora href={restaurante.mapsUrl} target="_blank" rel="noreferrer" variante="contorno">
-            Como Chegar
+            {t("comoChegar")}
           </BotaoAncora>
         </div>
       </div>

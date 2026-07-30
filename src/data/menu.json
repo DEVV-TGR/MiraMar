@@ -1,55 +1,141 @@
 {
   "placeholder": true,
-  "nota": "Ementa de rascunho — pratos e preços por confirmar com o cliente antes de imprimir/publicar.",
+  "nota": {
+    "pt": "Ementa de rascunho — pratos e preços por confirmar com o cliente antes de imprimir/publicar.",
+    "en": "Draft menu — dishes and prices to be confirmed with the client before printing/publishing.",
+    "fr": "Menu provisoire — plats et prix à confirmer avec le client avant impression/publication.",
+    "es": "Carta provisional — platos y precios por confirmar con el cliente antes de imprimir/publicar."
+  },
   "atualizadoEm": "2026-07-30",
   "categorias": [
     {
-      "nome": "Diária do Dia",
-      "descricao": "Sopa + prato + café, todos os dias",
+      "nome": { "pt": "Diária do Dia", "en": "Daily Special", "fr": "Plat du Jour", "es": "Plato del Día" },
+      "descricao": {
+        "pt": "Sopa + prato + café, todos os dias",
+        "en": "Soup + main + coffee, every day",
+        "fr": "Soupe + plat + café, tous les jours",
+        "es": "Sopa + plato + café, todos los días"
+      },
       "pratos": [
-        { "nome": "Diária do dia", "descricao": "Pergunte ao empregado qual é a diária de hoje", "preco": "8,50 €" }
+        {
+          "nome": { "pt": "Diária do dia", "en": "Daily special", "fr": "Plat du jour", "es": "Plato del día" },
+          "descricao": {
+            "pt": "Pergunte ao empregado qual é a diária de hoje",
+            "en": "Ask your server what today's special is",
+            "fr": "Demandez à votre serveur quel est le plat du jour",
+            "es": "Pregunte a su camarero cuál es el plato del día"
+          },
+          "preco": "8,50 €"
+        }
       ]
     },
     {
-      "nome": "Peixe",
+      "nome": { "pt": "Peixe", "en": "Fish", "fr": "Poisson", "es": "Pescado" },
       "pratos": [
-        { "nome": "Bacalhau à Mira Mar", "descricao": "Bacalhau assado, batata a murro e legumes salteados", "preco": "13,00 €" },
-        { "nome": "Dourada grelhada", "descricao": "Dourada fresca grelhada com batata cozida e salada", "preco": "12,50 €" },
-        { "nome": "Sardinha assada", "descricao": "Sazonal, com broa e pimentos assados", "preco": "10,00 €" },
-        { "nome": "Arroz de marisco", "descricao": "Para 2 pessoas", "preco": "26,00 €" }
+        {
+          "nome": { "pt": "Bacalhau à Mira Mar", "en": "Mira Mar–style Salt Cod", "fr": "Morue à la Mira Mar", "es": "Bacalao a la Mira Mar" },
+          "descricao": {
+            "pt": "Bacalhau assado, batata a murro e legumes salteados",
+            "en": "Roasted salt cod, crushed potatoes and sautéed vegetables",
+            "fr": "Morue rôtie, pommes de terre écrasées et légumes sautés",
+            "es": "Bacalao asado, patatas chafadas y verduras salteadas"
+          },
+          "preco": "13,00 €"
+        },
+        {
+          "nome": { "pt": "Dourada grelhada", "en": "Grilled Sea Bream", "fr": "Daurade grillée", "es": "Dorada a la parrilla" },
+          "descricao": {
+            "pt": "Dourada fresca grelhada com batata cozida e salada",
+            "en": "Fresh grilled sea bream with boiled potatoes and salad",
+            "fr": "Daurade fraîche grillée, pommes de terre vapeur et salade",
+            "es": "Dorada fresca a la parrilla con patata cocida y ensalada"
+          },
+          "preco": "12,50 €"
+        },
+        {
+          "nome": { "pt": "Sardinha assada", "en": "Grilled Sardines", "fr": "Sardines grillées", "es": "Sardinas asadas" },
+          "descricao": {
+            "pt": "Sazonal, com broa e pimentos assados",
+            "en": "Seasonal, served with corn bread and roasted peppers",
+            "fr": "De saison, servies avec pain de maïs et poivrons rôtis",
+            "es": "De temporada, con pan de maíz y pimientos asados"
+          },
+          "preco": "10,00 €"
+        },
+        {
+          "nome": { "pt": "Arroz de marisco", "en": "Seafood Rice", "fr": "Riz aux fruits de mer", "es": "Arroz de marisco" },
+          "descricao": { "pt": "Para 2 pessoas", "en": "Serves 2", "fr": "Pour 2 personnes", "es": "Para 2 personas" },
+          "preco": "26,00 €"
+        }
       ]
     },
     {
-      "nome": "Carne",
+      "nome": { "pt": "Carne", "en": "Meat", "fr": "Viande", "es": "Carne" },
       "pratos": [
-        { "nome": "Bife à casa", "descricao": "Bife de vaca com molho da casa, batata frita e ovo a cavalo", "preco": "11,50 €" },
-        { "nome": "Febras de porco grelhadas", "descricao": "Com arroz e salada", "preco": "9,50 €" },
-        { "nome": "Frango do churrasco", "descricao": "Meio frango, com batata frita", "preco": "9,00 €" }
+        {
+          "nome": { "pt": "Bife à casa", "en": "House-style Steak", "fr": "Steak à la maison", "es": "Bistec a la casa" },
+          "descricao": {
+            "pt": "Bife de vaca com molho da casa, batata frita e ovo a cavalo",
+            "en": "Beef steak with house sauce, fries and a fried egg",
+            "fr": "Steak de bœuf sauce maison, frites et œuf au plat",
+            "es": "Bistec de ternera con salsa de la casa, patatas fritas y huevo frito"
+          },
+          "preco": "11,50 €"
+        },
+        {
+          "nome": { "pt": "Febras de porco grelhadas", "en": "Grilled Pork Steaks", "fr": "Escalopes de porc grillées", "es": "Filetes de cerdo a la parrilla" },
+          "descricao": {
+            "pt": "Com arroz e salada",
+            "en": "With rice and salad",
+            "fr": "Avec riz et salade",
+            "es": "Con arroz y ensalada"
+          },
+          "preco": "9,50 €"
+        },
+        {
+          "nome": { "pt": "Frango do churrasco", "en": "Grilled Chicken", "fr": "Poulet grillé", "es": "Pollo a la parrilla" },
+          "descricao": {
+            "pt": "Meio frango, com batata frita",
+            "en": "Half chicken, with fries",
+            "fr": "Demi-poulet, avec frites",
+            "es": "Medio pollo, con patatas fritas"
+          },
+          "preco": "9,00 €"
+        }
       ]
     },
     {
-      "nome": "Acompanhamentos",
+      "nome": { "pt": "Acompanhamentos", "en": "Side Dishes", "fr": "Accompagnements", "es": "Guarniciones" },
       "pratos": [
-        { "nome": "Batata frita", "preco": "3,00 €" },
-        { "nome": "Arroz", "preco": "2,50 €" },
-        { "nome": "Salada mista", "preco": "3,50 €" }
+        { "nome": { "pt": "Batata frita", "en": "Fries", "fr": "Frites", "es": "Patatas fritas" }, "preco": "3,00 €" },
+        { "nome": { "pt": "Arroz", "en": "Rice", "fr": "Riz", "es": "Arroz" }, "preco": "2,50 €" },
+        { "nome": { "pt": "Salada mista", "en": "Mixed Salad", "fr": "Salade mixte", "es": "Ensalada mixta" }, "preco": "3,50 €" }
       ]
     },
     {
-      "nome": "Sobremesas",
+      "nome": { "pt": "Sobremesas", "en": "Desserts", "fr": "Desserts", "es": "Postres" },
       "pratos": [
-        { "nome": "Doce da casa", "descricao": "Pergunte a sugestão do dia", "preco": "3,00 €" },
-        { "nome": "Fruta da época", "preco": "2,00 €" },
-        { "nome": "Gelado", "preco": "2,50 €" }
+        {
+          "nome": { "pt": "Doce da casa", "en": "House Dessert", "fr": "Dessert maison", "es": "Postre de la casa" },
+          "descricao": {
+            "pt": "Pergunte a sugestão do dia",
+            "en": "Ask for today's suggestion",
+            "fr": "Demandez la suggestion du jour",
+            "es": "Pregunte la sugerencia del día"
+          },
+          "preco": "3,00 €"
+        },
+        { "nome": { "pt": "Fruta da época", "en": "Seasonal Fruit", "fr": "Fruits de saison", "es": "Fruta de temporada" }, "preco": "2,00 €" },
+        { "nome": { "pt": "Gelado", "en": "Ice Cream", "fr": "Glace", "es": "Helado" }, "preco": "2,50 €" }
       ]
     },
     {
-      "nome": "Bebidas",
+      "nome": { "pt": "Bebidas", "en": "Drinks", "fr": "Boissons", "es": "Bebidas" },
       "pratos": [
-        { "nome": "Água", "preco": "1,00 €" },
-        { "nome": "Refrigerante", "preco": "2,00 €" },
-        { "nome": "Vinho da casa (copo)", "preco": "2,00 €" },
-        { "nome": "Café", "preco": "1,00 €" }
+        { "nome": { "pt": "Água", "en": "Water", "fr": "Eau", "es": "Agua" }, "preco": "1,00 €" },
+        { "nome": { "pt": "Refrigerante", "en": "Soft Drink", "fr": "Soda", "es": "Refresco" }, "preco": "2,00 €" },
+        { "nome": { "pt": "Vinho da casa (copo)", "en": "House Wine (glass)", "fr": "Vin de la maison (verre)", "es": "Vino de la casa (copa)" }, "preco": "2,00 €" },
+        { "nome": { "pt": "Café", "en": "Coffee", "fr": "Café", "es": "Café" }, "preco": "1,00 €" }
       ]
     }
   ]

@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "title": "{nome} — Restaurant in Angeiras, Matosinhos",
+    "description": "Neighbourhood restaurant in Angeiras, next to the campsite. Daily specials, fresh fish and home cooking, at everyday prices."
+  },
+  "nav": {
+    "sobre": "About",
+    "fotos": "Photos",
+    "localizacao": "Location",
+    "contactos": "Contact",
+    "verEmenta": "View Menu",
+    "abrirMenu": "Open menu",
+    "fecharMenu": "Close menu"
+  },
+  "hero": {
+    "descricao": "Neighbourhood restaurant in Angeiras, next to the campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
+    "verEmenta": "View Menu",
+    "comoChegar": "Get Directions"
+  },
+  "sobre": {
+    "eyebrow": "About us",
+    "titulo": "A neighbourhood table, always full",
+    "paragrafo1": "At Mira Mar we cook every day like at home: plenty of daily specials, fresh fish and good quality meat, at everyday prices. We're right next to the Angeiras campsite, in a simple and welcoming setting where regulars feel at home from day one.",
+    "paragrafo2": "No fuss, no rush — just good food, served with care, every day of the week."
+  },
+  "galeria": {
+    "eyebrow": "Photos",
+    "titulo": "A little taste of home",
+    "fotos": {
+      "peixeGrelhado": "Grilled fish",
+      "salaBalcao": "Dining room & counter",
+      "pratoDoDia": "Dish of the day",
+      "esplanada": "Terrace",
+      "sobremesaDaCasa": "House dessert",
+      "vistaSobreOMar": "Sea view"
+    }
+  },
+  "localizacao": {
+    "eyebrow": "Location",
+    "titulo": "Next to the Angeiras campsite",
+    "abrirMaps": "Open in Google Maps"
+  },
+  "horario": {
+    "linhas": [
+      { "dias": "Tuesday to Sunday", "horas": "09:00 – 22:00" },
+      { "dias": "Monday", "horas": "Closed for dinner" }
+    ]
+  },
+  "contactos": {
+    "eyebrow": "Contact",
+    "titulo": "Get in touch",
+    "horarioLabel": "Opening hours",
+    "telefoneLabel": "Phone",
+    "ligarAgora": "Call now"
+  },
+  "footer": {
+    "horarioLabel": "Opening hours",
+    "contactosLabel": "Contact",
+    "instagram": "Instagram",
+    "verEmentaPdf": "View Menu (PDF)",
+    "copyright": "© {ano} {nome}"
+  },
+  "ementa": {
+    "eyebrow": "Menu",
+    "titulo": "Our menu",
+    "voltar": "Back to home",
+    "descarregarPdf": "Download PDF (PT)",
+    "rascunhoAviso": "Draft menu — dishes and prices to be confirmed"
+  },
+  "carregamento": {
+    "aCarregar": "Loading",
+    "aCarregarPagina": "Loading page"
+  },
+  "idiomas": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}

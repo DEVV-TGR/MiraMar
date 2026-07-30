@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "title": "{nome} — Restaurant à Angeiras, Matosinhos",
+    "description": "Restaurant de quartier à Angeiras, à côté du camping. Plats du jour, poisson frais et cuisine maison, à prix quotidien."
+  },
+  "nav": {
+    "sobre": "À propos",
+    "fotos": "Photos",
+    "localizacao": "Localisation",
+    "contactos": "Contact",
+    "verEmenta": "Voir le Menu",
+    "abrirMenu": "Ouvrir le menu",
+    "fecharMenu": "Fermer le menu"
+  },
+  "hero": {
+    "descricao": "Restaurant de quartier à Angeiras, à côté du camping. Plats du jour, poisson frais et cuisine maison, à prix quotidien.",
+    "verEmenta": "Voir le Menu",
+    "comoChegar": "Itinéraire"
+  },
+  "sobre": {
+    "eyebrow": "À propos de nous",
+    "titulo": "Une table de quartier, toujours pleine",
+    "paragrafo1": "Chez Mira Mar, on cuisine tous les jours comme à la maison : beaucoup de plats du jour, du poisson frais et de la viande de bonne qualité, à prix quotidien. Nous sommes juste à côté du camping d'Angeiras, dans une ambiance simple et chaleureuse où les habitués se sentent chez eux dès le premier jour.",
+    "paragrafo2": "Sans chichis, sans précipitation — juste de la bonne cuisine, servie avec soin, tous les jours de la semaine."
+  },
+  "galeria": {
+    "eyebrow": "Photos",
+    "titulo": "Un petit goût de la maison",
+    "fotos": {
+      "peixeGrelhado": "Poisson grillé",
+      "salaBalcao": "Salle et comptoir",
+      "pratoDoDia": "Plat du jour",
+      "esplanada": "Terrasse",
+      "sobremesaDaCasa": "Dessert maison",
+      "vistaSobreOMar": "Vue sur la mer"
+    }
+  },
+  "localizacao": {
+    "eyebrow": "Localisation",
+    "titulo": "À côté du camping d'Angeiras",
+    "abrirMaps": "Ouvrir dans Google Maps"
+  },
+  "horario": {
+    "linhas": [
+      { "dias": "Mardi à dimanche", "horas": "09:00 – 22:00" },
+      { "dias": "Lundi", "horas": "Fermé le soir" }
+    ]
+  },
+  "contactos": {
+    "eyebrow": "Contact",
+    "titulo": "Contactez-nous",
+    "horarioLabel": "Horaires",
+    "telefoneLabel": "Téléphone",
+    "ligarAgora": "Appeler maintenant"
+  },
+  "footer": {
+    "horarioLabel": "Horaires",
+    "contactosLabel": "Contact",
+    "instagram": "Instagram",
+    "verEmentaPdf": "Voir le Menu (PDF)",
+    "copyright": "© {ano} {nome}"
+  },
+  "ementa": {
+    "eyebrow": "Menu",
+    "titulo": "Notre menu",
+    "voltar": "Retour à l'accueil",
+    "descarregarPdf": "Télécharger le PDF (PT)",
+    "rascunhoAviso": "Menu provisoire — plats et prix à confirmer"
+  },
+  "carregamento": {
+    "aCarregar": "Chargement",
+    "aCarregarPagina": "Chargement de la page"
+  },
+  "idiomas": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}
