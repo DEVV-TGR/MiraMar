@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Preloader } from "@/components/ui/Preloader";
 import { TransicaoRota } from "@/components/ui/TransicaoRota";
+import { SeletorIdioma } from "@/components/ui/SeletorIdioma";
 import { restaurante } from "@/data/restaurante";
 import "../globals.css";
 
@@ -78,6 +79,7 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <SeletorIdioma />
         </NextIntlClientProvider>
       </body>
     </html>

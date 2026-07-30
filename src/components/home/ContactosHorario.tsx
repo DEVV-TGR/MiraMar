@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { BotaoAncora } from "@/components/ui/Botao";
+import { EtiquetaSeccao } from "@/components/ui/EtiquetaSeccao";
 import { restaurante } from "@/data/restaurante";
 
 export function ContactosHorario() {
@@ -12,7 +13,9 @@ export function ContactosHorario() {
     <section className="bg-sea-deep py-24 text-background">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.2em] text-gold">{t("eyebrow")}</p>
+          <EtiquetaSeccao centrado sobreEscuro>
+            {t("eyebrow")}
+          </EtiquetaSeccao>
           <h2 className="h-section mt-3 font-display">{t("titulo")}</h2>
         </Reveal>
 

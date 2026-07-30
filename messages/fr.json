@@ -5,6 +5,7 @@
   },
   "nav": {
     "sobre": "À propos",
+    "ementa": "Menu",
     "fotos": "Photos",
     "localizacao": "Localisation",
     "contactos": "Contact",
@@ -35,6 +36,12 @@
       "vistaSobreOMar": "Vue sur la mer"
     }
   },
+  "ementaDestaque": {
+    "eyebrow": "Menu",
+    "titulo": "Ce qu'on cuisine ici",
+    "descricao": "Poisson frais, viande de qualité et le plat du jour — cuisine maison à prix quotidien.",
+    "verCompleta": "Voir le Menu Complet"
+  },
   "localizacao": {
     "eyebrow": "Localisation",
     "titulo": "À côté du camping d'Angeiras",
@@ -42,8 +49,14 @@
   },
   "horario": {
     "linhas": [
-      { "dias": "Mardi à dimanche", "horas": "09:00 – 22:00" },
-      { "dias": "Lundi", "horas": "Fermé le soir" }
+      {
+        "dias": "Mardi à dimanche",
+        "horas": "09:00 – 22:00"
+      },
+      {
+        "dias": "Lundi",
+        "horas": "Fermé le soir"
+      }
     ]
   },
   "contactos": {

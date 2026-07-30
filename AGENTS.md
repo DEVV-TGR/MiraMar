@@ -15,7 +15,8 @@ Site do **Restaurante Mira Mar** (Angeiras/Lavra, Matosinhos) — projeto real d
 - Morada confirmada: junto ao Parque de Campismo de Angeiras, Rua de Angeiras 1183, 4455-039 Lavra, Matosinhos.
 - **Telefone e horário são PLACEHOLDER** (inventados a pedido do cliente, ver `src/data/restaurante.json` → `_placeholders`) — **confirmar valores reais antes de publicar ou imprimir** qualquer material.
 - **Ementa é um rascunho** (`src/data/menu.json`, `placeholder: true`) — pratos e preços inventados para termos algo completo a mostrar; substituir pelos reais assim que o cliente os fornecer.
-- **Fotos**: ainda não existem fotos reais do espaço/pratos. Por pedido do cliente ("não vamos entregar o trabalho com 0 imagens"), `public/fotos/` tem 8 **fotos de stock temporárias** (Unsplash/Pexels, licença livre para uso comercial, sem necessidade de atribuição) tematicamente parecidas — **não são o espaço real do Mira Mar**, servem só para dar noção do resultado final. `ImagemPlaceholder` (`src/components/ui/ImagemPlaceholder.tsx`) aceita uma prop `src` opcional: com `src` mostra a foto, sem `src` mostra a caixa placeholder (nunca quebra se faltar alguma imagem). **Substituir cada ficheiro em `public/fotos/` pela foto real correspondente assim que existir** — os componentes (`Hero.tsx`, `Sobre.tsx`, `Galeria.tsx`) já apontam para os caminhos certos, não é preciso mexer no código, só trocar os ficheiros mantendo o mesmo nome.
+- **Fotos**: ainda não existem fotos reais do espaço/pratos. Por pedido do cliente ("não vamos entregar o trabalho com 0 imagens"), `public/fotos/` tem **fotos de stock temporárias** (Unsplash/Pexels, licença livre para uso comercial, sem necessidade de atribuição) — **não são o espaço real do Mira Mar**, servem só para dar noção do resultado final. `ImagemPlaceholder` (`src/components/ui/ImagemPlaceholder.tsx`) aceita uma prop `src` opcional: com `src` mostra a foto, sem `src` mostra a caixa placeholder (nunca quebra se faltar alguma imagem). **Substituir cada ficheiro em `public/fotos/` pela foto real correspondente assim que existir** — os componentes (`Hero.tsx`, `Sobre.tsx`, `Galeria.tsx`) já apontam para os caminhos certos, não é preciso mexer no código, só trocar os ficheiros mantendo o mesmo nome. 
+> ⚠️ **`praia-angeiras.jpg` (fundo do Hero) tem um problema de licenciamento por resolver.** Ao contrário das restantes, não veio de stock livre — foi fornecida pelo cliente a partir de uma pesquisa na web, sem licença conhecida. Serve como placeholder para apresentação, mas **não pode ir para produção assim**: ou se licencia, ou (melhor) o cliente tira uma foto própria — a praia é ali ao lado do restaurante.
 
 ## Âmbito do produto
 
@@ -47,6 +48,31 @@ Site do **Restaurante Mira Mar** (Angeiras/Lavra, Matosinhos) — projeto real d
 ### Design visual (decidido)
 
 Paleta extraída do logótipo real (`public/logo/mira-mar-logo.jpg`): fundo creme quente, tinta escura para texto, dourado quente como destaque/CTA, azul-petróleo profundo ("mar") como cor secundária, verde-oliva como acento pontual — tema claro, definido em `src/app/globals.css`. Tipografia: **Fraunces** (serifada quente, `--font-fraunces`) para títulos + Geist Sans para corpo. Animação de scroll subtil (`src/components/ui/Reveal.tsx`, usa `motion`) + preloader/transições de rota (ver acima).
+
+**Header + Hero — referência e lições aprendidas.** A referência acordada com o cliente é [casadaguripa.pt](https://casadaguripa.pt) (restaurante real em Angeiras, ao lado do Mira Mar).
+
+- **Header** (`src/components/layout/Header.tsx`): logo **ao centro**, links divididos aos dois lados (grelha de 3 colunas para o logo ficar mesmo centrado), botão com contorno + seta à direita ("Ver Ementa" — o equivalente ao "Reservar" deles), e **transparente** sobre a foto do hero. Ganha fundo creme + blur ao fazer scroll, para os links continuarem legíveis sobre as secções seguintes (a referência deixa o header desaparecer, mas nós temos o seletor de idioma lá — importante para turistas — por isso mantém-se acessível).
+- **Hero** (`src/components/home/Hero.tsx`): centrado e deliberadamente simples — título, tagline, **um só botão**. Sem logo no corpo (vive no header; repeti-lo punha dois logos iguais no mesmo ecrã). Movimento: zoom lento (Ken Burns) + parallax em scroll (a foto acompanha mais devagar, o texto sobe e desvanece).
+- **Lição**: uma tentativa anterior de "dar vida" acrescentando peças (selo, descrição, dois botões, seta de scroll, entrada em sequência, layout assimétrico) piorou o resultado e foi rejeitada. Aqui "mais vivo" significou **mais simples e confiante** + uma foto genuinamente boa, não mais elementos. Não voltar a encher o Hero sem necessidade clara.
+- **Título sobre a foto**: a foto da praia é muito clara e ocupada, e o texto escuro perdia-se. A solução é a classe `.titulo-destaque` (`globals.css`) — halo creme em camadas via `text-shadow`, mais um véu radial na faixa do texto no `Hero.tsx`. Foi preferida a um contorno duro, que numa serifada fica com ar amador.
+
+### Ritmo de cor das secções
+
+A paleta não muda; o que estava mal era a **distribuição** — eram quatro secções cremes seguidas e só uma cor forte no fim, o que fazia a página parecer lavada. Ordem atual, com duas âncoras escuras espaçadas:
+
+`Hero (foto)` → `Sobre (creme)` → **`EmentaDestaque (azul-escuro)`** → `Galeria (surface)` → `Localização (creme)` → **`Contactos (azul-escuro)`** → `Rodapé (surface)`
+
+O **verde-oliva** da paleta esteve definido sem uso nenhum até aqui; agora é a cor das réguas finas de `EtiquetaSeccao` (`src/components/ui/EtiquetaSeccao.tsx`), o componente que abre todas as secções — nas secções escuras as réguas passam a douradas (`sobreEscuro`), que é o que lê sobre o azul. Usar sempre este componente para os "eyebrows" de secção, em vez de repetir o markup.
+
+### Idiomas: bandeiras
+
+- `src/components/ui/Bandeira.tsx` — as 4 bandeiras em **SVG inline, nunca emoji**: o Windows não tem glifos de bandeira e mostra `🇵🇹` como as letras "PT", o que não serve num site virado a turistas. Inglês usa a bandeira do Reino Unido (convenção europeia).
+- Há um seletor por tamanho de ecrã, **nunca os dois ao mesmo tempo**: no desktop o do `Header.tsx` (dentro do bloco `hidden md:grid`); no telemóvel o flutuante `src/components/ui/SeletorIdioma.tsx` (canto inferior direito, `md:hidden`, montado no layout). O menu móvel do header não tem idiomas de propósito. Ambos preservam a página ao trocar (`/en/ementa` → `/es/ementa`).
+- Uma bandeira não identifica um idioma para quem usa leitor de ecrã: todos os controlos levam `aria-label` + texto `sr-only` com o nome do idioma (chaves `idiomas.*`). Manter isso em qualquer alteração.
+
+### Secção de ementa na homepage
+
+`src/components/home/EmentaDestaque.tsx` lê as categorias diretamente de `src/data/menu.json` — não duplica conteúdo, acompanha sempre a ementa real. Destaca a primeira categoria (a diária) com o preço e liga a `/ementa`.
 
 ## Stack
 

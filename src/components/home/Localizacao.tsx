@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { BotaoAncora } from "@/components/ui/Botao";
+import { EtiquetaSeccao } from "@/components/ui/EtiquetaSeccao";
 import { restaurante } from "@/data/restaurante";
 
 export function Localizacao() {
@@ -9,9 +10,7 @@ export function Localizacao() {
   return (
     <section id="localizacao" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <p className="text-center text-xs uppercase tracking-[0.2em] text-gold-deep">
-          {t("eyebrow")}
-        </p>
+        <EtiquetaSeccao centrado>{t("eyebrow")}</EtiquetaSeccao>
         <h2 className="h-section mt-3 text-center font-display text-ink">{t("titulo")}</h2>
       </Reveal>
 

@@ -5,6 +5,7 @@
   },
   "nav": {
     "sobre": "Sobre",
+    "ementa": "Ementa",
     "fotos": "Fotos",
     "localizacao": "Localização",
     "contactos": "Contactos",
@@ -35,6 +36,12 @@
       "vistaSobreOMar": "Vista sobre o mar"
     }
   },
+  "ementaDestaque": {
+    "eyebrow": "Ementa",
+    "titulo": "O que se come cá em casa",
+    "descricao": "Peixe fresco, carne de boa qualidade e a diária de todos os dias — comida caseira a preços de sempre.",
+    "verCompleta": "Ver Ementa Completa"
+  },
   "localizacao": {
     "eyebrow": "Localização",
     "titulo": "Junto ao Parque de Campismo de Angeiras",
@@ -42,8 +49,14 @@
   },
   "horario": {
     "linhas": [
-      { "dias": "Terça a Domingo", "horas": "09:00 – 22:00" },
-      { "dias": "Segunda-feira", "horas": "Encerrado ao jantar" }
+      {
+        "dias": "Terça a Domingo",
+        "horas": "09:00 – 22:00"
+      },
+      {
+        "dias": "Segunda-feira",
+        "horas": "Encerrado ao jantar"
+      }
     ]
   },
   "contactos": {

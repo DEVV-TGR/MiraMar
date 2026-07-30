@@ -12,7 +12,7 @@ const estilos: Record<Variante, string> = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 px-6 py-3 text-sm tracking-wide transition-colors duration-200 cursor-pointer select-none rounded-full";
+  "inline-flex items-center justify-center gap-2 px-6 py-3 text-sm tracking-wide transition-[color,background-color,border-color,transform] duration-200 cursor-pointer select-none rounded-full hover:scale-[1.03] active:scale-[0.98]";
 
 export function BotaoLink({
   variante = "dourado",

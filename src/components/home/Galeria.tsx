@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { ImagemPlaceholder } from "@/components/ui/ImagemPlaceholder";
+import { EtiquetaSeccao } from "@/components/ui/EtiquetaSeccao";
 
 const fotos = [
   { chave: "peixeGrelhado", icone: "🐟", src: "/fotos/peixe-grelhado.jpg" },
@@ -18,7 +19,7 @@ export function Galeria() {
     <section id="galeria" className="bg-surface py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
-          <p className="text-center text-xs uppercase tracking-[0.2em] text-gold-deep">{t("eyebrow")}</p>
+          <EtiquetaSeccao centrado>{t("eyebrow")}</EtiquetaSeccao>
           <h2 className="h-section mt-3 text-center font-display text-ink">{t("titulo")}</h2>
         </Reveal>
 

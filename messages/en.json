@@ -5,6 +5,7 @@
   },
   "nav": {
     "sobre": "About",
+    "ementa": "Menu",
     "fotos": "Photos",
     "localizacao": "Location",
     "contactos": "Contact",
@@ -35,6 +36,12 @@
       "vistaSobreOMar": "Sea view"
     }
   },
+  "ementaDestaque": {
+    "eyebrow": "Menu",
+    "titulo": "What we cook here",
+    "descricao": "Fresh fish, good quality meat and the daily special — home cooking at everyday prices.",
+    "verCompleta": "See Full Menu"
+  },
   "localizacao": {
     "eyebrow": "Location",
     "titulo": "Next to the Angeiras campsite",
@@ -42,8 +49,14 @@
   },
   "horario": {
     "linhas": [
-      { "dias": "Tuesday to Sunday", "horas": "09:00 – 22:00" },
-      { "dias": "Monday", "horas": "Closed for dinner" }
+      {
+        "dias": "Tuesday to Sunday",
+        "horas": "09:00 – 22:00"
+      },
+      {
+        "dias": "Monday",
+        "horas": "Closed for dinner"
+      }
     ]
   },
   "contactos": {

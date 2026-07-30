@@ -18,6 +18,10 @@
 
   --ink: oklch(0.24 0.018 55);
   --muted: oklch(0.48 0.02 55);
+
+  /* halo creme para separar texto escuro de fotos claras e ocupadas */
+  --halo: oklch(0.97 0.015 85 / 0.9);
+  --halo-suave: oklch(0.97 0.015 85 / 0.65);
 }
 
 @theme inline {
@@ -70,6 +74,16 @@ body {
   letter-spacing: -0.008em;
 }
 
+/* texto escuro sobre foto clara e ocupada: um brilho curto encosta-se às
+   letras e um mais aberto afasta a textura de fundo — separa sem o ar
+   "colado por cima" de um contorno duro */
+.titulo-destaque {
+  text-shadow:
+    0 0 6px var(--halo),
+    0 0 22px var(--halo),
+    0 0 60px var(--halo-suave);
+}
+
 /* linha fina dourada, assinatura visual da marca */
 .hairline {
   height: 1px;
@@ -81,6 +95,20 @@ body {
     var(--gold-deep) 80%,
     transparent
   );
+}
+
+/* zoom lento e único (sem loop) na foto do hero — dá sensação de vida
+   sem o "salto" de um loop a recomeçar */
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+.kenburns {
+  animation: kenburns 22s ease-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

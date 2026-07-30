@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { ImagemPlaceholder } from "@/components/ui/ImagemPlaceholder";
+import { EtiquetaSeccao } from "@/components/ui/EtiquetaSeccao";
 
 export function Sobre() {
   const t = useTranslations("sobre");
@@ -17,7 +18,7 @@ export function Sobre() {
           />
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="text-xs uppercase tracking-[0.2em] text-gold-deep">{t("eyebrow")}</p>
+          <EtiquetaSeccao>{t("eyebrow")}</EtiquetaSeccao>
           <h2 className="h-section mt-3 font-display text-ink">{t("titulo")}</h2>
           <p className="mt-5 text-base leading-relaxed text-muted">{t("paragrafo1")}</p>
           <p className="mt-4 text-base leading-relaxed text-muted">{t("paragrafo2")}</p>
