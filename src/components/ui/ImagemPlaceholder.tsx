@@ -1,16 +1,38 @@
+import Image from "next/image";
+
 /**
- * Slot de imagem placeholder — usar até termos fotos reais do espaço/pratos.
- * `slot` identifica onde a foto real deve entrar (ver README/AGENTS.md).
+ * Slot de imagem — se `src` for passado, mostra a foto (por agora, fotos de
+ * stock temporárias, ver AGENTS.md); caso contrário mostra uma caixa
+ * placeholder com o nome do slot, para nunca ficar quebrado.
  */
 export function ImagemPlaceholder({
   slot,
   className = "",
   icone = "🐟",
+  src,
+  prioridade = false,
 }: {
   slot: string;
   className?: string;
   icone?: string;
+  src?: string;
+  prioridade?: boolean;
 }) {
+  if (src) {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <Image
+          src={src}
+          alt={slot}
+          fill
+          priority={prioridade}
+          sizes="(max-width: 640px) 50vw, 33vw"
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       role="img"

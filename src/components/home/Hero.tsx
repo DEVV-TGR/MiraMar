@@ -10,7 +10,17 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden pt-16">
       <div className="absolute inset-0 -z-10">
-        <ImagemPlaceholder slot="Fachada do Mira Mar" icone="🌅" className="h-full w-full" />
+        {/* fotos de stock (temporárias) não têm uma fachada de restaurante sem
+            texto/sinalética a atrapalhar — usa-se a vista do mar como fundo,
+            condiz com o nome "Mira Mar" e não corre o risco de mostrar
+            texto/logotipo de outro estabelecimento */}
+        <ImagemPlaceholder
+          slot="Fachada do Mira Mar"
+          icone="🌅"
+          src="/fotos/vista-mar.jpg"
+          prioridade
+          className="h-full w-full"
+        />
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-background/70 to-background/10" />
 

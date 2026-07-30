@@ -12,6 +12,7 @@ export function Sobre() {
           <ImagemPlaceholder
             slot="Sala do restaurante"
             icone="🍽️"
+            src="/fotos/sala-restaurante.jpg"
             className="aspect-[4/3] w-full rounded-2xl"
           />
         </Reveal>

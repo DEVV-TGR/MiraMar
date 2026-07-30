@@ -3,12 +3,12 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ImagemPlaceholder } from "@/components/ui/ImagemPlaceholder";
 
 const fotos = [
-  { chave: "peixeGrelhado", icone: "🐟" },
-  { chave: "salaBalcao", icone: "🍽️" },
-  { chave: "pratoDoDia", icone: "🍲" },
-  { chave: "esplanada", icone: "☀️" },
-  { chave: "sobremesaDaCasa", icone: "🍮" },
-  { chave: "vistaSobreOMar", icone: "🌊" },
+  { chave: "peixeGrelhado", icone: "🐟", src: "/fotos/peixe-grelhado.jpg" },
+  { chave: "salaBalcao", icone: "🍽️", src: "/fotos/sala-balcao.jpg" },
+  { chave: "pratoDoDia", icone: "🍲", src: "/fotos/prato-do-dia.jpg" },
+  { chave: "esplanada", icone: "☀️", src: "/fotos/esplanada.jpg" },
+  { chave: "sobremesaDaCasa", icone: "🍮", src: "/fotos/sobremesa-casa.jpg" },
+  { chave: "vistaSobreOMar", icone: "🌊", src: "/fotos/vista-mar.jpg" },
 ] as const;
 
 export function Galeria() {
@@ -28,6 +28,7 @@ export function Galeria() {
               <ImagemPlaceholder
                 slot={t(`fotos.${foto.chave}`)}
                 icone={foto.icone}
+                src={foto.src}
                 className="aspect-square rounded-xl"
               />
             </Reveal>
