@@ -1,0 +1,26 @@
+{
+  "nome": "Mira Mar",
+  "tagline": "Sabores. Mar. Momentos.",
+  "descricaoCurta": "Restaurante de bairro em Angeiras, junto ao Parque de Campismo. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias.",
+
+  "morada": "Rua de Angeiras 1183",
+  "localidade": "4455-039 Lavra, Matosinhos",
+  "moradaCompleta": "Junto ao Parque de Campismo de Angeiras",
+
+  "telefone": "912 345 678",
+  "telefoneNota": "Chamada para a rede móvel nacional",
+
+  "horarios": [
+    { "dias": "Terça a Domingo", "horas": "09:00 – 22:00" },
+    { "dias": "Segunda-feira", "horas": "Encerrado ao jantar" }
+  ],
+
+  "instagram": "https://www.instagram.com/restaurantemiramar26/",
+  "mapsQuery": "Restaurante Mira Mar, Rua de Angeiras 1183, 4455-039 Lavra",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Rua+de+Angeiras+1183+4455-039+Lavra",
+
+  "menuPdfUrl": "/mira-mar-menu.pdf",
+
+  "_placeholders": ["telefone", "telefoneNota", "horarios"],
+  "_nota": "Campos em _placeholders são inventados a pedido do cliente — confirmar valores reais antes de publicar/imprimir."
+}

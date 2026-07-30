@@ -1,9 +1,97 @@
 @import "tailwindcss";
 
+:root {
+  /* paleta extraída do logótipo: creme quente, dourado, azul-petróleo (mar), verde-oliva */
+  --background: oklch(0.97 0.015 85);
+  --surface: oklch(0.945 0.018 80);
+  --raised: oklch(1 0 0);
+  --line: oklch(0.87 0.017 78);
+
+  --gold: oklch(0.72 0.12 72);
+  --gold-bright: oklch(0.8 0.12 76);
+  --gold-deep: oklch(0.56 0.11 68);
+
+  --sea: oklch(0.36 0.06 231);
+  --sea-deep: oklch(0.26 0.05 235);
+
+  --olive: oklch(0.46 0.07 132);
+
+  --ink: oklch(0.24 0.018 55);
+  --muted: oklch(0.48 0.02 55);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-deep: var(--gold-deep);
+  --color-sea: var(--sea);
+  --color-sea-deep: var(--sea-deep);
+  --color-olive: var(--olive);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--sea-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--sea);
+  outline-offset: 2px;
+}
+
+.h-hero {
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+.h-section {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.008em;
+}
+
+/* linha fina dourada, assinatura visual da marca */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-deep) 20%,
+    var(--gold) 50%,
+    var(--gold-deep) 80%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,0 +1,56 @@
+{
+  "placeholder": true,
+  "nota": "Ementa de rascunho — pratos e preços por confirmar com o cliente antes de imprimir/publicar.",
+  "atualizadoEm": "2026-07-30",
+  "categorias": [
+    {
+      "nome": "Diária do Dia",
+      "descricao": "Sopa + prato + café, todos os dias",
+      "pratos": [
+        { "nome": "Diária do dia", "descricao": "Pergunte ao empregado qual é a diária de hoje", "preco": "8,50 €" }
+      ]
+    },
+    {
+      "nome": "Peixe",
+      "pratos": [
+        { "nome": "Bacalhau à Mira Mar", "descricao": "Bacalhau assado, batata a murro e legumes salteados", "preco": "13,00 €" },
+        { "nome": "Dourada grelhada", "descricao": "Dourada fresca grelhada com batata cozida e salada", "preco": "12,50 €" },
+        { "nome": "Sardinha assada", "descricao": "Sazonal, com broa e pimentos assados", "preco": "10,00 €" },
+        { "nome": "Arroz de marisco", "descricao": "Para 2 pessoas", "preco": "26,00 €" }
+      ]
+    },
+    {
+      "nome": "Carne",
+      "pratos": [
+        { "nome": "Bife à casa", "descricao": "Bife de vaca com molho da casa, batata frita e ovo a cavalo", "preco": "11,50 €" },
+        { "nome": "Febras de porco grelhadas", "descricao": "Com arroz e salada", "preco": "9,50 €" },
+        { "nome": "Frango do churrasco", "descricao": "Meio frango, com batata frita", "preco": "9,00 €" }
+      ]
+    },
+    {
+      "nome": "Acompanhamentos",
+      "pratos": [
+        { "nome": "Batata frita", "preco": "3,00 €" },
+        { "nome": "Arroz", "preco": "2,50 €" },
+        { "nome": "Salada mista", "preco": "3,50 €" }
+      ]
+    },
+    {
+      "nome": "Sobremesas",
+      "pratos": [
+        { "nome": "Doce da casa", "descricao": "Pergunte a sugestão do dia", "preco": "3,00 €" },
+        { "nome": "Fruta da época", "preco": "2,00 €" },
+        { "nome": "Gelado", "preco": "2,50 €" }
+      ]
+    },
+    {
+      "nome": "Bebidas",
+      "pratos": [
+        { "nome": "Água", "preco": "1,00 €" },
+        { "nome": "Refrigerante", "preco": "2,00 €" },
+        { "nome": "Vinho da casa (copo)", "preco": "2,00 €" },
+        { "nome": "Café", "preco": "1,00 €" }
+      ]
+    }
+  ]
+}

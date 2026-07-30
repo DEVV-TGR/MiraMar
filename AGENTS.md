@@ -12,19 +12,25 @@ Site do **Restaurante Mira Mar** (Angeiras/Lavra, Matosinhos) — projeto real d
 
 - O restaurante está a fazer **rebrand**: chamava-se "Mira Parque" / "Miraparque" e passa a chamar-se **Mira Mar**, com novo logótipo (`public/logo/mira-mar-logo.jpg`) e novo Instagram: [@restaurantemiramar26](https://www.instagram.com/restaurantemiramar26/).
 - É um **restaurante de bairro, simples e económico** — muitas diárias, comida caseira, peixe fresco e carne. **Não é fine dining.** O design deve refletir isto: acolhedor e direto, não "premium"/luxuoso.
-- Dados herdados da ficha antiga do mesmo espaço físico (**a confirmar com o cliente antes de publicar**, o rebrand pode ter mudado algo):
-  - Morada: Rua de Angeiras 1183, 4455-039 Lavra, Matosinhos (em frente ao Parque de Campismo de Angeiras)
-  - Telefones: 919 037 743 e 229 286 518
-  - Encerra à 2ª feira ao jantar
+- Morada confirmada: junto ao Parque de Campismo de Angeiras, Rua de Angeiras 1183, 4455-039 Lavra, Matosinhos.
+- **Telefone e horário são PLACEHOLDER** (inventados a pedido do cliente, ver `src/data/restaurante.json` → `_placeholders`) — **confirmar valores reais antes de publicar ou imprimir** qualquer material.
+- **Ementa é um rascunho** (`src/data/menu.json`, `placeholder: true`) — pratos e preços inventados para termos algo completo a mostrar; substituir pelos reais assim que o cliente os fornecer.
+- **Fotos**: ainda não existem fotos reais do espaço/pratos. Em vez de fotos de stock (enganoso), a landing page usa slots de placeholder visuais (`ImagemPlaceholder`, `src/components/ui/ImagemPlaceholder.tsx`) com nome do slot indicado — trocar por `<Image>` real quando houver fotos, mantendo os mesmos `slot` como referência do que fotografar.
 
 ## Âmbito do produto
 
-Duas peças, propositadamente simples:
+Duas peças, já implementadas nesta fase:
 
-1. **Landing page** — site institucional simples: quem somos, localização (mapa), contactos, horário. Sem catálogo, sem funcionalidades complexas.
-2. **Ementa digital** — QR code nas mesas do restaurante que abre diretamente a ementa em PDF (sem necessidade de navegar o site).
+1. **Landing page** (`/`) — página única com secções: Hero, Sobre, Galeria (placeholder), Localização (mapa embutido do Google Maps), Contactos & Horário. Sem catálogo, sem funcionalidades complexas.
+2. **Ementa digital** — `src/data/menu.json` (dados) → `npm run menu:pdf` gera `public/mira-mar-menu.pdf` via `@react-pdf/renderer` (`scripts/generate-menu-pdf.mjs`) → `npm run menu:qr` gera `public/qr/mira-mar-menu-qr.png` via `qrcode` (`scripts/generate-qr.mjs`), apontando para o PDF. QR code e botão "Ver Ementa" do site apontam para o mesmo ficheiro PDF.
 
-Nenhuma destas peças está implementada ainda — o design visual, a paleta de cores e a estrutura de páginas ainda **não foram decididos**. Este documento será atualizado assim que essa fase arrancar.
+**Atualizar a ementa no futuro**: editar `src/data/menu.json` → correr `npm run menu:pdf`. Simples, sem precisar de recriar o PDF à mão.
+
+**Antes de imprimir os QR codes definitivos**: atualizar `MENU_URL` em `scripts/generate-qr.mjs` para o domínio final (atualmente aponta para um subdomínio Vercel placeholder) e recorrer `npm run menu:qr`.
+
+### Design visual (decidido)
+
+Paleta extraída do logótipo real (`public/logo/mira-mar-logo.jpg`): fundo creme quente, tinta escura para texto, dourado quente como destaque/CTA, azul-petróleo profundo ("mar") como cor secundária, verde-oliva como acento pontual — tema claro, definido em `src/app/globals.css`. Tipografia: **Fraunces** (serifada quente, `--font-fraunces`) para títulos + Geist Sans para corpo. Sem preloader nem transições de rota — site de uma página, animação limitada a reveal subtil em scroll (`src/components/ui/Reveal.tsx`, usa `motion`).
 
 ## Stack
 
