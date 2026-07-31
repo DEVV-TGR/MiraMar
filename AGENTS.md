@@ -12,8 +12,9 @@ Site do **Restaurante Mira Mar** (Angeiras/Lavra, Matosinhos) — projeto real d
 
 - O restaurante está a fazer **rebrand**: chamava-se "Mira Parque" / "Miraparque" e passa a chamar-se **Mira Mar**, com novo logótipo (`public/logo/mira-mar-logo.jpg`) e novo Instagram: [@restaurantemiramar26](https://www.instagram.com/restaurantemiramar26/).
 - É um **restaurante de bairro, simples e económico** — muitas diárias, comida caseira, peixe fresco e carne. **Não é fine dining.** O design deve refletir isto: acolhedor e direto, não "premium"/luxuoso.
-- Morada confirmada: junto ao Parque de Campismo de Angeiras, Rua de Angeiras 1183, 4455-039 Lavra, Matosinhos.
-- **Telefone e horário são PLACEHOLDER** (inventados a pedido do cliente, ver `src/data/restaurante.json` → `_placeholders`) — **confirmar valores reais antes de publicar ou imprimir** qualquer material.
+- **O restaurante fica *dentro* do Parque de Campismo Orbitur Angeiras** — não ao lado. R. Angeiras 821, 4455-039 Lavra, Matosinhos. Isto não é um detalhe de morada: é o argumento comercial. Para quem está a acampar, "o restaurante é aqui" não é a mesma coisa que "há um restaurante ali perto" — o copy das quatro línguas diz "dentro/inside/au sein/dentro" de propósito.
+- **Morada, telefone e horário confirmados com o cliente em 2026-07-31** e já no `src/data/restaurante.json`: telefone fixo `22 928 6518`, aberto **todos os dias das 08:00 às 23:00** (sete dias iguais, por isso o horário é uma só linha em `messages/*.json` → `horario.linhas`). Já não há campos inventados neste ficheiro — o `_placeholders`/`_nota` foi removido.
+- **`mapsQuery`/`mapsUrl` apontam para "Restaurante Mira Mar, R. Angeiras 821, 4455-039 Lavra"** — o restaurante já está registado no Google Maps com o nome novo (confirmado pelo cliente), por isso a pesquisa resolve para a ficha dele e não só para a morada. Se algum dia o mapa embutido aparecer vazio, é sinal de que a ficha mudou de nome: confirmar no Google Maps antes de mexer aqui.
 - **Ementa é um rascunho** (`src/data/menu.json`, `placeholder: true`) — pratos e preços inventados para termos algo completo a mostrar; substituir pelos reais assim que o cliente os fornecer.
 - **Fotos**: ainda não existem fotos reais do espaço/pratos. Por pedido do cliente ("não vamos entregar o trabalho com 0 imagens"), `public/fotos/` tem **fotos de stock temporárias** (Unsplash/Pexels, licença livre para uso comercial, sem necessidade de atribuição) — **não são o espaço real do Mira Mar**, servem só para dar noção do resultado final. `ImagemPlaceholder` (`src/components/ui/ImagemPlaceholder.tsx`) aceita uma prop `src` opcional: com `src` mostra a foto, sem `src` mostra a caixa placeholder (nunca quebra se faltar alguma imagem). **Substituir cada ficheiro em `public/fotos/` pela foto real correspondente assim que existir** — os componentes (`Hero.tsx`, `Sobre.tsx`, `Galeria.tsx`) já apontam para os caminhos certos, não é preciso mexer no código, só trocar os ficheiros mantendo o mesmo nome. 
 > ⚠️ **`praia-angeiras.jpg` (fundo do Hero) tem um problema de licenciamento por resolver.** Ao contrário das restantes, não veio de stock livre — foi fornecida pelo cliente a partir de uma pesquisa na web, sem licença conhecida. Serve como placeholder para apresentação, mas **não pode ir para produção assim**: ou se licencia, ou (melhor) o cliente tira uma foto própria — a praia é ali ao lado do restaurante.
@@ -22,22 +23,37 @@ Site do **Restaurante Mira Mar** (Angeiras/Lavra, Matosinhos) — projeto real d
 
 - **Landing page** (`/{locale}`) — página única com secções: Hero, Sobre, Galeria (placeholder), Localização (mapa embutido do Google Maps), Contactos & Horário.
 - **Ementa digital** — página real do site (`/{locale}/ementa`), traduzida nas 4 línguas, com botão "Descarregar PDF" (só português, ver abaixo). QR code das mesas e o CTA "Ver Ementa" do site apontam para esta página.
-- **Multi-idioma** (PT/EN/FR/ES) — motivado por estar junto a um parque de campismo com muitos turistas. Ver secção própria abaixo.
+- **Multi-idioma** (PT/EN/FR/ES) — motivado por o restaurante estar dentro de um parque de campismo cheio de turistas estrangeiros. Ver secção própria abaixo.
 - **Logótipo no carregamento/transições** — dá "vida" ao site, pedido explicitamente para o mesmo motivo (site visitado por muitos visitantes de fora, primeira impressão importa).
 
 ### Multi-idioma (`next-intl`)
 
 - Locales: `pt` (default, sem prefixo no URL — `/`, `/ementa`), `en`, `fr`, `es` (`/en`, `/fr`, `/es`, `/en/ementa`...). Configurado em `src/i18n/routing.ts`.
-- `src/middleware.ts` deteta o idioma do browser automaticamente na primeira visita (`Accept-Language`); um seletor no `Header` permite trocar a qualquer momento (fica guardado em cookie). **Não há ecrã de escolha bloqueante** — decisão do cliente, para não gerar fricção com turistas.
+- `src/proxy.ts` (o Next 16 renomeou `middleware.ts` → `proxy.ts`) deteta o idioma do browser automaticamente na primeira visita (`Accept-Language`); um seletor no `Header` permite trocar a qualquer momento (fica guardado em cookie). **Não há ecrã de escolha bloqueante** — decisão do cliente, para não gerar fricção com turistas.
 - Todo o copy da UI está em `messages/{pt,en,fr,es}.json`, usado via `useTranslations()` nos componentes. **As traduções EN/FR/ES foram feitas por mim (Claude)** — boas o suficiente para mostrar ao cliente, mas tal como o resto do conteúdo placeholder, vale a pena um nativo rever antes de publicar a sério.
 - A ementa (`src/data/menu.json`) segue o mesmo princípio: cada `nome`/`descricao` é um objeto `{ pt, en, fr, es }`; `preco` é universal (€, não convertido por idioma).
 - Ao adicionar novo copy: criar a chave nas 4 mensagens, nunca só em português — o build não falha se faltar uma chave nalgum idioma, mas o texto aparece a menos noutras línguas.
 
 ### Ementa: página do site + PDF opcional
 
-- `src/data/menu.json` → página `/{locale}/ementa` (fonte principal, traduzida). Editar aqui para atualizar pratos/preços — não precisa de mais nada.
+- `src/data/menu.json` → página `/{locale}/ementa` (fonte principal, traduzida). Editar aqui para atualizar pratos/preços — não precisa de mais nada. **Exceção: a diária.** Essa é editada pelo restaurante em `/admin` e substitui os pratos da primeira categoria em tempo de execução (ver secção própria abaixo); o que está no `menu.json` é só o texto genérico de reserva.
 - `npm run menu:pdf` gera `public/mira-mar-menu.pdf` via `@react-pdf/renderer` (`scripts/generate-menu-pdf.mjs`) — **só em português** (decisão do cliente: manter o PDF como download opcional, não vale a pena gerar 4 PDFs traduzidos). O script lê os campos `.pt` do `menu.json`.
 - `npm run menu:qr` gera `public/qr/mira-mar-menu-qr.png` via `qrcode` (`scripts/generate-qr.mjs`), a apontar para a página `/ementa` (não para o PDF). **Antes de imprimir os QR codes definitivos**: atualizar `MENU_URL` no script para o domínio final (atualmente placeholder Vercel).
+
+### Diárias editáveis pelo cliente (`/admin`)
+
+O restaurante muda as diárias todos os dias e não pode depender de nós para isso. `/admin` é a página onde os funcionários as escrevem — pensada para telemóvel, que é o que têm na mão na cozinha.
+
+- **Fluxo**: `/admin/entrar` (palavra-passe) → `/admin` (editor) → grava → o site atualiza-se sozinho. `src/lib/menu.ts` (`obterMenu()`) junta as diárias gravadas ao `menu.json`, substituindo os pratos da **primeira categoria**. Todos os consumidores passam por aí, por isso o contrato "categorias[0] é a diária" continua a valer.
+- **Expiram ao fim do dia** (`src/lib/data-lisboa.ts`, fuso `Europe/Lisbon`): se as diárias guardadas não forem de hoje, o site volta ao texto genérico "pergunte ao empregado". Os funcionários esquecem-se de apagar, e mostrar o peixe de ontem é pior do que não mostrar nada. Cuidado ao mexer nisto: a Vercel corre em UTC.
+- **Armazenamento** (`src/lib/diarias-store.ts`): Vercel Blob em produção (o sistema de ficheiros é só-leitura lá), ficheiro `.data/diarias.json` em desenvolvimento. O driver é escolhido pela presença de `BLOB_READ_WRITE_TOKEN` — em dev não é preciso configurar nada. Trocar de fornecedor é mexer só neste ficheiro.
+- **Revalidação**: a leitura está em `unstable_cache` com a tag `diarias`; a server action chama **`updateTag("diarias")`**. Não trocar por `revalidateTag(tag, "max")` — testámos e esse tem semântica stale-while-revalidate: quem grava e vai logo ver o site ainda apanha a versão antiga na primeira visita. As páginas públicas têm `revalidate = 300` como rede de segurança para a viragem do dia.
+- **Tradução automática** (`src/lib/traduzir.ts`): ao gravar, os pratos novos (ou cujo português mudou) são traduzidos para EN/FR/ES. Duas fontes, por esta ordem: (1) `src/lib/dicionario-pratos.ts`, uma lista curada à mão dos pratos portugueses que qualquer tradutor automático estraga — "arroz de cabidela", "iscas com elas", "carapau" (que sai "mackerel", que é cavala); (2) **DeepL** para o resto, incluindo as descrições, que são texto corrido. **Nunca bloqueia a gravação**: se a API falhar ou faltar a chave, os nomes que estão no dicionário aparecem traduzidos à mesma (não precisam de rede), o resto fica em português, avisa no ecrã e o funcionário escreve à mão. Uma tradução corrigida à mão fica marcada como boa e não é sobrescrita na gravação seguinte.
+- **Porquê DeepL e não um modelo de linguagem**: um modelo traduz melhor os nomes de pratos, mas custa ~1 €/mês e obriga a carregar saldo. **O restaurante não pode ter despesa recorrente** — nem uma fatura pequena, nem um cartão numa conta que expira daqui a dois anos e faz as traduções deixarem de funcionar em silêncio. O plano gratuito do DeepL **bloqueia com erro quando a quota acaba, não passa a cobrar**; é essa garantia que interessa, mais do que ser barato. Ao volume deste site (3 pratos × 3 línguas, uma ou duas gravações por dia) fica-se abaixo de 10% da quota gratuita, e os pratos que estão no dicionário nem chegam a gastar quota. O dicionário é o que compensa a diferença de qualidade — **quando aparecer um prato mal traduzido, a correção é acrescentar uma entrada lá, não trocar de serviço.**
+- **Autenticação** (`src/lib/auth.ts`): uma palavra-passe partilhada (`ADMIN_PASSWORD`) e um cookie assinado com HMAC-SHA256 (`ADMIN_SESSION_SECRET`), 30 dias. É deliberadamente modesto — protege contra alterações acidentais e curiosos, **não** contra um atacante determinado; não há limite de tentativas por IP (em serverless não há contagem fiável em memória), só comparação em tempo constante e um atraso fixo. Se um dia isto crescer, o passo seguinte são contas individuais com hash.
+- **Onde se verifica a sessão**: na `page.tsx` e **dentro de cada server action**. Nunca no `layout.tsx` (não re-renderiza em navegações do lado do cliente) e nunca só no `proxy.ts` — as server actions são POSTs alcançáveis diretamente, e `/admin` está de propósito **fora** do matcher do `proxy.ts` (senão o next-intl reescrevia para `/pt/admin` e dava 404).
+- **Variáveis de ambiente**: ver `.env.example`. Os ficheiros `.env` são lidos da raiz do projeto, nunca de `src/`.
+- O **PDF continua estático e em português** — as diárias são por natureza dinâmicas e não fazem sentido num ficheiro descarregado.
 
 ### Logótipo no carregamento e transições
 
@@ -72,13 +88,16 @@ O **verde-oliva** da paleta esteve definido sem uso nenhum até aqui; agora é a
 
 ### Secção de ementa na homepage
 
-`src/components/home/EmentaDestaque.tsx` lê as categorias diretamente de `src/data/menu.json` — não duplica conteúdo, acompanha sempre a ementa real. Destaca a primeira categoria (a diária) com o preço e liga a `/ementa`.
+`src/components/home/EmentaDestaque.tsx` recebe a ementa já resolvida por `obterMenu()` (prop `menu`) — não duplica conteúdo, acompanha sempre a ementa real, incluindo as diárias do dia. Destaca a primeira categoria (a diária) com os preços e liga a `/ementa`.
 
 ## Stack
 
 - Next.js 16 (App Router, `src/app/[locale]/...`) + React 19 + TypeScript
 - Tailwind CSS v4
-- `next-intl` — i18n (routing, middleware, mensagens em `messages/`)
+- `next-intl` — i18n (routing, proxy, mensagens em `messages/`)
+- `@vercel/blob` — armazenamento das diárias em produção
+- DeepL (plano gratuito, via `fetch` — sem SDK) — tradução automática das diárias
+- `zod` — validação de formulários, do que vem do armazenamento e das respostas do DeepL
 - npm
 
 ## Skills

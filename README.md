@@ -14,10 +14,22 @@ Site do Restaurante Mira Mar (Angeiras/Lavra, Matosinhos): landing page instituc
 
 ```bash
 npm install
+cp .env.example .env.local   # preencher ADMIN_PASSWORD e ADMIN_SESSION_SECRET
 npm run dev
 ```
 
 Abrir [http://localhost:3000](http://localhost:3000).
+
+A área onde o restaurante escreve as diárias do dia está em
+[http://localhost:3000/admin](http://localhost:3000/admin). Em desenvolvimento as
+diárias são guardadas em `.data/diarias.json` (não versionado) — não é preciso
+configurar armazenamento nem chave de tradução para trabalhar no site.
+
+A tradução das diárias para EN/FR/ES usa o **plano gratuito do DeepL**
+(`DEEPL_API_KEY`), escolhido para o restaurante não ficar com despesa recorrente:
+quando a quota acaba, bloqueia com erro em vez de cobrar. Os pratos portugueses
+que a tradução automática estraga estão curados à mão em
+`src/lib/dicionario-pratos.ts` — é aí que se acrescenta um prato mal traduzido.
 
 Outros comandos:
 
@@ -25,3 +37,4 @@ Outros comandos:
 npm run build   # build de produção
 npm run lint    # eslint
 ```
+                

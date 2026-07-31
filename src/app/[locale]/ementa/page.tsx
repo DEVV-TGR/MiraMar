@@ -3,10 +3,12 @@ import { setRequestLocale } from "next-intl/server";
 import { Reveal } from "@/components/ui/Reveal";
 import { BotaoLink, BotaoAncora } from "@/components/ui/Botao";
 import { restaurante } from "@/data/restaurante";
-import menuData from "@/data/menu.json";
+import { obterMenu } from "@/lib/menu";
 import type { Menu } from "@/lib/menu-types";
 
-const menu = menuData as Menu;
+/* Ver a nota em `src/app/[locale]/page.tsx`: a diária vem do /admin e muda
+   todos os dias, por isso a página revalida em vez de ser fixa no build. */
+export const revalidate = 300;
 
 export default async function EmentaPage({
   params,
@@ -16,10 +18,12 @@ export default async function EmentaPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <EmentaConteudo />;
+  const menu = await obterMenu();
+
+  return <EmentaConteudo menu={menu} />;
 }
 
-function EmentaConteudo() {
+function EmentaConteudo({ menu }: { menu: Menu }) {
   const t = useTranslations("ementa");
   const locale = useLocale() as keyof Menu["nota"];
 
@@ -46,8 +50,10 @@ function EmentaConteudo() {
               <p className="mt-1 text-sm italic text-muted">{categoria.descricao[locale]}</p>
             )}
             <ul className="mt-4 divide-y divide-line">
-              {categoria.pratos.map((prato) => (
-                <li key={prato.nome.pt} className="flex items-start justify-between gap-4 py-3">
+              {/* chave pelo índice: os pratos da diária vêm do /admin e podem
+                  repetir o nome */}
+              {categoria.pratos.map((prato, j) => (
+                <li key={j} className="flex items-start justify-between gap-4 py-3">
                   <div>
                     <p className="font-medium text-ink">{prato.nome[locale]}</p>
                     {prato.descricao && (
