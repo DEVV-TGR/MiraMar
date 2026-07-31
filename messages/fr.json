@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "{nome} — Restaurant à Angeiras, Matosinhos",
-    "description": "Restaurant de quartier à Angeiras, à côté du camping. Plats du jour, poisson frais et cuisine maison, à prix quotidien."
+    "description": "Restaurant de quartier au sein du camping d'Angeiras. Plats du jour, poisson frais et cuisine maison, à prix quotidien."
   },
   "nav": {
     "sobre": "À propos",
@@ -14,14 +14,14 @@
     "fecharMenu": "Fermer le menu"
   },
   "hero": {
-    "descricao": "Restaurant de quartier à Angeiras, à côté du camping. Plats du jour, poisson frais et cuisine maison, à prix quotidien.",
+    "descricao": "Restaurant de quartier au sein du camping d'Angeiras. Plats du jour, poisson frais et cuisine maison, à prix quotidien.",
     "verEmenta": "Voir le Menu",
     "comoChegar": "Itinéraire"
   },
   "sobre": {
     "eyebrow": "À propos de nous",
     "titulo": "Une table de quartier, toujours pleine",
-    "paragrafo1": "Chez Mira Mar, on cuisine tous les jours comme à la maison : beaucoup de plats du jour, du poisson frais et de la viande de bonne qualité, à prix quotidien. Nous sommes juste à côté du camping d'Angeiras, dans une ambiance simple et chaleureuse où les habitués se sentent chez eux dès le premier jour.",
+    "paragrafo1": "Chez Mira Mar, on cuisine tous les jours comme à la maison : beaucoup de plats du jour, du poisson frais et de la viande de bonne qualité, à prix quotidien. Nous sommes au sein du camping d'Angeiras, dans une ambiance simple et chaleureuse où les habitués se sentent chez eux dès le premier jour.",
     "paragrafo2": "Sans chichis, sans précipitation — juste de la bonne cuisine, servie avec soin, tous les jours de la semaine."
   },
   "galeria": {
@@ -44,18 +44,14 @@
   },
   "localizacao": {
     "eyebrow": "Localisation",
-    "titulo": "À côté du camping d'Angeiras",
+    "titulo": "Au camping d'Angeiras",
     "abrirMaps": "Ouvrir dans Google Maps"
   },
   "horario": {
     "linhas": [
       {
-        "dias": "Mardi à dimanche",
-        "horas": "09:00 – 22:00"
-      },
-      {
-        "dias": "Lundi",
-        "horas": "Fermé le soir"
+        "dias": "Tous les jours",
+        "horas": "08:00 – 23:00"
       }
     ]
   },

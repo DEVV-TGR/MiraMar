@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "{nome} — Restaurante em Angeiras, Matosinhos",
-    "description": "Restaurante de bairro em Angeiras, junto ao Parque de Campismo. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias."
+    "description": "Restaurante de bairro no Parque de Campismo de Angeiras. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias."
   },
   "nav": {
     "sobre": "Sobre",
@@ -14,14 +14,14 @@
     "fecharMenu": "Fechar menu"
   },
   "hero": {
-    "descricao": "Restaurante de bairro em Angeiras, junto ao Parque de Campismo. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias.",
+    "descricao": "Restaurante de bairro no Parque de Campismo de Angeiras. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias.",
     "verEmenta": "Ver Ementa",
     "comoChegar": "Como Chegar"
   },
   "sobre": {
     "eyebrow": "Sobre nós",
     "titulo": "Casa de bairro, mesa cheia",
-    "paragrafo1": "No Mira Mar cozinha-se todos os dias como em casa: muitas diárias, peixe fresco e carne de boa qualidade, a preços de todos os dias. Fica junto ao Parque de Campismo de Angeiras, num ambiente simples e acolhedor onde os habituais se sentem em casa desde o primeiro dia.",
+    "paragrafo1": "No Mira Mar cozinha-se todos os dias como em casa: muitas diárias, peixe fresco e carne de boa qualidade, a preços de todos os dias. Fica dentro do Parque de Campismo de Angeiras, num ambiente simples e acolhedor onde os habituais se sentem em casa desde o primeiro dia.",
     "paragrafo2": "Sem complicações, sem pressa — só boa comida, servida com atenção, todos os dias da semana."
   },
   "galeria": {
@@ -44,18 +44,14 @@
   },
   "localizacao": {
     "eyebrow": "Localização",
-    "titulo": "Junto ao Parque de Campismo de Angeiras",
+    "titulo": "No Parque de Campismo de Angeiras",
     "abrirMaps": "Abrir no Google Maps"
   },
   "horario": {
     "linhas": [
       {
-        "dias": "Terça a Domingo",
-        "horas": "09:00 – 22:00"
-      },
-      {
-        "dias": "Segunda-feira",
-        "horas": "Encerrado ao jantar"
+        "dias": "Todos os dias",
+        "horas": "08:00 – 23:00"
       }
     ]
   },

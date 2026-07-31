@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "{nome} — Restaurant in Angeiras, Matosinhos",
-    "description": "Neighbourhood restaurant in Angeiras, next to the campsite. Daily specials, fresh fish and home cooking, at everyday prices."
+    "description": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices."
   },
   "nav": {
     "sobre": "About",
@@ -14,14 +14,14 @@
     "fecharMenu": "Close menu"
   },
   "hero": {
-    "descricao": "Neighbourhood restaurant in Angeiras, next to the campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
+    "descricao": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
     "verEmenta": "View Menu",
     "comoChegar": "Get Directions"
   },
   "sobre": {
     "eyebrow": "About us",
     "titulo": "A neighbourhood table, always full",
-    "paragrafo1": "At Mira Mar we cook every day like at home: plenty of daily specials, fresh fish and good quality meat, at everyday prices. We're right next to the Angeiras campsite, in a simple and welcoming setting where regulars feel at home from day one.",
+    "paragrafo1": "At Mira Mar we cook every day like at home: plenty of daily specials, fresh fish and good quality meat, at everyday prices. We're inside the Angeiras campsite, in a simple and welcoming setting where regulars feel at home from day one.",
     "paragrafo2": "No fuss, no rush — just good food, served with care, every day of the week."
   },
   "galeria": {
@@ -44,18 +44,14 @@
   },
   "localizacao": {
     "eyebrow": "Location",
-    "titulo": "Next to the Angeiras campsite",
+    "titulo": "Inside the Angeiras campsite",
     "abrirMaps": "Open in Google Maps"
   },
   "horario": {
     "linhas": [
       {
-        "dias": "Tuesday to Sunday",
-        "horas": "09:00 – 22:00"
-      },
-      {
-        "dias": "Monday",
-        "horas": "Closed for dinner"
+        "dias": "Every day",
+        "horas": "08:00 – 23:00"
       }
     ]
   },

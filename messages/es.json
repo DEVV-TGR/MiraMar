@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "{nome} — Restaurante en Angeiras, Matosinhos",
-    "description": "Restaurante de barrio en Angeiras, junto al camping. Muchos platos del día, pescado fresco y comida casera, a precios de cada día."
+    "description": "Restaurante de barrio en el camping de Angeiras. Muchos platos del día, pescado fresco y comida casera, a precios de cada día."
   },
   "nav": {
     "sobre": "Sobre nosotros",
@@ -14,14 +14,14 @@
     "fecharMenu": "Cerrar menú"
   },
   "hero": {
-    "descricao": "Restaurante de barrio en Angeiras, junto al camping. Muchos platos del día, pescado fresco y comida casera, a precios de cada día.",
+    "descricao": "Restaurante de barrio en el camping de Angeiras. Muchos platos del día, pescado fresco y comida casera, a precios de cada día.",
     "verEmenta": "Ver Carta",
     "comoChegar": "Cómo Llegar"
   },
   "sobre": {
     "eyebrow": "Sobre nosotros",
     "titulo": "Casa de barrio, mesa siempre llena",
-    "paragrafo1": "En Mira Mar se cocina cada día como en casa: muchos platos del día, pescado fresco y carne de buena calidad, a precios de cada día. Estamos junto al camping de Angeiras, en un ambiente sencillo y acogedor donde los habituales se sienten como en casa desde el primer día.",
+    "paragrafo1": "En Mira Mar se cocina cada día como en casa: muchos platos del día, pescado fresco y carne de buena calidad, a precios de cada día. Estamos dentro del camping de Angeiras, en un ambiente sencillo y acogedor donde los habituales se sienten como en casa desde el primer día.",
     "paragrafo2": "Sin complicaciones, sin prisas — solo buena comida, servida con cariño, todos los días de la semana."
   },
   "galeria": {
@@ -44,18 +44,14 @@
   },
   "localizacao": {
     "eyebrow": "Ubicación",
-    "titulo": "Junto al camping de Angeiras",
+    "titulo": "En el camping de Angeiras",
     "abrirMaps": "Abrir en Google Maps"
   },
   "horario": {
     "linhas": [
       {
-        "dias": "Martes a domingo",
-        "horas": "09:00 – 22:00"
-      },
-      {
-        "dias": "Lunes",
-        "horas": "Cerrado por la noche"
+        "dias": "Todos los días",
+        "horas": "08:00 – 23:00"
       }
     ]
   },
