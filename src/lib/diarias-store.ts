@@ -39,7 +39,8 @@ const esquemaDiarias = z.object({
     z.object({
       nome: textoLocalizado,
       descricao: textoLocalizado.optional(),
-      preco: z.string(),
+      // opcional: os pratos do Menu 1 não têm preço próprio, herdam o do menu
+      preco: z.string().optional(),
     }),
   ),
 });

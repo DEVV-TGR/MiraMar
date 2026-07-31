@@ -16,6 +16,7 @@
   "hero": {
     "descricao": "Restaurant de quartier au sein du camping d'Angeiras. Plats du jour, poisson frais et cuisine maison, à prix quotidien.",
     "verEmenta": "Voir le Menu",
+    "verTakeAway": "À Emporter",
     "comoChegar": "Itinéraire"
   },
   "sobre": {
@@ -39,7 +40,7 @@
   "ementaDestaque": {
     "eyebrow": "Menu",
     "titulo": "Ce qu'on cuisine ici",
-    "descricao": "Poisson frais, viande de qualité et le plat du jour — cuisine maison à prix quotidien.",
+    "descricao": "Des menus complets avec pain, soupe et boisson compris — et le Menu 1, qui change tous les jours.",
     "verCompleta": "Voir le Menu Complet"
   },
   "localizacao": {
@@ -74,7 +75,19 @@
     "titulo": "Notre menu",
     "voltar": "Retour à l'accueil",
     "descarregarPdf": "Télécharger le PDF (PT)",
-    "rascunhoAviso": "Menu provisoire — plats et prix à confirmer"
+    "rascunhoAviso": "Menu provisoire — plats et prix à confirmer",
+    "dose": "Entière",
+    "meiaDose": "Demi",
+    "abas": {
+      "etiqueta": "Choisir un menu",
+      "restaurante": "Carte Restaurant",
+      "takeAway": "À Emporter"
+    }
+  },
+  "takeaway": {
+    "eyebrow": "Take Away",
+    "titulo": "À emporter chez vous",
+    "encomendar": "Commander · {telefone}"
   },
   "carregamento": {
     "aCarregar": "Chargement",

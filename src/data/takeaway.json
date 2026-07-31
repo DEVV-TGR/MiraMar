@@ -1,0 +1,234 @@
+{
+  "placeholder": false,
+  "nota": {
+    "pt": "Ementa de take away por confirmar com o restaurante.",
+    "en": "Take away menu to be confirmed with the restaurant.",
+    "fr": "Menu à emporter à confirmer avec le restaurant.",
+    "es": "Carta para llevar por confirmar con el restaurante."
+  },
+  "incluido": {
+    "pt": "Onde há dois preços, o primeiro é a dose (para partilhar) e o segundo a meia dose (individual). Os restantes pratos têm preço único.",
+    "en": "Where two prices are shown, the first is a full portion (to share) and the second a half portion (for one). All other dishes have a single price.",
+    "fr": "Lorsque deux prix sont indiqués, le premier correspond à la portion entière (à partager) et le second à la demi-portion (individuelle). Les autres plats ont un prix unique.",
+    "es": "Donde hay dos precios, el primero es la ración (para compartir) y el segundo la media ración (individual). Los demás platos tienen un precio único."
+  },
+  "atualizadoEm": "2026-07-31",
+  "categorias": [
+    {
+      "nome": { "pt": "Carne", "en": "Meat", "fr": "Viande", "es": "Carne" },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Chouriço crioulo",
+            "en": "Creole-style chouriço sausage",
+            "fr": "Chouriço créole (saucisse fumée)",
+            "es": "Chorizo criollo"
+          },
+          "preco": "1,70 €"
+        },
+        {
+          "nome": {
+            "pt": "Frango no churrasco (meia de batata ou arroz)",
+            "en": "Charcoal-grilled chicken (half portion of fries or rice)",
+            "fr": "Poulet grillé au charbon de bois (demi-portion de frites ou de riz)",
+            "es": "Pollo a la brasa (media de patatas o arroz)"
+          },
+          "preco": "10 €"
+        },
+        {
+          "nome": {
+            "pt": "Bifinhos de frango grelhados",
+            "en": "Grilled chicken strips",
+            "fr": "Émincé de poulet grillé",
+            "es": "Tiras de pollo a la plancha"
+          },
+          "precoDose": "22 €",
+          "preco": "14 €"
+        },
+        {
+          "nome": {
+            "pt": "Panados de frango com batata e arroz",
+            "en": "Breaded chicken cutlets with potatoes and rice",
+            "fr": "Escalopes de poulet panées, pommes de terre et riz",
+            "es": "Filetes de pollo empanados con patatas y arroz"
+          },
+          "precoDose": "22 €",
+          "preco": "14 €"
+        },
+        {
+          "nome": {
+            "pt": "Panados de porco com batata e arroz",
+            "en": "Breaded pork cutlets with potatoes and rice",
+            "fr": "Escalopes de porc panées, pommes de terre et riz",
+            "es": "Filetes de cerdo empanados con patatas y arroz"
+          },
+          "precoDose": "22 €",
+          "preco": "14 €"
+        },
+        {
+          "nome": {
+            "pt": "Prego em prato",
+            "en": "Prego — garlic beef steak, served on a plate",
+            "fr": "Prego — steak de bœuf à l'ail, servi à l'assiette",
+            "es": "Prego — filete de ternera al ajo, servido en plato"
+          },
+          "preco": "16 €"
+        },
+        {
+          "nome": {
+            "pt": "Bifinhos de vitela, batata e arroz",
+            "en": "Veal strips, potatoes and rice",
+            "fr": "Émincé de veau, pommes de terre et riz",
+            "es": "Tiras de ternera lechal, patatas y arroz"
+          },
+          "precoDose": "28 €",
+          "preco": "16 €"
+        },
+        {
+          "nome": {
+            "pt": "Picanha à Brasileira, batata, arroz e feijão",
+            "en": "Brazilian-style picanha, potatoes, rice and beans",
+            "fr": "Picanha à la brésilienne, pommes de terre, riz et haricots",
+            "es": "Picaña a la brasileña, patatas, arroz y frijoles"
+          },
+          "precoDose": "28 €",
+          "preco": "16 €"
+        },
+        {
+          "nome": {
+            "pt": "Francesinha t4 com ovo e batata",
+            "en": "Francesinha t4 with a fried egg and fries",
+            "fr": "Francesinha t4 avec œuf au plat et frites",
+            "es": "Francesinha t4 con huevo frito y patatas"
+          },
+          "preco": "11 €"
+        },
+        {
+          "nome": {
+            "pt": "Francesinha t1 com batata frita",
+            "en": "Francesinha t1 with fries",
+            "fr": "Francesinha t1 avec frites",
+            "es": "Francesinha t1 con patatas fritas"
+          },
+          "preco": "9,50 €"
+        },
+        {
+          "nome": {
+            "pt": "Cachorro t4 com ovo e batata",
+            "en": "Hot dog t4 with a fried egg and fries",
+            "fr": "Hot-dog t4 avec œuf au plat et frites",
+            "es": "Perrito caliente t4 con huevo frito y patatas"
+          },
+          "preco": "7 €"
+        },
+        {
+          "nome": {
+            "pt": "Kebab de frango com batata e salada",
+            "en": "Chicken kebab with potatoes and salad",
+            "fr": "Kebab de poulet, pommes de terre et salade",
+            "es": "Kebab de pollo con patatas y ensalada"
+          },
+          "preco": "6 €"
+        },
+        {
+          "nome": {
+            "pt": "Feijoada à moda da casa",
+            "en": "House-style feijoada (bean and meat stew)",
+            "fr": "Feijoada maison (ragoût de haricots et de viandes)",
+            "es": "Feijoada a la moda de la casa (guiso de alubias y carnes)"
+          },
+          "preco": "6 €"
+        }
+      ]
+    },
+    {
+      "nome": { "pt": "Peixe", "en": "Fish", "fr": "Poisson", "es": "Pescado" },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Bacalhau à Braga, batata frita e arroz",
+            "en": "Braga-style salt cod, fries and rice",
+            "fr": "Morue à la mode de Braga, frites et riz",
+            "es": "Bacalao a la moda de Braga, patatas fritas y arroz"
+          },
+          "precoDose": "28 €",
+          "preco": "16 €"
+        },
+        {
+          "nome": {
+            "pt": "Filetes de pescada",
+            "en": "Hake fillets",
+            "fr": "Filets de merlu",
+            "es": "Filetes de merluza"
+          },
+          "precoDose": "26 €",
+          "preco": "14 €"
+        },
+        {
+          "nome": {
+            "pt": "Dourada grelhada, batata cozida e salada",
+            "en": "Grilled sea bream, boiled potatoes and salad",
+            "fr": "Daurade grillée, pommes de terre vapeur et salade",
+            "es": "Dorada a la parrilla, patata cocida y ensalada"
+          },
+          "preco": "14 €"
+        },
+        {
+          "nome": {
+            "pt": "Robalo grelhado, batata cozida e salada",
+            "en": "Grilled sea bass, boiled potatoes and salad",
+            "fr": "Bar grillé, pommes de terre vapeur et salade",
+            "es": "Lubina a la parrilla, patata cocida y ensalada"
+          },
+          "preco": "14 €"
+        },
+        {
+          "nome": {
+            "pt": "Raia com batata cozida e salada",
+            "en": "Skate with boiled potatoes and salad",
+            "fr": "Raie, pommes de terre vapeur et salade",
+            "es": "Raya con patata cocida y ensalada"
+          },
+          "preco": "6 €"
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Leitão",
+        "en": "Suckling Pig",
+        "fr": "Cochon de Lait",
+        "es": "Cochinillo"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Leitão com batata à rodela e salada",
+            "en": "Roast suckling pig with sliced potatoes and salad",
+            "fr": "Cochon de lait rôti, pommes de terre en rondelles et salade",
+            "es": "Cochinillo asado con patatas en rodajas y ensalada"
+          },
+          "preco": "45 € / kg"
+        },
+        {
+          "nome": {
+            "pt": "Meio leitão",
+            "en": "Half a suckling pig",
+            "fr": "Demi cochon de lait",
+            "es": "Medio cochinillo"
+          },
+          "preco": "90,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Leitão inteiro",
+            "en": "Whole suckling pig",
+            "fr": "Cochon de lait entier",
+            "es": "Cochinillo entero"
+          },
+          "preco": "170,00 €"
+        }
+      ]
+    }
+  ]
+}

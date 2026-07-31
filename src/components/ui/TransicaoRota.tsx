@@ -8,6 +8,25 @@ import { LogoAnel } from "@/components/ui/LogoAnel";
 const MINIMO_MS = 450; // curto: marca a transição sem travar a navegação
 const LIMITE_MS = 2500; // rede de segurança se a rota nunca chegar
 
+/**
+ * `/ementa` e `/take-away` comportam-se como dois separadores da mesma página:
+ * partilham layout, título e alternador (ver `src/app/[locale]/(ementas)/`).
+ * Tapar o ecrã com o logótipo entre elas era o oposto do pretendido — ficava
+ * um carregamento de página onde devia haver um deslize. Só se ignora a
+ * transição quando **o idioma é o mesmo**: trocar de língua muda a página
+ * toda e aí o logótipo continua a fazer sentido.
+ */
+const ESTA_NUMA_EMENTA = /\/(ementa|take-away)$/;
+const prefixoDeIdioma = (caminho: string) => caminho.replace(ESTA_NUMA_EMENTA, "");
+
+function ehTrocaDeSeparador(destino: string, atual: string) {
+  return (
+    ESTA_NUMA_EMENTA.test(destino) &&
+    ESTA_NUMA_EMENTA.test(atual) &&
+    prefixoDeIdioma(destino) === prefixoDeIdioma(atual)
+  );
+}
+
 /** Ecrã breve entre páginas, disparado por src/instrumentation-client.ts. */
 export function TransicaoRota() {
   const t = useTranslations("carregamento");
@@ -23,6 +42,8 @@ export function TransicaoRota() {
 
       // mesma página (ex.: âncora `#sobre`) — deixa-se o scroll fazer o trabalho
       if (caminho !== null && caminho === window.location.pathname) return;
+
+      if (caminho !== null && ehTrocaDeSeparador(caminho, window.location.pathname)) return;
 
       destino.current = caminho;
       inicio.current = performance.now();

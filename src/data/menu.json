@@ -1,141 +1,188 @@
 {
-  "placeholder": true,
+  "placeholder": false,
   "nota": {
-    "pt": "Ementa de rascunho — pratos e preços por confirmar com o cliente antes de imprimir/publicar.",
-    "en": "Draft menu — dishes and prices to be confirmed with the client before printing/publishing.",
-    "fr": "Menu provisoire — plats et prix à confirmer avec le client avant impression/publication.",
-    "es": "Carta provisional — platos y precios por confirmar con el cliente antes de imprimir/publicar."
+    "pt": "Ementa por confirmar — pratos e preços a validar com o restaurante.",
+    "en": "Menu to be confirmed — dishes and prices pending validation by the restaurant.",
+    "fr": "Menu à confirmer — plats et prix en attente de validation par le restaurant.",
+    "es": "Carta por confirmar — platos y precios pendientes de validación por el restaurante."
   },
-  "atualizadoEm": "2026-07-30",
+  "incluido": {
+    "pt": "Todos os menus incluem pão, sopa, prato de peixe ou carne e bebida (refrigerante, cerveja, água 0,50 L ou vinho de pressão 0,50 L). Sangria e Somersby não estão incluídas. Sobremesa não incluída; café 1,00 €.",
+    "en": "Every menu includes bread, soup, a fish or meat main course and a drink (soft drink, beer, 0.50 L water or 0.50 L draught wine). Sangria and Somersby are not included. Dessert not included; coffee 1,00 €.",
+    "fr": "Tous les menus comprennent le pain, la soupe, un plat de poisson ou de viande et une boisson (soda, bière, eau 0,50 L ou vin pression 0,50 L). La sangria et le Somersby ne sont pas compris. Dessert non compris ; café 1,00 €.",
+    "es": "Todos los menús incluyen pan, sopa, un plato de pescado o carne y bebida (refresco, cerveza, agua 0,50 L o vino de presión 0,50 L). La sangría y el Somersby no están incluidos. Postre no incluido; café 1,00 €."
+  },
+  "atualizadoEm": "2026-07-31",
   "categorias": [
     {
-      "nome": { "pt": "Diária do Dia", "en": "Daily Special", "fr": "Plat du Jour", "es": "Plato del Día" },
+      "nome": {
+        "pt": "Menu 1",
+        "en": "Menu 1",
+        "fr": "Menu 1",
+        "es": "Menú 1"
+      },
+      "preco": "7,50 €",
       "descricao": {
-        "pt": "Sopa + prato + café, todos os dias",
-        "en": "Soup + main + coffee, every day",
-        "fr": "Soupe + plat + café, tous les jours",
-        "es": "Sopa + plato + café, todos los días"
+        "pt": "Muda todos os dias",
+        "en": "Changes every day",
+        "fr": "Change tous les jours",
+        "es": "Cambia todos los días"
       },
       "pratos": [
         {
-          "nome": { "pt": "Diária do dia", "en": "Daily special", "fr": "Plat du jour", "es": "Plato del día" },
-          "descricao": {
-            "pt": "Pergunte ao empregado qual é a diária de hoje",
-            "en": "Ask your server what today's special is",
-            "fr": "Demandez à votre serveur quel est le plat du jour",
-            "es": "Pregunte a su camarero cuál es el plato del día"
+          "nome": {
+            "pt": "Menu do dia",
+            "en": "Menu of the day",
+            "fr": "Menu du jour",
+            "es": "Menú del día"
           },
-          "preco": "8,50 €"
+          "descricao": {
+            "pt": "Pergunte ao empregado quais são os pratos de hoje",
+            "en": "Ask your server what today's dishes are",
+            "fr": "Demandez à votre serveur quels sont les plats du jour",
+            "es": "Pregunte a su camarero cuáles son los platos de hoy"
+          }
         }
       ]
     },
     {
-      "nome": { "pt": "Peixe", "en": "Fish", "fr": "Poisson", "es": "Pescado" },
+      "nome": {
+        "pt": "Menu 2",
+        "en": "Menu 2",
+        "fr": "Menu 2",
+        "es": "Menú 2"
+      },
+      "preco": "9,00 €",
       "pratos": [
         {
-          "nome": { "pt": "Bacalhau à Mira Mar", "en": "Mira Mar–style Salt Cod", "fr": "Morue à la Mira Mar", "es": "Bacalao a la Mira Mar" },
-          "descricao": {
-            "pt": "Bacalhau assado, batata a murro e legumes salteados",
-            "en": "Roasted salt cod, crushed potatoes and sautéed vegetables",
-            "fr": "Morue rôtie, pommes de terre écrasées et légumes sautés",
-            "es": "Bacalao asado, patatas chafadas y verduras salteadas"
-          },
-          "preco": "13,00 €"
+          "nome": {
+            "pt": "Panados de frango com batata frita e arroz",
+            "en": "Breaded chicken cutlets with fries and rice",
+            "fr": "Escalopes de poulet panées, frites et riz",
+            "es": "Filetes de pollo empanados con patatas fritas y arroz"
+          }
         },
         {
-          "nome": { "pt": "Dourada grelhada", "en": "Grilled Sea Bream", "fr": "Daurade grillée", "es": "Dorada a la parrilla" },
-          "descricao": {
-            "pt": "Dourada fresca grelhada com batata cozida e salada",
-            "en": "Fresh grilled sea bream with boiled potatoes and salad",
-            "fr": "Daurade fraîche grillée, pommes de terre vapeur et salade",
-            "es": "Dorada fresca a la parrilla con patata cocida y ensalada"
-          },
-          "preco": "12,50 €"
+          "nome": {
+            "pt": "Panados de porco com batata e arroz",
+            "en": "Breaded pork cutlets with potatoes and rice",
+            "fr": "Escalopes de porc panées, pommes de terre et riz",
+            "es": "Filetes de cerdo empanados con patatas y arroz"
+          }
         },
         {
-          "nome": { "pt": "Sardinha assada", "en": "Grilled Sardines", "fr": "Sardines grillées", "es": "Sardinas asadas" },
-          "descricao": {
-            "pt": "Sazonal, com broa e pimentos assados",
-            "en": "Seasonal, served with corn bread and roasted peppers",
-            "fr": "De saison, servies avec pain de maïs et poivrons rôtis",
-            "es": "De temporada, con pan de maíz y pimientos asados"
-          },
-          "preco": "10,00 €"
+          "nome": {
+            "pt": "Frango no churrasco com batata frita e arroz",
+            "en": "Charcoal-grilled chicken with fries and rice",
+            "fr": "Poulet grillé au charbon de bois, frites et riz",
+            "es": "Pollo a la brasa con patatas fritas y arroz"
+          }
         },
         {
-          "nome": { "pt": "Arroz de marisco", "en": "Seafood Rice", "fr": "Riz aux fruits de mer", "es": "Arroz de marisco" },
-          "descricao": { "pt": "Para 2 pessoas", "en": "Serves 2", "fr": "Pour 2 personnes", "es": "Para 2 personas" },
-          "preco": "26,00 €"
+          "nome": {
+            "pt": "Omeleta mista com batata frita e salada",
+            "en": "Ham and cheese omelette with fries and salad",
+            "fr": "Omelette jambon-fromage, frites et salade",
+            "es": "Tortilla mixta con patatas fritas y ensalada"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Bifinhos de frango grelhados, batata frita e arroz",
+            "en": "Grilled chicken strips, fries and rice",
+            "fr": "Émincé de poulet grillé, frites et riz",
+            "es": "Tiras de pollo a la plancha, patatas fritas y arroz"
+          }
         }
       ]
     },
     {
-      "nome": { "pt": "Carne", "en": "Meat", "fr": "Viande", "es": "Carne" },
+      "nome": {
+        "pt": "Menu 3",
+        "en": "Menu 3",
+        "fr": "Menu 3",
+        "es": "Menú 3"
+      },
+      "preco": "15,00 €",
       "pratos": [
         {
-          "nome": { "pt": "Bife à casa", "en": "House-style Steak", "fr": "Steak à la maison", "es": "Bistec a la casa" },
-          "descricao": {
-            "pt": "Bife de vaca com molho da casa, batata frita e ovo a cavalo",
-            "en": "Beef steak with house sauce, fries and a fried egg",
-            "fr": "Steak de bœuf sauce maison, frites et œuf au plat",
-            "es": "Bistec de ternera con salsa de la casa, patatas fritas y huevo frito"
-          },
-          "preco": "11,50 €"
+          "nome": {
+            "pt": "Dourada grelhada com batata cozida e salada",
+            "en": "Grilled sea bream with boiled potatoes and salad",
+            "fr": "Daurade grillée, pommes de terre vapeur et salade",
+            "es": "Dorada a la parrilla con patata cocida y ensalada"
+          }
         },
         {
-          "nome": { "pt": "Febras de porco grelhadas", "en": "Grilled Pork Steaks", "fr": "Escalopes de porc grillées", "es": "Filetes de cerdo a la parrilla" },
-          "descricao": {
-            "pt": "Com arroz e salada",
-            "en": "With rice and salad",
-            "fr": "Avec riz et salade",
-            "es": "Con arroz y ensalada"
-          },
-          "preco": "9,50 €"
-        },
-        {
-          "nome": { "pt": "Frango do churrasco", "en": "Grilled Chicken", "fr": "Poulet grillé", "es": "Pollo a la parrilla" },
-          "descricao": {
-            "pt": "Meio frango, com batata frita",
-            "en": "Half chicken, with fries",
-            "fr": "Demi-poulet, avec frites",
-            "es": "Medio pollo, con patatas fritas"
-          },
-          "preco": "9,00 €"
+          "nome": {
+            "pt": "Salmão grelhado com batata cozida e salada",
+            "en": "Grilled salmon with boiled potatoes and salad",
+            "fr": "Saumon grillé, pommes de terre vapeur et salade",
+            "es": "Salmón a la parrilla con patata cocida y ensalada"
+          }
         }
       ]
     },
     {
-      "nome": { "pt": "Acompanhamentos", "en": "Side Dishes", "fr": "Accompagnements", "es": "Guarniciones" },
-      "pratos": [
-        { "nome": { "pt": "Batata frita", "en": "Fries", "fr": "Frites", "es": "Patatas fritas" }, "preco": "3,00 €" },
-        { "nome": { "pt": "Arroz", "en": "Rice", "fr": "Riz", "es": "Arroz" }, "preco": "2,50 €" },
-        { "nome": { "pt": "Salada mista", "en": "Mixed Salad", "fr": "Salade mixte", "es": "Ensalada mixta" }, "preco": "3,50 €" }
-      ]
-    },
-    {
-      "nome": { "pt": "Sobremesas", "en": "Desserts", "fr": "Desserts", "es": "Postres" },
+      "nome": {
+        "pt": "Menu 4",
+        "en": "Menu 4",
+        "fr": "Menu 4",
+        "es": "Menú 4"
+      },
+      "preco": "16,50 €",
       "pratos": [
         {
-          "nome": { "pt": "Doce da casa", "en": "House Dessert", "fr": "Dessert maison", "es": "Postre de la casa" },
-          "descricao": {
-            "pt": "Pergunte a sugestão do dia",
-            "en": "Ask for today's suggestion",
-            "fr": "Demandez la suggestion du jour",
-            "es": "Pregunte la sugerencia del día"
-          },
-          "preco": "3,00 €"
+          "nome": {
+            "pt": "Bacalhau à Braga, batata, arroz e molho de cebolada",
+            "en": "Braga-style salt cod, potatoes, rice and onion sauce",
+            "fr": "Morue à la mode de Braga, pommes de terre, riz et sauce à l'oignon",
+            "es": "Bacalao a la moda de Braga, patatas, arroz y salsa de cebolla"
+          }
         },
-        { "nome": { "pt": "Fruta da época", "en": "Seasonal Fruit", "fr": "Fruits de saison", "es": "Fruta de temporada" }, "preco": "2,00 €" },
-        { "nome": { "pt": "Gelado", "en": "Ice Cream", "fr": "Glace", "es": "Helado" }, "preco": "2,50 €" }
+        {
+          "nome": {
+            "pt": "Picanha à Brasileira, batata, arroz, feijão e farofa",
+            "en": "Brazilian-style picanha, potatoes, rice, beans and farofa",
+            "fr": "Picanha à la brésilienne, pommes de terre, riz, haricots et farofa",
+            "es": "Picaña a la brasileña, patatas, arroz, frijoles y farofa"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Bife grelhado com ovo, batata e arroz",
+            "en": "Grilled steak with a fried egg, potatoes and rice",
+            "fr": "Steak grillé avec œuf au plat, pommes de terre et riz",
+            "es": "Bistec a la parrilla con huevo frito, patatas y arroz"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Bifinhos de vaca com batata, arroz e molho de cogumelos",
+            "en": "Beef strips with potatoes, rice and mushroom sauce",
+            "fr": "Émincé de bœuf, pommes de terre, riz et sauce aux champignons",
+            "es": "Tiras de ternera con patatas, arroz y salsa de champiñones"
+          }
+        }
       ]
     },
     {
-      "nome": { "pt": "Bebidas", "en": "Drinks", "fr": "Boissons", "es": "Bebidas" },
+      "nome": {
+        "pt": "Menu 5",
+        "en": "Menu 5",
+        "fr": "Menu 5",
+        "es": "Menú 5"
+      },
+      "preco": "20,00 €",
       "pratos": [
-        { "nome": { "pt": "Água", "en": "Water", "fr": "Eau", "es": "Agua" }, "preco": "1,00 €" },
-        { "nome": { "pt": "Refrigerante", "en": "Soft Drink", "fr": "Soda", "es": "Refresco" }, "preco": "2,00 €" },
-        { "nome": { "pt": "Vinho da casa (copo)", "en": "House Wine (glass)", "fr": "Vin de la maison (verre)", "es": "Vino de la casa (copa)" }, "preco": "2,00 €" },
-        { "nome": { "pt": "Café", "en": "Coffee", "fr": "Café", "es": "Café" }, "preco": "1,00 €" }
+        {
+          "nome": {
+            "pt": "Bife na Pedra com batata frita e salada",
+            "en": "Steak on a hot stone with fries and salad",
+            "fr": "Steak sur pierre chaude, frites et salade",
+            "es": "Bistec a la piedra con patatas fritas y ensalada"
+          }
+        }
       ]
     }
   ]

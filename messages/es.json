@@ -16,6 +16,7 @@
   "hero": {
     "descricao": "Restaurante de barrio en el camping de Angeiras. Muchos platos del día, pescado fresco y comida casera, a precios de cada día.",
     "verEmenta": "Ver Carta",
+    "verTakeAway": "Para Llevar",
     "comoChegar": "Cómo Llegar"
   },
   "sobre": {
@@ -39,7 +40,7 @@
   "ementaDestaque": {
     "eyebrow": "Carta",
     "titulo": "Lo que se cocina aquí",
-    "descricao": "Pescado fresco, carne de buena calidad y el plato del día — comida casera a precios de siempre.",
+    "descricao": "Menús completos con pan, sopa y bebida incluidos — y el Menú 1, que cambia todos los días.",
     "verCompleta": "Ver Carta Completa"
   },
   "localizacao": {
@@ -74,7 +75,19 @@
     "titulo": "Nuestra carta",
     "voltar": "Volver al inicio",
     "descarregarPdf": "Descargar PDF (PT)",
-    "rascunhoAviso": "Carta provisional — platos y precios por confirmar"
+    "rascunhoAviso": "Carta provisional — platos y precios por confirmar",
+    "dose": "Ración",
+    "meiaDose": "Media",
+    "abas": {
+      "etiqueta": "Elegir carta",
+      "restaurante": "Carta Restaurante",
+      "takeAway": "Para Llevar"
+    }
+  },
+  "takeaway": {
+    "eyebrow": "Take Away",
+    "titulo": "Para llevar a casa",
+    "encomendar": "Pedir · {telefone}"
   },
   "carregamento": {
     "aCarregar": "Cargando",

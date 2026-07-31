@@ -16,6 +16,7 @@
   "hero": {
     "descricao": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
     "verEmenta": "View Menu",
+    "verTakeAway": "Take Away",
     "comoChegar": "Get Directions"
   },
   "sobre": {
@@ -39,7 +40,7 @@
   "ementaDestaque": {
     "eyebrow": "Menu",
     "titulo": "What we cook here",
-    "descricao": "Fresh fish, good quality meat and the daily special — home cooking at everyday prices.",
+    "descricao": "Full menus with bread, soup and a drink included — plus Menu 1, which changes every day.",
     "verCompleta": "See Full Menu"
   },
   "localizacao": {
@@ -74,7 +75,19 @@
     "titulo": "Our menu",
     "voltar": "Back to home",
     "descarregarPdf": "Download PDF (PT)",
-    "rascunhoAviso": "Draft menu — dishes and prices to be confirmed"
+    "rascunhoAviso": "Draft menu — dishes and prices to be confirmed",
+    "dose": "Full",
+    "meiaDose": "Half",
+    "abas": {
+      "etiqueta": "Choose a menu",
+      "restaurante": "Restaurant Menu",
+      "takeAway": "Take Away"
+    }
+  },
+  "takeaway": {
+    "eyebrow": "Take Away",
+    "titulo": "To take home",
+    "encomendar": "Order · {telefone}"
   },
   "carregamento": {
     "aCarregar": "Loading",

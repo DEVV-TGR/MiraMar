@@ -222,6 +222,252 @@ const ENTRADAS: Record<string, Traducoes> = {
     fr: "Bœuf en daube",
     es: "Carne guisada",
   },
+
+  // --- a carta do Mira Mar -------------------------------------------------
+  // Nomes exatamente como aparecem na ementa do restaurante e no take away
+  // (`src/data/menu.json` e `src/data/takeaway.json`). O Menu 1, que é o que
+  // roda todos os dias no /admin, sai destes pratos — tê-los aqui é o que
+  // garante que a diária aparece traduzida mesmo sem chave do DeepL.
+
+  // Menu 1 / take away
+  "feijoada a moda da casa": {
+    en: "House-style feijoada (bean and meat stew)",
+    fr: "Feijoada maison (ragoût de haricots et de viandes)",
+    es: "Feijoada a la moda de la casa (guiso de alubias y carnes)",
+  },
+  "kebab de frango": {
+    en: "Chicken kebab",
+    fr: "Kebab de poulet",
+    es: "Kebab de pollo",
+  },
+  "kebab de frango com batata e salada": {
+    en: "Chicken kebab with potatoes and salad",
+    fr: "Kebab de poulet, pommes de terre et salade",
+    es: "Kebab de pollo con patatas y ensalada",
+  },
+  // a raia é o outro erro clássico: "raia" traduzido à letra dá "stripe"
+  raia: {
+    en: "Skate",
+    fr: "Raie",
+    es: "Raya",
+  },
+  "raia com batata cozida e salada": {
+    en: "Skate with boiled potatoes and salad",
+    fr: "Raie, pommes de terre vapeur et salade",
+    es: "Raya con patata cocida y ensalada",
+  },
+
+  // Menu 2
+  "panados de frango": {
+    en: "Breaded chicken cutlets",
+    fr: "Escalopes de poulet panées",
+    es: "Filetes de pollo empanados",
+  },
+  "panados de frango com batata frita e arroz": {
+    en: "Breaded chicken cutlets with fries and rice",
+    fr: "Escalopes de poulet panées, frites et riz",
+    es: "Filetes de pollo empanados con patatas fritas y arroz",
+  },
+  "panados de frango com batata e arroz": {
+    en: "Breaded chicken cutlets with potatoes and rice",
+    fr: "Escalopes de poulet panées, pommes de terre et riz",
+    es: "Filetes de pollo empanados con patatas y arroz",
+  },
+  "panados de porco": {
+    en: "Breaded pork cutlets",
+    fr: "Escalopes de porc panées",
+    es: "Filetes de cerdo empanados",
+  },
+  "panados de porco com batata e arroz": {
+    en: "Breaded pork cutlets with potatoes and rice",
+    fr: "Escalopes de porc panées, pommes de terre et riz",
+    es: "Filetes de cerdo empanados con patatas y arroz",
+  },
+  "frango no churrasco com batata frita e arroz": {
+    en: "Charcoal-grilled chicken with fries and rice",
+    fr: "Poulet grillé au charbon de bois, frites et riz",
+    es: "Pollo a la brasa con patatas fritas y arroz",
+  },
+  "frango no churrasco (meia de batata ou arroz)": {
+    en: "Charcoal-grilled chicken (half portion of fries or rice)",
+    fr: "Poulet grillé au charbon de bois (demi-portion de frites ou de riz)",
+    es: "Pollo a la brasa (media de patatas o arroz)",
+  },
+  "omeleta mista": {
+    en: "Ham and cheese omelette",
+    fr: "Omelette jambon-fromage",
+    es: "Tortilla mixta",
+  },
+  "omeleta mista com batata frita e salada": {
+    en: "Ham and cheese omelette with fries and salad",
+    fr: "Omelette jambon-fromage, frites et salade",
+    es: "Tortilla mixta con patatas fritas y ensalada",
+  },
+  // "bifinhos" não é "little steaks" — são tiras finas de carne
+  "bifinhos de frango grelhados": {
+    en: "Grilled chicken strips",
+    fr: "Émincé de poulet grillé",
+    es: "Tiras de pollo a la plancha",
+  },
+  "bifinhos de frango grelhados, batata frita e arroz": {
+    en: "Grilled chicken strips, fries and rice",
+    fr: "Émincé de poulet grillé, frites et riz",
+    es: "Tiras de pollo a la plancha, patatas fritas y arroz",
+  },
+
+  // Menu 3
+  "dourada grelhada com batata cozida e salada": {
+    en: "Grilled sea bream with boiled potatoes and salad",
+    fr: "Daurade grillée, pommes de terre vapeur et salade",
+    es: "Dorada a la parrilla con patata cocida y ensalada",
+  },
+  "dourada grelhada, batata cozida e salada": {
+    en: "Grilled sea bream, boiled potatoes and salad",
+    fr: "Daurade grillée, pommes de terre vapeur et salade",
+    es: "Dorada a la parrilla, patata cocida y ensalada",
+  },
+  "salmao grelhado": {
+    en: "Grilled salmon",
+    fr: "Saumon grillé",
+    es: "Salmón a la parrilla",
+  },
+  "salmao grelhado com batata cozida e salada": {
+    en: "Grilled salmon with boiled potatoes and salad",
+    fr: "Saumon grillé, pommes de terre vapeur et salade",
+    es: "Salmón a la parrilla con patata cocida y ensalada",
+  },
+  "robalo grelhado, batata cozida e salada": {
+    en: "Grilled sea bass, boiled potatoes and salad",
+    fr: "Bar grillé, pommes de terre vapeur et salade",
+    es: "Lubina a la parrilla, patata cocida y ensalada",
+  },
+
+  // Menu 4
+  "bacalhau a braga": {
+    en: "Braga-style salt cod",
+    fr: "Morue à la mode de Braga",
+    es: "Bacalao a la moda de Braga",
+  },
+  "bacalhau a braga, batata, arroz e molho de cebolada": {
+    en: "Braga-style salt cod, potatoes, rice and onion sauce",
+    fr: "Morue à la mode de Braga, pommes de terre, riz et sauce à l'oignon",
+    es: "Bacalao a la moda de Braga, patatas, arroz y salsa de cebolla",
+  },
+  "bacalhau a braga, batata frita e arroz": {
+    en: "Braga-style salt cod, fries and rice",
+    fr: "Morue à la mode de Braga, frites et riz",
+    es: "Bacalao a la moda de Braga, patatas fritas y arroz",
+  },
+  "picanha a brasileira": {
+    en: "Brazilian-style picanha",
+    fr: "Picanha à la brésilienne",
+    es: "Picaña a la brasileña",
+  },
+  "picanha a brasileira, batata, arroz, feijao e farofa": {
+    en: "Brazilian-style picanha, potatoes, rice, beans and farofa",
+    fr: "Picanha à la brésilienne, pommes de terre, riz, haricots et farofa",
+    es: "Picaña a la brasileña, patatas, arroz, frijoles y farofa",
+  },
+  "picanha a brasileira, batata, arroz e feijao": {
+    en: "Brazilian-style picanha, potatoes, rice and beans",
+    fr: "Picanha à la brésilienne, pommes de terre, riz et haricots",
+    es: "Picaña a la brasileña, patatas, arroz y frijoles",
+  },
+  "bife grelhado com ovo, batata e arroz": {
+    en: "Grilled steak with a fried egg, potatoes and rice",
+    fr: "Steak grillé avec œuf au plat, pommes de terre et riz",
+    es: "Bistec a la parrilla con huevo frito, patatas y arroz",
+  },
+  "bifinhos de vaca": {
+    en: "Beef strips",
+    fr: "Émincé de bœuf",
+    es: "Tiras de ternera",
+  },
+  "bifinhos de vaca com batata, arroz e molho de cogumelos": {
+    en: "Beef strips with potatoes, rice and mushroom sauce",
+    fr: "Émincé de bœuf, pommes de terre, riz et sauce aux champignons",
+    es: "Tiras de ternera con patatas, arroz y salsa de champiñones",
+  },
+  "bifinhos de vitela": {
+    en: "Veal strips",
+    fr: "Émincé de veau",
+    es: "Tiras de ternera lechal",
+  },
+  "bifinhos de vitela, batata e arroz": {
+    en: "Veal strips, potatoes and rice",
+    fr: "Émincé de veau, pommes de terre et riz",
+    es: "Tiras de ternera lechal, patatas y arroz",
+  },
+
+  // Menu 5
+  "bife na pedra": {
+    en: "Steak on a hot stone",
+    fr: "Steak sur pierre chaude",
+    es: "Bistec a la piedra",
+  },
+  "bife na pedra com batata frita e salada": {
+    en: "Steak on a hot stone with fries and salad",
+    fr: "Steak sur pierre chaude, frites et salade",
+    es: "Bistec a la piedra con patatas fritas y ensalada",
+  },
+
+  // take away: petiscos e pratos que não estão nos menus
+  "chourico crioulo": {
+    en: "Creole-style chouriço sausage",
+    fr: "Chouriço créole (saucisse fumée)",
+    es: "Chorizo criollo",
+  },
+  "prego em prato": {
+    en: "Prego — garlic beef steak, served on a plate",
+    fr: "Prego — steak de bœuf à l'ail, servi à l'assiette",
+    es: "Prego — filete de ternera al ajo, servido en plato",
+  },
+  "francesinha t4 com ovo e batata": {
+    en: "Francesinha t4 with a fried egg and fries",
+    fr: "Francesinha t4 avec œuf au plat et frites",
+    es: "Francesinha t4 con huevo frito y patatas",
+  },
+  "francesinha t1 com batata frita": {
+    en: "Francesinha t1 with fries",
+    fr: "Francesinha t1 avec frites",
+    es: "Francesinha t1 con patatas fritas",
+  },
+  // "cachorro" é cachorro-quente, não o animal — é dos piores erros possíveis
+  cachorro: {
+    en: "Hot dog",
+    fr: "Hot-dog",
+    es: "Perrito caliente",
+  },
+  "cachorro t4 com ovo e batata": {
+    en: "Hot dog t4 with a fried egg and fries",
+    fr: "Hot-dog t4 avec œuf au plat et frites",
+    es: "Perrito caliente t4 con huevo frito y patatas",
+  },
+  "filetes de pescada": {
+    en: "Hake fillets",
+    fr: "Filets de merlu",
+    es: "Filetes de merluza",
+  },
+  leitao: {
+    en: "Roast suckling pig",
+    fr: "Cochon de lait rôti",
+    es: "Cochinillo asado",
+  },
+  "leitao com batata a rodela e salada": {
+    en: "Roast suckling pig with sliced potatoes and salad",
+    fr: "Cochon de lait rôti, pommes de terre en rondelles et salade",
+    es: "Cochinillo asado con patatas en rodajas y ensalada",
+  },
+  "meio leitao": {
+    en: "Half a suckling pig",
+    fr: "Demi cochon de lait",
+    es: "Medio cochinillo",
+  },
+  "leitao inteiro": {
+    en: "Whole suckling pig",
+    fr: "Cochon de lait entier",
+    es: "Cochinillo entero",
+  },
 };
 
 /**

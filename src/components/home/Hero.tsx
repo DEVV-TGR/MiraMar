@@ -64,9 +64,14 @@ export function Hero() {
           {restaurante.tagline}
         </p>
 
-        <div className="mt-9">
+        {/* dois destinos, duas hierarquias: a carta é o principal (dourado), o
+            take away é o secundário (contorno). Empilham no telemóvel. */}
+        <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <BotaoLink href="/ementa" variante="dourado">
             {t("verEmenta")}
+          </BotaoLink>
+          <BotaoLink href="/take-away" variante="contorno" className="bg-background/70 backdrop-blur-sm">
+            {t("verTakeAway")}
           </BotaoLink>
         </div>
       </motion.div>

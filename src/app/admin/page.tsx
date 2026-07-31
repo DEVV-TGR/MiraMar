@@ -25,7 +25,7 @@ export default async function AdminPage() {
     id: String(i),
     nomePt: prato.nome.pt,
     descricaoPt: prato.descricao?.pt ?? "",
-    preco: prato.preco,
+    preco: prato.preco ?? "",
     traducoes: {
       nome: { en: prato.nome.en, fr: prato.nome.fr, es: prato.nome.es },
       descricao: prato.descricao

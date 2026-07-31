@@ -269,6 +269,7 @@ function LinhaPrato({
 }) {
   const idNome = useId();
   const idPreco = useId();
+  const idAjudaPreco = useId();
   const idDescricao = useId();
   const idErro = useId();
   const desatualizada = traducoesDesatualizadas(linha);
@@ -307,19 +308,24 @@ function LinhaPrato({
         </div>
         <div>
           <label htmlFor={idPreco} className="block text-sm font-medium text-ink">
-            Preço
+            Preço <span className="font-normal text-muted">(opcional)</span>
           </label>
           <input
             id={idPreco}
             value={linha.preco}
             onChange={(evento) => aoAlterar(linha.id, { preco: evento.target.value })}
             inputMode="decimal"
-            placeholder="8,50"
-            aria-invalid={erro ? true : undefined}
+            placeholder="7,50"
+            aria-describedby={idAjudaPreco}
             className={`${campo} mt-2`}
           />
         </div>
       </div>
+
+      <p id={idAjudaPreco} className="mt-2 text-xs text-muted">
+        Deixa vazio se o prato for do Menu 1 — o preço 7,50 € já aparece no site.
+        Só preenche se este prato tiver um preço diferente.
+      </p>
 
       {erro && (
         <p id={idErro} role="alert" className="mt-2 text-sm text-gold-deep">

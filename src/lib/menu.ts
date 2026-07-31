@@ -1,11 +1,13 @@
 import "server-only";
 
 import menuData from "@/data/menu.json";
+import takeAwayData from "@/data/takeaway.json";
 import type { Menu } from "./menu-types";
 import { lerDiarias } from "./diarias-store";
 import { hojeEmLisboa } from "./data-lisboa";
 
 const menuBase = menuData as Menu;
+const takeAwayBase = takeAwayData as Menu;
 
 /**
  * A ementa como o site a deve mostrar: o `menu.json` com a primeira categoria
@@ -33,4 +35,13 @@ export async function obterMenu(): Promise<Menu> {
     ...menuBase,
     categorias: [{ ...categoriaDiaria, pratos: diarias.pratos }, ...restantes],
   };
+}
+
+/**
+ * A ementa de take away. Ao contrário da carta do restaurante, é inteiramente
+ * estática: não tem diária, não passa pelo /admin e não precisa de cache nem
+ * de revalidação. Por isso é síncrona.
+ */
+export function obterTakeAway(): Menu {
+  return takeAwayBase;
 }

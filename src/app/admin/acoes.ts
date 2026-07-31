@@ -144,10 +144,12 @@ export async function gerirDiarias(
     };
   }
 
+  // O preço não é obrigatório: os pratos do Menu 1 partilham o preço do menu
+  // (`categorias[0].preco` no menu.json), e obrigar a escrever "7,50 €" três
+  // vezes por dia no telemóvel só serve para gerar enganos.
   const errosPorLinha: Record<string, string> = {};
   for (const linha of linhas) {
     if (!linha.nomePt.trim()) errosPorLinha[linha.id] = "Falta o nome do prato.";
-    else if (!linha.preco.trim()) errosPorLinha[linha.id] = "Falta o preço.";
   }
   if (Object.keys(errosPorLinha).length > 0) {
     return {
@@ -164,7 +166,7 @@ export async function gerirDiarias(
     ...linha,
     nomePt: linha.nomePt.trim(),
     descricaoPt: linha.descricaoPt.trim(),
-    preco: normalizarPreco(linha.preco),
+    preco: linha.preco.trim() ? normalizarPreco(linha.preco) : "",
   }));
 
   const porTraduzir: { indice: number; prato: PratoParaTraduzir }[] = [];
@@ -230,7 +232,8 @@ export async function gerirDiarias(
             es: linha.traducoes?.descricao?.es || linha.descricaoPt,
           }
         : undefined,
-      preco: linha.preco,
+      // sem preço próprio, o prato herda o preço do menu na página da ementa
+      preco: linha.preco || undefined,
     })),
   };
 
