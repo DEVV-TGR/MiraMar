@@ -12,7 +12,7 @@
     "fr": "Tous les menus comprennent le pain, la soupe, un plat de poisson ou de viande et une boisson (soda, bière, eau 0,50 L ou vin pression 0,50 L). La sangria et le Somersby ne sont pas compris. Dessert non compris ; café 1,00 €.",
     "es": "Todos los menús incluyen pan, sopa, un plato de pescado o carne y bebida (refresco, cerveza, agua 0,50 L o vino de presión 0,50 L). La sangría y el Somersby no están incluidos. Postre no incluido; café 1,00 €."
   },
-  "atualizadoEm": "2026-07-31",
+  "atualizadoEm": "2026-08-01",
   "categorias": [
     {
       "nome": {
@@ -163,6 +163,14 @@
             "fr": "Émincé de bœuf, pommes de terre, riz et sauce aux champignons",
             "es": "Tiras de ternera con patatas, arroz y salsa de champiñones"
           }
+        },
+        {
+          "nome": {
+            "pt": "Francesinha com ovo, batata frita e arroz",
+            "en": "Francesinha with a fried egg, fries and rice",
+            "fr": "Francesinha avec œuf au plat, frites et riz",
+            "es": "Francesinha con huevo frito, patatas fritas y arroz"
+          }
         }
       ]
     },
@@ -181,6 +189,32 @@
             "en": "Steak on a hot stone with fries and salad",
             "fr": "Steak sur pierre chaude, frites et salade",
             "es": "Bistec a la piedra con patatas fritas y ensalada"
+          }
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Menu 6",
+        "en": "Menu 6",
+        "fr": "Menu 6",
+        "es": "Menú 6"
+      },
+      "preco": "25,00 €",
+      "diasSemana": [0],
+      "descricao": {
+        "pt": "Só aos domingos",
+        "en": "Sundays only",
+        "fr": "Uniquement le dimanche",
+        "es": "Solo los domingos"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Leitão à moda da Bairrada com batata à rodela",
+            "en": "Bairrada-style roast suckling pig with sliced potatoes",
+            "fr": "Cochon de lait rôti à la mode de Bairrada, pommes de terre en rondelles",
+            "es": "Cochinillo asado a la moda de Bairrada con patatas en rodajas"
           }
         }
       ]

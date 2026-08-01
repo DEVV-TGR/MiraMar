@@ -16,6 +16,14 @@ export function EmentaDestaque({ menu }: { menu: Menu }) {
 
   const [diaria, ...restantes] = menu.categorias;
 
+  /* As categorias que só se servem em certos dias já vêm filtradas por
+     `obterMenu()` — se estão aqui, é porque hoje há. Mas não podem ir para a
+     fila "Menu 2 · Menu 3 · …": aparecer e desaparecer no meio da linha sem
+     explicação parece um erro, e o leitão de domingo é dos pratos que mais
+     vale a pena anunciar. */
+  const semanais = restantes.filter((categoria) => !categoria.diasSemana);
+  const especiais = restantes.filter((categoria) => categoria.diasSemana);
+
   return (
     <section id="ementa" className="bg-sea-deep py-24 text-background">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -68,7 +76,7 @@ export function EmentaDestaque({ menu }: { menu: Menu }) {
           {/* só os nomes ("Menu 2 · Menu 3 · …") não dizem nada a ninguém —
               é o preço que faz alguém querer abrir a ementa */}
           <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center">
-            {restantes.map((categoria, i) => (
+            {semanais.map((categoria, i) => (
               <li key={i} className="flex items-center gap-3">
                 {i > 0 && <span className="text-gold/50">·</span>}
                 <span className="font-display text-lg text-background/85">
@@ -81,6 +89,31 @@ export function EmentaDestaque({ menu }: { menu: Menu }) {
             ))}
           </ul>
         </Reveal>
+
+        {/* Contorno em vez de fundo cheio: uma segunda caixa igual à da diária
+            tirava-lhe o destaque, e é a diária que traz a maioria dos
+            clientes. O aviso ("Só aos domingos") sai da `descricao` da
+            categoria, que já vem traduzida do menu.json. */}
+        {especiais.map((categoria, i) => (
+          <Reveal key={i} delay={0.17} className="mt-6">
+            <div className="mx-auto max-w-md rounded-2xl border border-gold/25 px-6 py-4 text-center">
+              {categoria.descricao && (
+                <p className="text-xs uppercase tracking-[0.15em] text-gold">
+                  {categoria.descricao[locale]}
+                </p>
+              )}
+              {categoria.pratos.map((prato, j) => (
+                <p key={j} className="mt-2 font-display text-xl text-balance">
+                  {prato.nome[locale]}
+                </p>
+              ))}
+              <p className="mt-2 text-sm text-background/70">
+                {categoria.nome[locale]}
+                {categoria.preco && <span className="ml-2 text-gold">{categoria.preco}</span>}
+              </p>
+            </div>
+          </Reveal>
+        ))}
 
         <Reveal delay={0.2} className="mt-12 text-center">
           <BotaoLink href="/ementa" variante="dourado">

@@ -398,6 +398,11 @@ const ENTRADAS: Record<string, Traducoes> = {
     fr: "Émincé de veau, pommes de terre et riz",
     es: "Tiras de ternera lechal, patatas y arroz",
   },
+  "francesinha com ovo, batata frita e arroz": {
+    en: "Francesinha with a fried egg, fries and rice",
+    fr: "Francesinha avec œuf au plat, frites et riz",
+    es: "Francesinha con huevo frito, patatas fritas y arroz",
+  },
 
   // Menu 5
   "bife na pedra": {
@@ -409,6 +414,20 @@ const ENTRADAS: Record<string, Traducoes> = {
     en: "Steak on a hot stone with fries and salad",
     fr: "Steak sur pierre chaude, frites et salade",
     es: "Bistec a la piedra con patatas fritas y ensalada",
+  },
+
+  // Menu 6 (só aos domingos)
+  // "Bairrada" é uma região, não se traduz — mas sem o "roast"/"rôti" o leitão
+  // fica a parecer cru nas outras línguas.
+  "leitao a moda da bairrada": {
+    en: "Bairrada-style roast suckling pig",
+    fr: "Cochon de lait rôti à la mode de Bairrada",
+    es: "Cochinillo asado a la moda de Bairrada",
+  },
+  "leitao a moda da bairrada com batata a rodela": {
+    en: "Bairrada-style roast suckling pig with sliced potatoes",
+    fr: "Cochon de lait rôti à la mode de Bairrada, pommes de terre en rondelles",
+    es: "Cochinillo asado a la moda de Bairrada con patatas en rodajas",
   },
 
   // take away: petiscos e pratos que não estão nos menus

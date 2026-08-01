@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   page: {
     backgroundColor: cor.fundo,
     paddingHorizontal: 54,
-    paddingVertical: 42,
+    paddingVertical: 32,
     fontFamily: "Helvetica",
     color: cor.ink,
   },
@@ -46,10 +46,15 @@ const styles = StyleSheet.create({
   nome: { fontFamily: "Times-Bold", fontSize: 34, color: cor.sea },
   tagline: { fontFamily: "Times-Italic", fontSize: 12.5, color: cor.gold, marginTop: 4 },
   moradaLinha: { fontSize: 9, color: cor.muted, marginTop: 8 },
-  hairline: { height: 1.2, backgroundColor: cor.gold, opacity: 0.5, marginVertical: 14 },
-  // Uma coluna só: a carta são cinco menus de preço fixo com poucas linhas
-  // cada um. Em duas colunas sobrava meia página em branco.
-  categoria: { marginBottom: 20 },
+  hairline: { height: 1.2, backgroundColor: cor.gold, opacity: 0.5, marginVertical: 11 },
+  // Uma coluna só: a carta são seis menus de preço fixo com poucas linhas cada
+  // um. Em duas colunas sobrava meia página em branco.
+  //
+  // Cabe tudo numa página A4, mas à justa — com o Menu 6 já foi preciso apertar
+  // as margens. Como `Categoria` tem `wrap: false`, quando transborda não parte
+  // a lista: manda um menu inteiro para a página 2. Ao acrescentar pratos,
+  // correr `npm run menu:pdf` e confirmar que continua a dar uma página só.
+  categoria: { marginBottom: 12 },
   categoriaCabecalho: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -76,7 +81,7 @@ const styles = StyleSheet.create({
     color: cor.muted,
     textAlign: "center",
     lineHeight: 1.5,
-    marginBottom: 18,
+    marginBottom: 12,
   },
   prato: {
     flexDirection: "row",

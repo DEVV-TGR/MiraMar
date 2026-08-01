@@ -27,6 +27,15 @@ export type CategoriaMenu = {
   descricao?: TextoLocalizado;
   /** Preço fixo do menu inteiro, ex. "7,50 €". Ver `PratoMenu.preco`. */
   preco?: string;
+  /**
+   * Dias da semana em que a categoria é servida (0 = domingo, como
+   * `Date.getDay()`). Ausente — o caso normal — quer dizer todos os dias.
+   *
+   * Só `obterMenu()` filtra por isto. O PDF é estático e mostra sempre tudo,
+   * por isso a restrição tem de estar também escrita na `descricao` ("Só aos
+   * domingos"), que é o que aparece impresso.
+   */
+  diasSemana?: number[];
   pratos: PratoMenu[];
 };
 

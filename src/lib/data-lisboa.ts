@@ -16,6 +16,26 @@ export function hojeEmLisboa(): string {
   }).format(new Date());
 }
 
+const DIAS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+/**
+ * O dia da semana em Lisboa: 0 = domingo … 6 = sábado, como `Date.getDay()`.
+ *
+ * Pelo mesmo motivo que `hojeEmLisboa()`: `new Date().getDay()` daria o dia do
+ * servidor, que na Vercel é UTC — no verão português, das 23h à meia-noite de
+ * sábado o servidor ainda está em sábado enquanto em Lisboa já é domingo, e o
+ * menu de domingo aparecia (e desaparecia) uma hora fora de horas.
+ *
+ * O parâmetro `agora` existe só para testar um domingo sem esperar por domingo.
+ */
+export function diaSemanaEmLisboa(agora: Date = new Date()): number {
+  const abreviatura = new Intl.DateTimeFormat("en-US", {
+    timeZone: FUSO,
+    weekday: "short",
+  }).format(agora);
+  return DIAS.indexOf(abreviatura);
+}
+
 /** "2026-07-31" → "31/07" — como aparece no /admin. */
 export function formatarDiaMes(data: string): string {
   const [, mes, dia] = data.split("-");
