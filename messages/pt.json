@@ -1,7 +1,12 @@
 {
   "metadata": {
     "title": "{nome} — Restaurante em Angeiras, Matosinhos",
-    "description": "Restaurante de bairro no Parque de Campismo de Angeiras. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias."
+    "description": "Restaurante de bairro no Parque de Campismo de Angeiras. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias.",
+    "cozinha": "Portuguesa",
+    "ogSubtitulo": "Dentro do Parque de Campismo de Angeiras",
+    "descricaoEmenta": "A carta do Mira Mar: menus de preço fixo com sopa, pão e bebida incluídos, e diárias que mudam todos os dias.",
+    "descricaoTakeAway": "Peixe, carne e comida caseira para levar, em dose e meia dose. Encomendas por telefone.",
+    "descricaoEsplanada": "A carta do Pool Bar: cafés e pastelaria, sandes e snacks, sumos, cervejas e drinks — servidos ao balcão."
   },
   "nav": {
     "sobre": "Sobre",

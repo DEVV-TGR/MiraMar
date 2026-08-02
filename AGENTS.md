@@ -26,6 +26,13 @@ Site do **Restaurante Mira Mar** (Angeiras/Lavra, Matosinhos) — projeto real d
 - **Três ementas**, todas páginas reais do site e traduzidas nas 4 línguas: a **carta do restaurante** (`/{locale}/ementa`, com botão "Descarregar PDF" — só português, ver abaixo), o **take away** (`/{locale}/take-away`) e a **esplanada / Pool Bar** (`/{locale}/esplanada`). QR code das mesas e o CTA "Ver Ementa" apontam para a carta.
 - **Multi-idioma** (PT/EN/FR/ES) — motivado por o restaurante estar dentro de um parque de campismo cheio de turistas estrangeiros. Ver secção própria abaixo.
 - **Logótipo no carregamento/transições** — dá "vida" ao site, pedido explicitamente para o mesmo motivo (site visitado por muitos visitantes de fora, primeira impressão importa).
+- **SEO local e partilha** — o restaurante é encontrado por pesquisa ("restaurante em Angeiras") e por links partilhados no WhatsApp, não por quem já sabe o nome. Ver secção própria abaixo.
+
+### `NEXT_PUBLIC_SITE_URL` — fonte única do domínio
+
+Quatro coisas têm de concordar sobre qual é o endereço do site: o `metadataBase` (que torna absolutas as imagens de partilha), o `sitemap.xml`, o `robots.txt` e o **QR code impresso**. Todas leem `NEXT_PUBLIC_SITE_URL` — via `src/lib/site.ts` no código, e diretamente do ambiente no `scripts/generate-qr.mjs`, que é Node e não importa TypeScript.
+
+> ⚠️ **O domínio final ainda não está decidido.** Por defeito assume-se o subdomínio de demonstração da Vercel. Enquanto for esse o valor, **não mandar imprimir QR codes** — vão para as mesas plastificados e o endereço vai morrer. O `menu:qr` imprime a URL que gerou e avisa em maiúsculas quando está no valor provisório; é de propósito, para ser impossível gerar sem reparar.
 
 ### Multi-idioma (`next-intl`)
 
@@ -91,6 +98,17 @@ O restaurante muda as diárias todos os dias e não pode depender de nós para i
 - **Variáveis de ambiente**: ver `.env.example`. Os ficheiros `.env` são lidos da raiz do projeto, nunca de `src/`.
 - O **PDF continua estático e em português** — as diárias são por natureza dinâmicas e não fazem sentido num ficheiro descarregado.
 
+### SEO local, ícones e cartão de partilha
+
+O site esteve funcionalmente completo durante um tempo sem nada disto, e a falta não se via a navegar — via-se ao partilhar o link (retângulo cinzento sem imagem) e ao procurar o restaurante no Google (nada). É a camada que faz o site trabalhar para o restaurante em vez de só existir.
+
+- **Dados estruturados `Restaurant`** (`src/components/seo/DadosEstruturados.tsx`, montado na homepage). É o item de maior retorno: dá ao Google o horário, o telefone, a morada e a ementa para mostrar nos resultados e no mapa. Sai todo do `restaurante.json` — **não acrescentar conteúdo aqui**, se algo estiver errado corrige-se lá. Duas escolhas com razão: `priceRange: "€"` (reforça o posicionamento económico, que é o certo) e `containedInPlace: Campground` (o restaurante fica *dentro* do parque de campismo — é o argumento comercial e o schema tem campo próprio). O horário é **extraído** do texto de `horarios[0].horas` em vez de repetido noutro campo: dois sítios com o mesmo horário acabam sempre por divergir. **Falta o `geo`** — as coordenadas hão de vir do Google Maps; ficou de fora em vez de inventado, porque pôr o restaurante 200 m ao lado é pior do que não o pôr.
+- **`hreflang`** — quatro línguas e, até aqui, nada a dizer ao Google que são a mesma página. Vive em `src/lib/metadata.ts`: **qualquer página pública nova tem de chamar `metadataDeRota()`**, tal como tem de entrar na regex `ESTA_NUMA_EMENTA` do `TransicaoRota`. O `openGraph` vai lá dentro inteiro de propósito — os metadados do Next são fundidos *superficialmente*, e uma página que declare `openGraph` **apaga** o do layout em vez de o completar.
+- **`sitemap.ts` e `robots.ts`** vivem em `src/app/`, **fora de `[locale]`**: são um por site, não um por idioma. Uma rota nova entra em `ROTAS_PUBLICAS` (`src/lib/site.ts`) e aparece nos dois sozinha, nas quatro línguas.
+- **Ícones** (`npm run icons`, `scripts/generate-icons.mjs`) — o ícone **não é o logótipo inteiro**: a 16 px o lockup com "MIRA MAR / RESTAURANTE / SABORES. MAR. MOMENTOS." é uma mancha castanha. É só o medalhão do topo (sol sobre o mar), recortado por comparação a 16/32/48 px. O `apple-icon` é quadrado e opaco (o iOS compõe transparências a preto); os outros são redondos, como no header.
+- **Cartão de partilha** (`src/app/[locale]/opengraph-image.tsx`) — gerado por código, um por língua, e **em JPEG**: em PNG dava 1,8 MB e o WhatsApp ignora pré-visualizações grandes. Usa a foto do **peixe grelhado e não a do hero**, porque a `praia-angeiras.jpg` tem o problema de licença por resolver e um cartão de partilha circula ainda mais do que o próprio site. A Fraunces está versionada em `assets/` — o `next/font` não a serve ao Satori. Duas armadilhas do Satori já pagas: não entende o atalho `inset` nem o atalho `background` (com eles as camadas do véu saem invisíveis).
+- **Analytics** (`@vercel/analytics`, montado só no layout público) — para o cliente poder ver se o QR code está a ser usado. **Sem cookies**, por isso não obriga a banner de consentimento; o site não tem nenhum e não deve passar a ter. Plano gratuito, pela mesma regra do DeepL: o restaurante não pode ter despesa recorrente. Se um dia se trocar de ferramenta, tem de continuar a ser sem cookies.
+
 ### Logótipo no carregamento e transições
 
 - `src/instrumentation-client.ts` + `src/components/ui/TransicaoRota.tsx` — usa a API estável do Next 16 `onRouterTransitionStart` (sem flags experimentais) para mostrar brevemente o logótipo (`LogoAnel.tsx`, anel dourado a girar) entre navegações (`/` ↔ `/ementa`, trocas de idioma).
@@ -134,6 +152,8 @@ O **verde-oliva** da paleta esteve definido sem uso nenhum até aqui; agora é a
 - `@vercel/blob` — armazenamento das diárias em produção
 - DeepL (plano gratuito, via `fetch` — sem SDK) — tradução automática das diárias
 - `zod` — validação de formulários, do que vem do armazenamento e das respostas do DeepL
+- `sharp` — ícones (`npm run icons`) e compressão do cartão de partilha. **Manter a versão alinhada com a que o Next traz** (`next` → `optionalDependencies.sharp`): duas cópias de versões diferentes carregam duas libvips e o build avisa que pode dar "mysterious crashes".
+- `@vercel/analytics` — contagem de visitas, sem cookies
 - npm
 
 ## Skills

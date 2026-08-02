@@ -1,15 +1,33 @@
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Reveal } from "@/components/ui/Reveal";
 import { BotaoLink } from "@/components/ui/Botao";
 import { ListaEmenta } from "@/components/ementa/ListaEmenta";
 import { obterEsplanada } from "@/lib/menu";
+import { metadataDeRota } from "@/lib/metadata";
 import type { Menu } from "@/lib/menu-types";
 
 /* Sem `revalidate`: a esplanada é estática (`src/data/esplanada.json`), como o
    take away.
    O título e as tabs estão no layout partilhado com as outras ementas — ver
    `src/app/[locale]/(ementas)/layout.tsx`. */
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+
+  return metadataDeRota({
+    rota: "/esplanada",
+    locale,
+    titulo: t("esplanada.eyebrow"),
+    descricao: t("metadata.descricaoEsplanada"),
+  });
+}
 
 export default async function EsplanadaPage({
   params,

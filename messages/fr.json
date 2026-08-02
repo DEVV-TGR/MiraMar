@@ -1,7 +1,12 @@
 {
   "metadata": {
     "title": "{nome} — Restaurant à Angeiras, Matosinhos",
-    "description": "Restaurant de quartier au sein du camping d'Angeiras. Plats du jour, poisson frais et cuisine maison, à prix quotidien."
+    "description": "Restaurant de quartier au sein du camping d'Angeiras. Plats du jour, poisson frais et cuisine maison, à prix quotidien.",
+    "cozinha": "Portugaise",
+    "ogSubtitulo": "Au sein du camping d'Angeiras",
+    "descricaoEmenta": "La carte du Mira Mar : des menus à prix fixe avec soupe, pain et boisson compris, et des plats du jour qui changent chaque jour.",
+    "descricaoTakeAway": "Poisson, viande et cuisine maison à emporter, en portion entière ou demi-portion. Commandes par téléphone.",
+    "descricaoEsplanada": "La carte du Pool Bar : cafés et viennoiseries, sandwichs et snacks, jus, bières et cocktails — servis au comptoir."
   },
   "nav": {
     "sobre": "À propos",

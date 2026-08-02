@@ -1,7 +1,12 @@
 {
   "metadata": {
     "title": "{nome} — Restaurant in Angeiras, Matosinhos",
-    "description": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices."
+    "description": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
+    "cozinha": "Portuguese",
+    "ogSubtitulo": "Inside the Angeiras campsite",
+    "descricaoEmenta": "The Mira Mar menu: set-price menus with soup, bread and a drink included, and daily specials that change every day.",
+    "descricaoTakeAway": "Fish, meat and home cooking to take away, in full and half portions. Order by phone.",
+    "descricaoEsplanada": "The Pool Bar menu: coffee and pastries, sandwiches and snacks, juices, beers and drinks — served at the counter."
   },
   "nav": {
     "sobre": "About",
