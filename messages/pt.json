@@ -17,6 +17,7 @@
     "descricao": "Restaurante de bairro no Parque de Campismo de Angeiras. Muitas diárias, peixe fresco e comida caseira, a preços de todos os dias.",
     "verEmenta": "Ver Ementa",
     "verTakeAway": "Take Away",
+    "verEsplanada": "Pool Bar",
     "comoChegar": "Como Chegar"
   },
   "sobre": {
@@ -78,16 +79,23 @@
     "rascunhoAviso": "Ementa de rascunho — pratos e preços por confirmar",
     "dose": "Dose",
     "meiaDose": "Meia dose",
+    "minimizarTudo": "Minimizar tudo",
+    "mostrarTudo": "Mostrar tudo",
     "abas": {
       "etiqueta": "Escolher ementa",
       "restaurante": "Carta Restaurante",
-      "takeAway": "Take Away"
+      "takeAway": "Take Away",
+      "esplanada": "Esplanada / Pool Bar"
     }
   },
   "takeaway": {
     "eyebrow": "Take Away",
     "titulo": "Para levar para casa",
     "encomendar": "Encomendar · {telefone}"
+  },
+  "esplanada": {
+    "eyebrow": "Esplanada / Pool Bar",
+    "titulo": "À beira da piscina"
   },
   "carregamento": {
     "aCarregar": "A carregar",

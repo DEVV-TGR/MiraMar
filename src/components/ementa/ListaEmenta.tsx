@@ -1,5 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import { EntradaEmenta } from "@/components/ementa/EntradaEmenta";
+import { AcordeaoEmenta, CategoriaColapsavel } from "@/components/ementa/AcordeaoEmenta";
 import type { CategoriaMenu, Menu } from "@/lib/menu-types";
 
 /**
@@ -28,15 +29,20 @@ export function ListaEmenta({ menu }: { menu: Menu }) {
         </p>
       )}
 
-      <div className="mt-12 space-y-12">
-        {menu.categorias.map((categoria, i) => (
-          /* chave pelo índice: os nomes das categorias são livres e nada
-             impede que um dia se repitam */
-          <div key={i}>
-            <Categoria categoria={categoria} locale={locale} />
-          </div>
-        ))}
-      </div>
+      {/* as categorias minimizam-se uma a uma ou todas de vez — as ementas são
+          compridas (a esplanada tem dez categorias). Só a casca é cliente: os
+          pratos continuam a ser renderizados aqui, no servidor. */}
+      <AcordeaoEmenta total={menu.categorias.length}>
+        <div className="mt-6 space-y-10">
+          {menu.categorias.map((categoria, i) => (
+            /* chave pelo índice: os nomes das categorias são livres e nada
+               impede que um dia se repitam */
+            <div key={i}>
+              <Categoria categoria={categoria} locale={locale} indice={i} />
+            </div>
+          ))}
+        </div>
+      </AcordeaoEmenta>
     </EntradaEmenta>
   );
 }
@@ -44,9 +50,11 @@ export function ListaEmenta({ menu }: { menu: Menu }) {
 function Categoria({
   categoria,
   locale,
+  indice,
 }: {
   categoria: CategoriaMenu;
   locale: keyof Menu["nota"];
+  indice: number;
 }) {
   const t = useTranslations("ementa");
 
@@ -56,19 +64,12 @@ function Categoria({
   const temDose = categoria.pratos.some((prato) => prato.precoDose);
 
   return (
-    <>
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h2 className="font-display text-xl uppercase tracking-wide text-sea-deep">
-          {categoria.nome[locale]}
-        </h2>
-        {categoria.preco && (
-          <p className="font-display text-xl text-gold-deep">{categoria.preco}</p>
-        )}
-      </div>
-      {categoria.descricao && (
-        <p className="mt-1 text-sm italic text-muted">{categoria.descricao[locale]}</p>
-      )}
-
+    <CategoriaColapsavel
+      indice={indice}
+      nome={categoria.nome[locale]}
+      preco={categoria.preco}
+      descricao={categoria.descricao?.[locale]}
+    >
       {temDose && (
         <div
           aria-hidden
@@ -116,6 +117,6 @@ function Categoria({
           </li>
         ))}
       </ul>
-    </>
+    </CategoriaColapsavel>
   );
 }

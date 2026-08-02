@@ -17,6 +17,7 @@
     "descricao": "Restaurante de barrio en el camping de Angeiras. Muchos platos del día, pescado fresco y comida casera, a precios de cada día.",
     "verEmenta": "Ver Carta",
     "verTakeAway": "Para Llevar",
+    "verEsplanada": "Pool Bar",
     "comoChegar": "Cómo Llegar"
   },
   "sobre": {
@@ -78,16 +79,23 @@
     "rascunhoAviso": "Carta provisional — platos y precios por confirmar",
     "dose": "Ración",
     "meiaDose": "Media",
+    "minimizarTudo": "Minimizar todo",
+    "mostrarTudo": "Mostrar todo",
     "abas": {
       "etiqueta": "Elegir carta",
       "restaurante": "Carta Restaurante",
-      "takeAway": "Para Llevar"
+      "takeAway": "Para Llevar",
+      "esplanada": "Terraza / Pool Bar"
     }
   },
   "takeaway": {
     "eyebrow": "Take Away",
     "titulo": "Para llevar a casa",
     "encomendar": "Pedir · {telefone}"
+  },
+  "esplanada": {
+    "eyebrow": "Terraza / Pool Bar",
+    "titulo": "Junto a la piscina"
   },
   "carregamento": {
     "aCarregar": "Cargando",

@@ -9,15 +9,21 @@ import { usePathname } from "@/i18n/navigation";
  * remonta ao trocar de separador — troca de texto com um fundido curto,
  * enquanto o resto da página fica quieto.
  */
+/* Cada ementa traz o seu eyebrow e título do seu namespace. Um mapa e não um
+   ternário: com três abas, um booleano dava o título da carta do restaurante a
+   tudo o que não fosse take away. */
+const NAMESPACES: Record<string, string> = {
+  "/take-away": "takeaway",
+  "/esplanada": "esplanada",
+};
+
 export function CabecalhoEmenta() {
-  const tEmenta = useTranslations("ementa");
-  const tTakeAway = useTranslations("takeaway");
   const caminho = usePathname();
   const reduzido = useReducedMotion();
 
-  const takeAway = caminho === "/take-away";
-  const eyebrow = takeAway ? tTakeAway("eyebrow") : tEmenta("eyebrow");
-  const titulo = takeAway ? tTakeAway("titulo") : tEmenta("titulo");
+  const t = useTranslations(NAMESPACES[caminho] ?? "ementa");
+  const eyebrow = t("eyebrow");
+  const titulo = t("titulo");
 
   return (
     /* altura reservada pelo conteúdo: o `grid` de uma célula sobrepõe o texto
@@ -25,7 +31,7 @@ export function CabecalhoEmenta() {
     <div className="grid text-center [&>*]:col-start-1 [&>*]:row-start-1">
       <AnimatePresence initial={false}>
         <motion.div
-          key={takeAway ? "take-away" : "ementa"}
+          key={caminho}
           initial={reduzido ? false : { opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           exit={reduzido ? { opacity: 0 } : { opacity: 0, y: -6 }}

@@ -17,6 +17,7 @@
     "descricao": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
     "verEmenta": "View Menu",
     "verTakeAway": "Take Away",
+    "verEsplanada": "Pool Bar",
     "comoChegar": "Get Directions"
   },
   "sobre": {
@@ -78,16 +79,23 @@
     "rascunhoAviso": "Draft menu — dishes and prices to be confirmed",
     "dose": "Full",
     "meiaDose": "Half",
+    "minimizarTudo": "Collapse all",
+    "mostrarTudo": "Expand all",
     "abas": {
       "etiqueta": "Choose a menu",
       "restaurante": "Restaurant Menu",
-      "takeAway": "Take Away"
+      "takeAway": "Take Away",
+      "esplanada": "Terrace / Pool Bar"
     }
   },
   "takeaway": {
     "eyebrow": "Take Away",
     "titulo": "To take home",
     "encomendar": "Order · {telefone}"
+  },
+  "esplanada": {
+    "eyebrow": "Terrace / Pool Bar",
+    "titulo": "By the pool"
   },
   "carregamento": {
     "aCarregar": "Loading",

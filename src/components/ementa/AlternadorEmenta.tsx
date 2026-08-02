@@ -17,6 +17,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 const ABAS = [
   { href: "/ementa", chave: "restaurante" },
   { href: "/take-away", chave: "takeAway" },
+  { href: "/esplanada", chave: "esplanada" },
 ] as const;
 
 export function AlternadorEmenta() {
@@ -26,7 +27,10 @@ export function AlternadorEmenta() {
 
   return (
     <nav aria-label={t("etiqueta")} className="flex justify-center">
-      <div className="inline-flex gap-1 rounded-full border border-line bg-surface p-1">
+      {/* com três abas, "Carta Restaurante" já não cabe a `px-5` num telemóvel
+          estreito: aperta-se abaixo do `sm` e deixa-se quebrar em duas linhas
+          como rede de segurança */}
+      <div className="inline-flex flex-wrap justify-center gap-1 rounded-3xl border border-line bg-surface p-1 sm:rounded-full">
         {ABAS.map(({ href, chave }) => {
           const ativa = caminho === href;
 
@@ -35,7 +39,7 @@ export function AlternadorEmenta() {
               key={href}
               href={href}
               aria-current={ativa ? "page" : undefined}
-              className="relative rounded-full px-5 py-2 text-sm tracking-wide"
+              className="relative rounded-full px-3.5 py-1.5 text-[0.8125rem] tracking-wide sm:px-5 sm:py-2 sm:text-sm"
             >
               {ativa &&
                 (reduzido ? (

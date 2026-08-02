@@ -1,0 +1,857 @@
+{
+  "placeholder": false,
+  "nota": {
+    "pt": "Preços das bebidas, da pastelaria e dos acompanhamentos por confirmar com o restaurante.",
+    "en": "Prices for drinks, pastries and sides to be confirmed with the restaurant.",
+    "fr": "Prix des boissons, des viennoiseries et des accompagnements à confirmer avec le restaurant.",
+    "es": "Precios de las bebidas, la pastelería y los acompañamientos por confirmar con el restaurante."
+  },
+  "incluido": {
+    "pt": "Serviço ao balcão: os pedidos fazem-se e levantam-se no balcão. Na esplanada todo o ano; no Pool Bar da piscina em julho e agosto.",
+    "en": "Counter service: order and collect at the counter. On the terrace all year round; at the poolside Pool Bar in July and August.",
+    "fr": "Service au comptoir : on commande et on récupère au comptoir. Sur la terrasse toute l'année ; au Pool Bar de la piscine en juillet et août.",
+    "es": "Servicio en barra: se pide y se recoge en la barra. En la terraza todo el año; en el Pool Bar de la piscina en julio y agosto."
+  },
+  "atualizadoEm": "2026-08-02",
+  "categorias": [
+    {
+      "nome": {
+        "pt": "Pastelaria",
+        "en": "Pastries",
+        "fr": "Pâtisserie",
+        "es": "Pastelería"
+      },
+      "descricao": {
+        "pt": "Preços afixados no balcão",
+        "en": "Prices displayed at the counter",
+        "fr": "Prix affichés au comptoir",
+        "es": "Precios expuestos en la barra"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Croissant simples",
+            "en": "Plain croissant",
+            "fr": "Croissant nature",
+            "es": "Cruasán solo"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Croissant com manteiga",
+            "en": "Croissant with butter",
+            "fr": "Croissant au beurre",
+            "es": "Cruasán con mantequilla"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Croissant com compota",
+            "en": "Croissant with jam",
+            "fr": "Croissant à la confiture",
+            "es": "Cruasán con mermelada"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Croissant com queijo ou fiambre",
+            "en": "Croissant with cheese or ham",
+            "fr": "Croissant au fromage ou au jambon",
+            "es": "Cruasán con queso o jamón de York"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Croissant misto",
+            "en": "Cheese and ham croissant",
+            "fr": "Croissant jambon-fromage",
+            "es": "Cruasán mixto de queso y jamón"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Pastel de nata",
+            "en": "Pastel de nata (Portuguese custard tart)",
+            "fr": "Pastel de nata (flan pâtissier portugais)",
+            "es": "Pastel de nata (tartaleta de crema)"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Queque",
+            "en": "Muffin",
+            "fr": "Muffin",
+            "es": "Magdalena"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Panike de chocolate ou misto",
+            "en": "Panike pastry, chocolate or cheese and ham",
+            "fr": "Viennoiserie Panike, chocolat ou jambon-fromage",
+            "es": "Bollo Panike de chocolate o mixto"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Folhados",
+            "en": "Puff pastries",
+            "fr": "Feuilletés",
+            "es": "Hojaldres"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Lanches",
+            "en": "Filled bread rolls",
+            "fr": "Petits pains garnis",
+            "es": "Bollos rellenos"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Amendoins ou tremoços",
+            "en": "Peanuts or lupin beans",
+            "fr": "Cacahuètes ou lupins",
+            "es": "Cacahuetes o altramuces"
+          }
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Cafetaria",
+        "en": "Coffee & Tea",
+        "fr": "Cafétéria",
+        "es": "Cafetería"
+      },
+      "descricao": {
+        "pt": "Preços afixados no balcão",
+        "en": "Prices displayed at the counter",
+        "fr": "Prix affichés au comptoir",
+        "es": "Precios expuestos en la barra"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Café ou descafeinado",
+            "en": "Espresso or decaf",
+            "fr": "Expresso ou déca",
+            "es": "Café solo o descafeinado"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Café duplo",
+            "en": "Double espresso",
+            "fr": "Double expresso",
+            "es": "Café doble"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Carioca de café ou de limão",
+            "en": "Carioca — weak espresso, or hot lemon-peel infusion",
+            "fr": "Carioca — expresso léger, ou infusion de zeste de citron",
+            "es": "Carioca — café flojo, o infusión de piel de limón"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Pingo",
+            "en": "Pingo — espresso with a dash of milk",
+            "fr": "Pingo — expresso avec un nuage de lait",
+            "es": "Pingo — café solo con una nube de leche"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Meia de leite",
+            "en": "White coffee",
+            "fr": "Café au lait",
+            "es": "Café con leche"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Cappuccino",
+            "en": "Cappuccino",
+            "fr": "Cappuccino",
+            "es": "Capuchino"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Café com gelo",
+            "en": "Espresso over ice",
+            "fr": "Expresso sur glace",
+            "es": "Café con hielo"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Iced coffee",
+            "en": "Iced coffee",
+            "fr": "Café glacé",
+            "es": "Café helado"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Infusão quente",
+            "en": "Hot herbal tea",
+            "fr": "Infusion chaude",
+            "es": "Infusión caliente"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Infusão gelada",
+            "en": "Iced herbal tea",
+            "fr": "Infusion glacée",
+            "es": "Infusión fría"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Leite Agros",
+            "en": "Agros milk",
+            "fr": "Lait Agros",
+            "es": "Leche Agros"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Carioca de limão duplo",
+            "en": "Double carioca de limão — hot lemon-peel infusion",
+            "fr": "Double carioca de limão — infusion de zeste de citron",
+            "es": "Carioca de limón doble — infusión de piel de limón"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Abatanado",
+            "en": "Abatanado — long black coffee",
+            "fr": "Abatanado — café allongé",
+            "es": "Abatanado — café largo"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Cevada",
+            "en": "Barley coffee",
+            "fr": "Café d'orge",
+            "es": "Café de cebada"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Cevada dupla",
+            "en": "Double barley coffee",
+            "fr": "Double café d'orge",
+            "es": "Café de cebada doble"
+          }
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Saladas",
+        "en": "Salads",
+        "fr": "Salades",
+        "es": "Ensaladas"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Salada tropical",
+            "en": "Tropical salad",
+            "fr": "Salade tropicale",
+            "es": "Ensalada tropical"
+          },
+          "descricao": {
+            "pt": "Alface, tomate cherry, manga, ananás, cebola roxa, azeitonas pretas e salsa.",
+            "en": "Lettuce, cherry tomato, mango, pineapple, red onion, black olives and parsley.",
+            "fr": "Laitue, tomates cerises, mangue, ananas, oignon rouge, olives noires et persil.",
+            "es": "Lechuga, tomate cherry, mango, piña, cebolla roja, aceitunas negras y perejil."
+          },
+          "preco": "7,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Salada de pepino",
+            "en": "Cucumber salad",
+            "fr": "Salade de concombre",
+            "es": "Ensalada de pepino"
+          },
+          "descricao": {
+            "pt": "Pepino, salmão fumado, cebola roxa, queijo creme, abacate e alcaparras.",
+            "en": "Cucumber, smoked salmon, red onion, cream cheese, avocado and capers.",
+            "fr": "Concombre, saumon fumé, oignon rouge, fromage frais, avocat et câpres.",
+            "es": "Pepino, salmón ahumado, cebolla roja, queso crema, aguacate y alcaparras."
+          },
+          "preco": "7,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Salada de atum",
+            "en": "Tuna salad",
+            "fr": "Salade de thon",
+            "es": "Ensalada de atún"
+          },
+          "descricao": {
+            "pt": "Alface, atum, cenoura, tomate cherry, milho e azeitonas pretas.",
+            "en": "Lettuce, tuna, carrot, cherry tomato, sweetcorn and black olives.",
+            "fr": "Laitue, thon, carotte, tomates cerises, maïs et olives noires.",
+            "es": "Lechuga, atún, zanahoria, tomate cherry, maíz y aceitunas negras."
+          },
+          "preco": "7,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Bagel de salmão",
+            "en": "Salmon bagel",
+            "fr": "Bagel au saumon",
+            "es": "Bagel de salmón"
+          },
+          "descricao": {
+            "pt": "Salmão fumado, queijo creme, pepino, alcaparras e sementes.",
+            "en": "Smoked salmon, cream cheese, cucumber, capers and seeds.",
+            "fr": "Saumon fumé, fromage frais, concombre, câpres et graines.",
+            "es": "Salmón ahumado, queso crema, pepino, alcaparras y semillas."
+          },
+          "preco": "5,00 €"
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Snacks",
+        "en": "Snacks",
+        "fr": "Snacks",
+        "es": "Snacks"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Hambúrguer",
+            "en": "Burger",
+            "fr": "Burger",
+            "es": "Hamburguesa"
+          },
+          "descricao": {
+            "pt": "Hambúrguer, bacon, cheddar, rúcula, cebola frita e molho.",
+            "en": "Beef patty, bacon, cheddar, rocket, fried onion and sauce.",
+            "fr": "Steak haché, bacon, cheddar, roquette, oignons frits et sauce.",
+            "es": "Hamburguesa, bacon, cheddar, rúcula, cebolla frita y salsa."
+          },
+          "preco": "8,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Prego no pão",
+            "en": "Prego — steak sandwich",
+            "fr": "Prego — sandwich au steak",
+            "es": "Prego — bocadillo de filete"
+          },
+          "descricao": {
+            "pt": "Bife, queijo e fiambre.",
+            "en": "Steak, cheese and ham.",
+            "fr": "Steak, fromage et jambon.",
+            "es": "Filete, queso y jamón de York."
+          },
+          "preco": "6,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Panado no pão",
+            "en": "Breaded chicken sandwich",
+            "fr": "Sandwich au poulet pané",
+            "es": "Bocadillo de pollo empanado"
+          },
+          "descricao": {
+            "pt": "Panado de frango com queijo e fiambre.",
+            "en": "Breaded chicken with cheese and ham.",
+            "fr": "Poulet pané, fromage et jambon.",
+            "es": "Pollo empanado con queso y jamón de York."
+          },
+          "preco": "4,00 €"
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Tostas",
+        "en": "Toasted Sandwiches",
+        "fr": "Sandwichs Grillés",
+        "es": "Tostas"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Tosta de queijo ou fiambre",
+            "en": "Cheese or ham toastie",
+            "fr": "Sandwich grillé au fromage ou au jambon",
+            "es": "Tosta de queso o de jamón"
+          },
+          "descricao": {
+            "pt": "Pão rústico só com queijo ou só com fiambre.",
+            "en": "Rustic bread with cheese only or ham only.",
+            "fr": "Pain rustique, fromage seul ou jambon seul.",
+            "es": "Pan rústico solo con queso o solo con jamón de York."
+          },
+          "preco": "3,50 €"
+        },
+        {
+          "nome": {
+            "pt": "Tosta mista",
+            "en": "Cheese and ham toastie",
+            "fr": "Sandwich grillé jambon-fromage",
+            "es": "Tosta mixta"
+          },
+          "descricao": {
+            "pt": "Pão rústico com queijo e fiambre.",
+            "en": "Rustic bread with cheese and ham.",
+            "fr": "Pain rustique, fromage et jambon.",
+            "es": "Pan rústico con queso y jamón de York."
+          },
+          "preco": "4,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Tosta de bacon",
+            "en": "Bacon toastie",
+            "fr": "Sandwich grillé au bacon",
+            "es": "Tosta de bacon"
+          },
+          "descricao": {
+            "pt": "Pão rústico com queijo, bacon, ovo frito e maionese.",
+            "en": "Rustic bread with cheese, bacon, fried egg and mayonnaise.",
+            "fr": "Pain rustique, fromage, bacon, œuf au plat et mayonnaise.",
+            "es": "Pan rústico con queso, bacon, huevo frito y mayonesa."
+          },
+          "preco": "6,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Tosta de tomate cherry",
+            "en": "Cherry tomato toastie",
+            "fr": "Sandwich grillé aux tomates cerises",
+            "es": "Tosta de tomate cherry"
+          },
+          "descricao": {
+            "pt": "Pão rústico com mozzarella, tomate cherry, orégãos e molho balsâmico.",
+            "en": "Rustic bread with mozzarella, cherry tomato, oregano and balsamic dressing.",
+            "fr": "Pain rustique, mozzarella, tomates cerises, origan et sauce balsamique.",
+            "es": "Pan rústico con mozzarella, tomate cherry, orégano y salsa balsámica."
+          },
+          "preco": "6,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Cachorrinho",
+            "en": "Cachorrinho — Porto-style pressed hot dog",
+            "fr": "Cachorrinho — hot-dog pressé à la mode de Porto",
+            "es": "Cachorrinho — perrito caliente prensado de Oporto"
+          },
+          "descricao": {
+            "pt": "Salsicha, queijo e fiambre.",
+            "en": "Sausage, cheese and ham.",
+            "fr": "Saucisse, fromage et jambon.",
+            "es": "Salchicha, queso y jamón de York."
+          },
+          "preco": "5,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Francesinha prensada",
+            "en": "Pressed francesinha",
+            "fr": "Francesinha pressée",
+            "es": "Francesinha prensada"
+          },
+          "descricao": {
+            "pt": "Linguiça, queijo, fiambre e molho de francesinha.",
+            "en": "Linguiça sausage, cheese, ham and francesinha sauce.",
+            "fr": "Saucisse linguiça, fromage, jambon et sauce francesinha.",
+            "es": "Longaniza, queso, jamón de York y salsa de francesinha."
+          },
+          "preco": "5,00 €"
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Baguetes",
+        "en": "Baguettes",
+        "fr": "Baguettes",
+        "es": "Baguetes"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Baguete de atum",
+            "en": "Tuna baguette",
+            "fr": "Baguette au thon",
+            "es": "Baguete de atún"
+          },
+          "descricao": {
+            "pt": "Pasta de atum, rúcula, tomate e ovo cozido.",
+            "en": "Tuna mayo, rocket, tomato and boiled egg.",
+            "fr": "Thon mayonnaise, roquette, tomate et œuf dur.",
+            "es": "Paté de atún, rúcula, tomate y huevo cocido."
+          },
+          "preco": "6,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Baguete americana",
+            "en": "American baguette",
+            "fr": "Baguette américaine",
+            "es": "Baguete americana"
+          },
+          "descricao": {
+            "pt": "Alface, queijo, fiambre, tomate e ovo cozido.",
+            "en": "Lettuce, cheese, ham, tomato and boiled egg.",
+            "fr": "Laitue, fromage, jambon, tomate et œuf dur.",
+            "es": "Lechuga, queso, jamón de York, tomate y huevo cocido."
+          },
+          "preco": "6,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Baguete de presunto",
+            "en": "Cured ham baguette",
+            "fr": "Baguette au jambon cru",
+            "es": "Baguete de jamón serrano"
+          },
+          "descricao": {
+            "pt": "Presunto, rúcula, tomate, mozzarella e molho pesto.",
+            "en": "Presunto cured ham, rocket, tomato, mozzarella and pesto.",
+            "fr": "Jambon cru presunto, roquette, tomate, mozzarella et pesto.",
+            "es": "Jamón curado presunto, rúcula, tomate, mozzarella y salsa pesto."
+          },
+          "preco": "7,00 €"
+        },
+        {
+          "nome": {
+            "pt": "Baguete de delícias do mar",
+            "en": "Seafood stick baguette",
+            "fr": "Baguette au surimi",
+            "es": "Baguete de palitos de cangrejo"
+          },
+          "descricao": {
+            "pt": "Pasta de delícias do mar, milho, alface e ovo cozido.",
+            "en": "Crab-stick mayo, sweetcorn, lettuce and boiled egg.",
+            "fr": "Surimi mayonnaise, maïs, laitue et œuf dur.",
+            "es": "Paté de palitos de cangrejo, maíz, lechuga y huevo cocido."
+          },
+          "preco": "6,00 €"
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Acompanhamentos",
+        "en": "Sides",
+        "fr": "Accompagnements",
+        "es": "Acompañamientos"
+      },
+      "descricao": {
+        "pt": "Preços afixados no balcão",
+        "en": "Prices displayed at the counter",
+        "fr": "Prix affichés au comptoir",
+        "es": "Precios expuestos en la barra"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Sopa do dia",
+            "en": "Soup of the day",
+            "fr": "Soupe du jour",
+            "es": "Sopa del día"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Nachos com guacamole",
+            "en": "Nachos with guacamole",
+            "fr": "Nachos au guacamole",
+            "es": "Nachos con guacamole"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Batatas fritas de pacote",
+            "en": "Crisps",
+            "fr": "Chips",
+            "es": "Patatas fritas de bolsa"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Nuggets",
+            "en": "Chicken nuggets",
+            "fr": "Nuggets de poulet",
+            "es": "Nuggets de pollo"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Salgadinhos variados",
+            "en": "Assorted savoury snacks",
+            "fr": "Assortiment de petits salés",
+            "es": "Surtido de salados"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Potes de fruta",
+            "en": "Fruit pots",
+            "fr": "Coupes de fruits",
+            "es": "Vasitos de fruta"
+          }
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Sumos e Águas",
+        "en": "Juices & Water",
+        "fr": "Jus et Eaux",
+        "es": "Zumos y Aguas"
+      },
+      "descricao": {
+        "pt": "Preços afixados no balcão",
+        "en": "Prices displayed at the counter",
+        "fr": "Prix affichés au comptoir",
+        "es": "Precios expuestos en la barra"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Compal",
+            "en": "Compal fruit juice",
+            "fr": "Jus de fruits Compal",
+            "es": "Zumo Compal"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Sumo natural de laranja",
+            "en": "Freshly squeezed orange juice",
+            "fr": "Jus d'orange pressé",
+            "es": "Zumo de naranja natural"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Limonada",
+            "en": "Lemonade",
+            "fr": "Citronnade",
+            "es": "Limonada"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Água mineral",
+            "en": "Still mineral water",
+            "fr": "Eau minérale plate",
+            "es": "Agua mineral"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Água com gás",
+            "en": "Sparkling water",
+            "fr": "Eau pétillante",
+            "es": "Agua con gas"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Água com gás de sabores",
+            "en": "Flavoured sparkling water",
+            "fr": "Eau pétillante aromatisée",
+            "es": "Agua con gas de sabores"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Água tónica",
+            "en": "Tonic water",
+            "fr": "Eau tonique",
+            "es": "Agua tónica"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Refrigerantes",
+            "en": "Soft drinks",
+            "fr": "Sodas",
+            "es": "Refrescos"
+          }
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Cervejas",
+        "en": "Beers",
+        "fr": "Bières",
+        "es": "Cervezas"
+      },
+      "descricao": {
+        "pt": "Preços afixados no balcão",
+        "en": "Prices displayed at the counter",
+        "fr": "Prix affichés au comptoir",
+        "es": "Precios expuestos en la barra"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Fino",
+            "en": "Fino — small draught beer",
+            "fr": "Fino — bière pression, petit verre",
+            "es": "Fino — caña de cerveza"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Fino preto",
+            "en": "Fino preto — small draught dark beer",
+            "fr": "Fino preto — bière brune pression, petit verre",
+            "es": "Fino preto — caña de cerveza negra"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Panaché",
+            "en": "Shandy — beer with lemonade",
+            "fr": "Panaché",
+            "es": "Clara"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Tango",
+            "en": "Tango — beer with grenadine",
+            "fr": "Tango — bière au sirop de grenadine",
+            "es": "Tango — cerveza con granadina"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Somersby",
+            "en": "Somersby cider",
+            "fr": "Cidre Somersby",
+            "es": "Sidra Somersby"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Caneca",
+            "en": "Caneca — large draught beer",
+            "fr": "Caneca — grande bière pression",
+            "es": "Caneca — jarra de cerveza"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Caneca preta",
+            "en": "Caneca preta — large draught dark beer",
+            "fr": "Caneca preta — grande bière brune pression",
+            "es": "Caneca preta — jarra de cerveza negra"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Favaios com cerveja",
+            "en": "Favaios muscatel with beer",
+            "fr": "Muscat de Favaios avec bière",
+            "es": "Moscatel de Favaios con cerveza"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Martini com cerveja",
+            "en": "Martini with beer",
+            "fr": "Martini avec bière",
+            "es": "Martini con cerveza"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Diesel",
+            "en": "Diesel — beer with cola",
+            "fr": "Diesel — bière au cola",
+            "es": "Diesel — cerveza con cola"
+          }
+        }
+      ]
+    },
+    {
+      "nome": {
+        "pt": "Drinks",
+        "en": "Cocktails",
+        "fr": "Cocktails",
+        "es": "Cócteles"
+      },
+      "descricao": {
+        "pt": "Preços afixados no balcão",
+        "en": "Prices displayed at the counter",
+        "fr": "Prix affichés au comptoir",
+        "es": "Precios expuestos en la barra"
+      },
+      "pratos": [
+        {
+          "nome": {
+            "pt": "Caipirinha",
+            "en": "Caipirinha",
+            "fr": "Caïpirinha",
+            "es": "Caipiriña"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Mojito",
+            "en": "Mojito",
+            "fr": "Mojito",
+            "es": "Mojito"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Aperol Spritz",
+            "en": "Aperol Spritz",
+            "fr": "Aperol Spritz",
+            "es": "Aperol Spritz"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Gin tónico",
+            "en": "Gin and tonic",
+            "fr": "Gin tonic",
+            "es": "Gin-tonic"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Vodka tónica",
+            "en": "Vodka and tonic",
+            "fr": "Vodka tonic",
+            "es": "Vodka con tónica"
+          }
+        },
+        {
+          "nome": {
+            "pt": "Sangria branca ou tinta",
+            "en": "White or red sangria",
+            "fr": "Sangria blanche ou rouge",
+            "es": "Sangría blanca o tinta"
+          }
+        }
+      ]
+    }
+  ]
+}
