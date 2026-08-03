@@ -60,6 +60,14 @@ export async function DadosEstruturados({ locale }: { locale: string }) {
       addressRegion: "Matosinhos",
       addressCountry: "PT",
     },
+    /* Coordenadas do próprio restaurante, tiradas da ficha do Google Maps.
+       Sem condicional, ao contrário do horário: aqui são números no JSON, ou
+       existem ou o TypeScript acusa. */
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: restaurante.coordenadas.latitude,
+      longitude: restaurante.coordenadas.longitude,
+    },
     /* O restaurante fica *dentro* do parque de campismo — não ao lado. É o
        argumento comercial do negócio e o schema tem campo próprio para isso. */
     containedInPlace: {

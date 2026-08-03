@@ -15,6 +15,7 @@
   "instagram": "https://www.instagram.com/restaurantemiramar26/",
   "mapsQuery": "Restaurante Mira Mar, R. Angeiras 821, 4455-039 Lavra",
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Mira%20Mar%2C%20R.%20Angeiras%20821%2C%204455-039%20Lavra",
+  "coordenadas": { "latitude": 41.2671, "longitude": -8.7188 },
 
   "menuPdfUrl": "/mira-mar-menu.pdf"
 }
