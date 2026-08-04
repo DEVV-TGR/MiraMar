@@ -16,10 +16,11 @@ import { restaurante } from "@/data/restaurante";
  * quatro línguas (o Next chama isto uma vez por locale) e acompanha a foto —
  * quando as fotos reais substituírem as de stock, o cartão atualiza-se sozinho.
  *
- * A foto é a do peixe grelhado e **não** a do hero: a `praia-angeiras.jpg` tem
- * um problema de licença por resolver (ver AGENTS.md) e um cartão de partilha
- * circula ainda mais do que o próprio site. A do peixe é stock livre — e para
- * um restaurante, comida vende melhor do que paisagem.
+ * A foto é a do peixe grelhado e **não** a do hero. Começou por ser uma questão
+ * de licença (a foto do hero de então não a tinha); hoje o hero é uma foto real
+ * do restaurante, mas fica na mesma o peixe: num cartão de WhatsApp a comida
+ * convida mais do que uma fachada, e a foto do hero é pequena (768 px) para os
+ * 1200×630 disto. Reavaliar quando chegar o original em resolução alta.
  */
 
 export const size = { width: 1200, height: 630 };
