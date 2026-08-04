@@ -1,7 +1,12 @@
 {
   "metadata": {
     "title": "{nome} — Restaurant in Angeiras, Matosinhos",
-    "description": "Neighbourhood restaurant in Angeiras, next to the campsite. Daily specials, fresh fish and home cooking, at everyday prices."
+    "description": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
+    "cozinha": "Portuguese",
+    "ogSubtitulo": "Inside the Angeiras campsite",
+    "descricaoEmenta": "The Mira Mar menu: set-price menus with soup, bread and a drink included, and daily specials that change every day.",
+    "descricaoTakeAway": "Fish, meat and home cooking to take away, in full and half portions. Order by phone.",
+    "descricaoEsplanada": "The Pool Bar menu: coffee and pastries, sandwiches and snacks, juices, beers and drinks — served at the counter."
   },
   "nav": {
     "sobre": "About",
@@ -14,14 +19,16 @@
     "fecharMenu": "Close menu"
   },
   "hero": {
-    "descricao": "Neighbourhood restaurant in Angeiras, next to the campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
+    "descricao": "Neighbourhood restaurant inside the Angeiras campsite. Daily specials, fresh fish and home cooking, at everyday prices.",
     "verEmenta": "View Menu",
+    "verTakeAway": "Take Away",
+    "verEsplanada": "Pool Bar",
     "comoChegar": "Get Directions"
   },
   "sobre": {
     "eyebrow": "About us",
     "titulo": "A neighbourhood table, always full",
-    "paragrafo1": "At Mira Mar we cook every day like at home: plenty of daily specials, fresh fish and good quality meat, at everyday prices. We're right next to the Angeiras campsite, in a simple and welcoming setting where regulars feel at home from day one.",
+    "paragrafo1": "At Mira Mar we cook every day like at home: plenty of daily specials, fresh fish and good quality meat, at everyday prices. We're inside the Angeiras campsite, in a simple and welcoming setting where regulars feel at home from day one.",
     "paragrafo2": "No fuss, no rush — just good food, served with care, every day of the week."
   },
   "galeria": {
@@ -39,23 +46,19 @@
   "ementaDestaque": {
     "eyebrow": "Menu",
     "titulo": "What we cook here",
-    "descricao": "Fresh fish, good quality meat and the daily special — home cooking at everyday prices.",
+    "descricao": "Full menus with bread, soup and a drink included — plus Menu 1, which changes every day.",
     "verCompleta": "See Full Menu"
   },
   "localizacao": {
     "eyebrow": "Location",
-    "titulo": "Next to the Angeiras campsite",
+    "titulo": "Inside the Angeiras campsite",
     "abrirMaps": "Open in Google Maps"
   },
   "horario": {
     "linhas": [
       {
-        "dias": "Tuesday to Sunday",
-        "horas": "09:00 – 22:00"
-      },
-      {
-        "dias": "Monday",
-        "horas": "Closed for dinner"
+        "dias": "Every day",
+        "horas": "08:00 – 23:00"
       }
     ]
   },
@@ -78,7 +81,26 @@
     "titulo": "Our menu",
     "voltar": "Back to home",
     "descarregarPdf": "Download PDF (PT)",
-    "rascunhoAviso": "Draft menu — dishes and prices to be confirmed"
+    "rascunhoAviso": "Draft menu — dishes and prices to be confirmed",
+    "dose": "Full",
+    "meiaDose": "Half",
+    "minimizarTudo": "Collapse all",
+    "mostrarTudo": "Expand all",
+    "abas": {
+      "etiqueta": "Choose a menu",
+      "restaurante": "Restaurant Menu",
+      "takeAway": "Take Away",
+      "esplanada": "Terrace / Pool Bar"
+    }
+  },
+  "takeaway": {
+    "eyebrow": "Take Away",
+    "titulo": "To take home",
+    "encomendar": "Order · {telefone}"
+  },
+  "esplanada": {
+    "eyebrow": "Terrace / Pool Bar",
+    "titulo": "By the pool"
   },
   "carregamento": {
     "aCarregar": "Loading",

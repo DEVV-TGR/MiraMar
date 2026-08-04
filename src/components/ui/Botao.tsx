@@ -27,6 +27,23 @@ export function BotaoLink({
   );
 }
 
+/** `<button>` nativo com o mesmo aspeto — para formulários (ex.: /admin). */
+export function Botao({
+  variante = "dourado",
+  className = "",
+  children,
+  ...props
+}: ComponentProps<"button"> & { variante?: Variante; children: ReactNode }) {
+  return (
+    <button
+      {...props}
+      className={`${base} ${estilos[variante]} disabled:pointer-events-none disabled:opacity-60 ${className}`}
+    >
+      {children}
+    </button>
+  );
+}
+
 export function BotaoAncora({
   variante = "dourado",
   className = "",

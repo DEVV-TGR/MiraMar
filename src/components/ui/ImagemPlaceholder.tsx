@@ -5,18 +5,32 @@ import Image from "next/image";
  * stock temporárias, ver AGENTS.md); caso contrário mostra uma caixa
  * placeholder com o nome do slot, para nunca ficar quebrado.
  */
+/**
+ * Grelha da Galeria: duas colunas no telemóvel, três a partir do `sm`, dentro
+ * de um contentor que não passa dos 1152 px. É o caso mais comum, por isso é o
+ * valor por defeito — quem usar a imagem noutro sítio **tem de passar o seu**.
+ */
+const SIZES_GALERIA = "(min-width: 1200px) 384px, (min-width: 640px) 33vw, 50vw";
+
 export function ImagemPlaceholder({
   slot,
   className = "",
   icone = "🐟",
   src,
   prioridade = false,
+  sizes = SIZES_GALERIA,
 }: {
   slot: string;
   className?: string;
   icone?: string;
   src?: string;
   prioridade?: boolean;
+  /**
+   * Largura que a imagem ocupa em cada tamanho de ecrã. É por aqui que o Next
+   * escolhe qual das variantes serve — declarar menos do que a imagem ocupa
+   * faz chegar um ficheiro pequeno esticado, e vê-se.
+   */
+  sizes?: string;
 }) {
   if (src) {
     return (
@@ -26,7 +40,7 @@ export function ImagemPlaceholder({
           alt={slot}
           fill
           priority={prioridade}
-          sizes="(max-width: 640px) 50vw, 33vw"
+          sizes={sizes}
           className="object-cover"
         />
       </div>

@@ -8,9 +8,18 @@
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import React from "react";
-import { Document, Page, View, Text, StyleSheet, renderToFile } from "@react-pdf/renderer";
+import { Document, Page, View, Text, StyleSheet, Font, renderToFile } from "@react-pdf/renderer";
 import menu from "../src/data/menu.json" with { type: "json" };
 import restaurante from "../src/data/restaurante.json" with { type: "json" };
+
+// Sem hifenização: "molho de cogume-los" partido ao meio numa ementa impressa
+// fica com ar de trabalho mal feito. Vale mais a linha quebrar na palavra.
+Font.registerHyphenationCallback((palavra) => [palavra]);
+
+/* Cuidado ao escrever texto corrido com "€" no menu.json: nas fontes standard
+   do PDF o glifo do euro tem a largura errada e come o espaço a seguir
+   ("1,00 €e sobremesa"). Por isso o texto do `incluido` está escrito de forma
+   a que o "€" fique sempre no fim da frase. */
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = path.join(__dirname, "..", "public", "mira-mar-menu.pdf");
@@ -28,42 +37,68 @@ const cor = {
 const styles = StyleSheet.create({
   page: {
     backgroundColor: cor.fundo,
-    padding: 36,
+    paddingHorizontal: 54,
+    paddingVertical: 32,
     fontFamily: "Helvetica",
     color: cor.ink,
   },
   cabecalho: { marginBottom: 14, alignItems: "center" },
-  nome: { fontFamily: "Times-Bold", fontSize: 26, color: cor.sea },
-  tagline: { fontFamily: "Times-Italic", fontSize: 10.5, color: cor.gold, marginTop: 3 },
-  moradaLinha: { fontSize: 8, color: cor.muted, marginTop: 6 },
-  hairline: { height: 1.2, backgroundColor: cor.gold, opacity: 0.5, marginVertical: 12 },
-  colunas: { flexDirection: "row", gap: 28 },
-  coluna: { flex: 1 },
-  categoria: { marginBottom: 11 },
+  nome: { fontFamily: "Times-Bold", fontSize: 34, color: cor.sea },
+  tagline: { fontFamily: "Times-Italic", fontSize: 12.5, color: cor.gold, marginTop: 4 },
+  moradaLinha: { fontSize: 9, color: cor.muted, marginTop: 8 },
+  hairline: { height: 1.2, backgroundColor: cor.gold, opacity: 0.5, marginVertical: 11 },
+  // Uma coluna só: a carta são seis menus de preço fixo com poucas linhas cada
+  // um. Em duas colunas sobrava meia página em branco.
+  //
+  // Cabe tudo numa página A4, mas à justa — com o Menu 6 já foi preciso apertar
+  // as margens. Como `Categoria` tem `wrap: false`, quando transborda não parte
+  // a lista: manda um menu inteiro para a página 2. Ao acrescentar pratos,
+  // correr `npm run menu:pdf` e confirmar que continua a dar uma página só.
+  categoria: { marginBottom: 12 },
+  categoriaCabecalho: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    marginBottom: 6,
+  },
   categoriaTitulo: {
     fontFamily: "Times-Bold",
-    fontSize: 11,
+    fontSize: 15,
     color: cor.goldDeep,
     textTransform: "uppercase",
-    letterSpacing: 1.3,
-    marginBottom: 5,
+    letterSpacing: 1.6,
+  },
+  categoriaPreco: { fontFamily: "Times-Bold", fontSize: 15, color: cor.goldDeep },
+  categoriaDescricao: {
+    fontFamily: "Helvetica-Oblique",
+    fontSize: 9,
+    color: cor.muted,
+    marginTop: -4,
+    marginBottom: 6,
+  },
+  incluido: {
+    fontSize: 9,
+    color: cor.muted,
+    textAlign: "center",
+    lineHeight: 1.5,
+    marginBottom: 12,
   },
   prato: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    paddingVertical: 2.5,
+    paddingVertical: 5,
     borderBottomWidth: 0.5,
     borderBottomColor: cor.linha,
   },
-  pratoTexto: { flexDirection: "column", flex: 1, paddingRight: 10 },
-  pratoNome: { fontFamily: "Helvetica-Bold", fontSize: 9 },
-  pratoDescricao: { fontFamily: "Helvetica-Oblique", fontSize: 7.5, color: cor.muted, marginTop: 1 },
-  pratoPreco: { fontFamily: "Helvetica-Bold", fontSize: 9, color: cor.goldDeep },
-  rodape: { marginTop: 16, alignItems: "center" },
-  rodapeTexto: { fontSize: 8, color: cor.muted, textAlign: "center" },
+  pratoTexto: { flexDirection: "column", flex: 1, paddingRight: 12 },
+  pratoNome: { fontFamily: "Helvetica-Bold", fontSize: 11 },
+  pratoDescricao: { fontFamily: "Helvetica-Oblique", fontSize: 9, color: cor.muted, marginTop: 2 },
+  pratoPreco: { fontFamily: "Helvetica-Bold", fontSize: 11, color: cor.goldDeep },
+  rodape: { marginTop: "auto", alignItems: "center" },
+  rodapeTexto: { fontSize: 9, color: cor.muted, textAlign: "center" },
   notaRascunho: {
-    fontSize: 7.5,
+    fontSize: 8.5,
     color: "#b23b3b",
     textAlign: "center",
     marginBottom: 8,
@@ -83,7 +118,15 @@ function Prato({ prato }) {
       React.createElement(Text, { style: styles.pratoNome }, prato.nome.pt),
       prato.descricao ? React.createElement(Text, { style: styles.pratoDescricao }, prato.descricao.pt) : null,
     ),
-    React.createElement(Text, { style: styles.pratoPreco }, prato.preco),
+    // sem preço próprio o prato herda o do menu, que está no cabeçalho da
+    // categoria — não se repete em cada linha
+    prato.preco
+      ? React.createElement(
+          Text,
+          { style: styles.pratoPreco },
+          prato.precoDose ? `${prato.precoDose} / ${prato.preco}` : prato.preco,
+        )
+      : null,
   );
 }
 
@@ -91,16 +134,22 @@ function Categoria({ categoria }) {
   return React.createElement(
     View,
     { style: styles.categoria, wrap: false },
-    React.createElement(Text, { style: styles.categoriaTitulo }, categoria.nome.pt),
-    ...categoria.pratos.map((prato) => React.createElement(Prato, { key: prato.nome.pt, prato })),
+    React.createElement(
+      View,
+      { style: styles.categoriaCabecalho },
+      React.createElement(Text, { style: styles.categoriaTitulo }, categoria.nome.pt),
+      categoria.preco
+        ? React.createElement(Text, { style: styles.categoriaPreco }, categoria.preco)
+        : null,
+    ),
+    categoria.descricao
+      ? React.createElement(Text, { style: styles.categoriaDescricao }, categoria.descricao.pt)
+      : null,
+    ...categoria.pratos.map((prato, i) => React.createElement(Prato, { key: i, prato })),
   );
 }
 
 function MenuDocument() {
-  const meio = Math.ceil(menu.categorias.length / 2);
-  const colunaEsquerda = menu.categorias.slice(0, meio);
-  const colunaDireita = menu.categorias.slice(meio);
-
   return React.createElement(
     Document,
     { title: `Ementa — ${restaurante.nome}` },
@@ -122,19 +171,11 @@ function MenuDocument() {
         ),
       ),
       React.createElement(View, { style: styles.hairline }),
+      menu.incluido ? React.createElement(Text, { style: styles.incluido }, menu.incluido.pt) : null,
       React.createElement(
         View,
-        { style: styles.colunas },
-        React.createElement(
-          View,
-          { style: styles.coluna },
-          ...colunaEsquerda.map((categoria) => React.createElement(Categoria, { key: categoria.nome.pt, categoria })),
-        ),
-        React.createElement(
-          View,
-          { style: styles.coluna },
-          ...colunaDireita.map((categoria) => React.createElement(Categoria, { key: categoria.nome.pt, categoria })),
-        ),
+        null,
+        ...menu.categorias.map((categoria, i) => React.createElement(Categoria, { key: i, categoria })),
       ),
       React.createElement(
         View,

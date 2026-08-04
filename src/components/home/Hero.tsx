@@ -64,10 +64,34 @@ export function Hero() {
           {restaurante.tagline}
         </p>
 
-        <div className="mt-9">
+        {/* três destinos, duas hierarquias: a carta é o principal (dourado), o
+            take away e a esplanada são secundários (contorno).
+
+            No telemóvel os três empilhados eram uma coluna alta de mais para um
+            ecrã que já é `min-h`: o principal fica sozinho na primeira linha e
+            os dois secundários dividem a segunda. O `sm:contents` dissolve o
+            wrapper acima do breakpoint e os três voltam a ser irmãos da mesma
+            linha, sem markup duplicado. */}
+        <div className="mt-9 flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:justify-center">
           <BotaoLink href="/ementa" variante="dourado">
             {t("verEmenta")}
           </BotaoLink>
+          <div className="flex gap-3 sm:contents">
+            <BotaoLink
+              href="/take-away"
+              variante="contorno"
+              className="flex-1 bg-background/70 backdrop-blur-sm sm:flex-none"
+            >
+              {t("verTakeAway")}
+            </BotaoLink>
+            <BotaoLink
+              href="/esplanada"
+              variante="contorno"
+              className="flex-1 bg-background/70 backdrop-blur-sm sm:flex-none"
+            >
+              {t("verEsplanada")}
+            </BotaoLink>
+          </div>
         </div>
       </motion.div>
     </section>
