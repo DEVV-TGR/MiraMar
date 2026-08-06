@@ -5,11 +5,11 @@ import { EtiquetaSeccao } from "@/components/ui/EtiquetaSeccao";
 
 const fotos = [
   { chave: "peixeGrelhado", icone: "🐟", src: "/fotos/peixe-grelhado.jpg" },
-  { chave: "salaBalcao", icone: "🍽️", src: "/fotos/sala-balcao.jpg" },
+  { chave: "entrada", icone: "📍", src: "/fotos/placa-entrada.jpg" },
   { chave: "pratoDoDia", icone: "🍲", src: "/fotos/prato-do-dia.jpg" },
   { chave: "esplanada", icone: "☀️", src: "/fotos/esplanada.jpg" },
   { chave: "sobremesaDaCasa", icone: "🍮", src: "/fotos/sobremesa-casa.jpg" },
-  { chave: "vistaSobreOMar", icone: "🌊", src: "/fotos/vista-mar.jpg" },
+  { chave: "fachada", icone: "🏠", src: "/fotos/entrada-restaurante.jpg" },
 ] as const;
 
 export function Galeria() {

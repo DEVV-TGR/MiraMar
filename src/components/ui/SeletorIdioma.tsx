@@ -43,7 +43,11 @@ export function SeletorIdioma() {
     // só no telemóvel — no desktop o seletor vive no header, para não repetir
     <div ref={caixa} className="fixed bottom-6 right-6 z-40 md:hidden">
       {aberto && (
-        <ul className="mb-2 flex flex-col gap-1.5 rounded-2xl border border-line bg-background/95 p-2 shadow-lg backdrop-blur-sm">
+        // fora do fluxo (o `fixed` do pai serve de referência) para a caixa do
+        // contentor não crescer ao abrir: a lista é mais larga que o botão e,
+        // ancorada à direita, empurrava a bandeira ativa para a esquerda.
+        // Mesmo padrão do seletor de desktop (`Header.tsx`).
+        <ul className="absolute bottom-full right-0 mb-2 flex w-12 flex-col items-center gap-1.5 rounded-2xl border border-line bg-background/95 p-1 shadow-lg backdrop-blur-sm">
           {outros.map((loc) => (
             <li key={loc}>
               <Link

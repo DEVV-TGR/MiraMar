@@ -36,11 +36,11 @@
     "titulo": "Un poco de la casa",
     "fotos": {
       "peixeGrelhado": "Pescado a la parrilla",
-      "salaBalcao": "Sala y barra",
+      "entrada": "Entrada del restaurante",
       "pratoDoDia": "Plato del día",
       "esplanada": "Terraza",
       "sobremesaDaCasa": "Postre de la casa",
-      "vistaSobreOMar": "Vista al mar"
+      "fachada": "El restaurante"
     }
   },
   "ementaDestaque": {

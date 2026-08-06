@@ -36,11 +36,11 @@
     "titulo": "Um bocadinho da casa",
     "fotos": {
       "peixeGrelhado": "Peixe grelhado",
-      "salaBalcao": "Sala e balcão",
+      "entrada": "Entrada do restaurante",
       "pratoDoDia": "Prato do dia",
       "esplanada": "Esplanada",
       "sobremesaDaCasa": "Sobremesa da casa",
-      "vistaSobreOMar": "Vista sobre o mar"
+      "fachada": "O restaurante"
     }
   },
   "ementaDestaque": {
