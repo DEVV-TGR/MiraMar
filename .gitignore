@@ -40,6 +40,10 @@ yarn-error.log*
 # diarias guardadas localmente em desenvolvimento (em producao vivem no Vercel Blob)
 /.data/
 
+# worktrees: neste projeto trabalha-se so com branches (ver CLAUDE.md). Se algum
+# dia reaparecer um worktree aqui, nao deve entrar no repo.
+/.claude/worktrees/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
