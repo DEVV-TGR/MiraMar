@@ -66,14 +66,13 @@ Três coisas por fechar, todas registadas em `AGENTS.md`:
    QR code. **Não imprimir QR codes antes disso** — enquanto a variável não
    estiver definida, o script avisa e o código gerado aponta para o subdomínio de
    demonstração, que vai morrer.
-2. **Original da foto do hero.** A fachada (`public/fotos/entrada-restaurante.jpg`)
-   é uma foto real do cliente, mas chegou a 768×1024 e o hero estica-a a toda a
-   largura do ecrã. Pedir o ficheiro original ao cliente e substituí-lo, mantendo
-   o nome.
+2. **Licença da foto do hero.** A praia (`public/fotos/praia-angeiras.jpg`) veio
+   de uma pesquisa na web feita pelo cliente e não tem licença conhecida.
+   Confirmar com ele de onde vem — e, já agora, pedir o ficheiro original: chegou
+   a 1024×680 e o hero estica-a a toda a largura do ecrã.
 3. **Ativar o Analytics** no painel da Vercel (sem cookies, plano gratuito).
 
-As fotos do espaço já são reais (fachada, sala, placa da entrada, esplanada).
-Continuam de stock temporário as de comida e mar — `peixe-grelhado.jpg`,
-`prato-do-dia.jpg`, `sobremesa-casa.jpg` e `vista-mar.jpg`: substituir cada
-ficheiro pela foto real correspondente, mantendo o mesmo nome — o código não
-precisa de mexer.
+As fotos do espaço já são reais (sala, placa da entrada, esplanada, fachada).
+Continuam de stock temporário as de comida — `peixe-grelhado.jpg`,
+`prato-do-dia.jpg` e `sobremesa-casa.jpg`: substituir cada ficheiro pela foto
+real correspondente, mantendo o mesmo nome — o código não precisa de mexer.

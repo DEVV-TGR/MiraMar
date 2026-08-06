@@ -33,7 +33,7 @@ export function Hero() {
         className="absolute inset-x-0 -inset-y-[12%] -z-20"
       >
         <Image
-          src="/fotos/entrada-restaurante.jpg"
+          src="/fotos/praia-angeiras.jpg"
           alt=""
           fill
           priority

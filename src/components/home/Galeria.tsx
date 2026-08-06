@@ -9,7 +9,7 @@ const fotos = [
   { chave: "pratoDoDia", icone: "🍲", src: "/fotos/prato-do-dia.jpg" },
   { chave: "esplanada", icone: "☀️", src: "/fotos/esplanada.jpg" },
   { chave: "sobremesaDaCasa", icone: "🍮", src: "/fotos/sobremesa-casa.jpg" },
-  { chave: "vistaSobreOMar", icone: "🌊", src: "/fotos/vista-mar.jpg" },
+  { chave: "fachada", icone: "🏠", src: "/fotos/entrada-restaurante.jpg" },
 ] as const;
 
 export function Galeria() {
